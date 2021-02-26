@@ -3,7 +3,7 @@
     <div id="content" class="container-fluid">
         <div class="card">
             <div class="card-header font-weight-bold">
-                Cập nhật Dự án
+                Thêm Dự án
             </div>
             @if (session('status'))
                 <div class="alert alert-success">
@@ -11,11 +11,11 @@
                 </div>
             @endif
             <div class="card-body">
-                <form method="POST" action="{{route('admin.saveProject',['id'=>$project->id])}}" enctype="multipart/form-data">
+                <form method="POST" action="{{route('admin.saveFurniture')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="name">Tiêu đề Dự án</label>
-                        <input class="form-control @error('title') is-invalid @enderror" type="text" name="title" id="name" value="{{ $project->title }}">
+                        <input class="form-control @error('title') is-invalid @enderror" type="text" name="title" id="name" value="{{ old('title') }}">
                         @error('title')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -23,64 +23,40 @@
                         @enderror
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <label for="inputEmail4">Giá</label>
-                            <input type="text" name="price" class="form-control @error('price') is-invalid @enderror" id="inputEmail4" value="{{ $project->price }}">
-                            @error('price')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                            @enderror
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputPassword4">Số Tầng</label>
-                            <input type="text" name="floors" class="form-control @error('floors') is-invalid @enderror" id="inputPassword4" value="{{ $project->floors }}">
-                            @error('floors')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                            @enderror
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputPassword4">Diện tích</label>
-                            <input type="text" name="acreage" class="form-control @error('acreage') is-invalid @enderror" id="inputPassword4" value="{{ $project->acreage }}">
-                            @error('acreage')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                            @enderror
-                        </div>
-                    </div>
-
                     <div class="form-group">
                         <label for="content">Nội dung Dự án</label>
-                        <textarea id="mytextarea" class="form-control @error('content') is-invalid @enderror" name="content">{{ $project->title }}</textarea>
+                        <textarea id="mytextarea" class="form-control @error('content') is-invalid @enderror" name="content">{{ old('content') }}</textarea>
                         @error('content')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                         @enderror
                     </div>
-                    <label for="fileupload">Ảnh đại diện</label><br>
-                    <input id="fileupload" name="file" type="file" multiple="multiple" />
-                    <br>
-                    <br />
-                    <b>Live Preview</b>
-                    <br />
-                    <div id="dvPreview">
+                    <label for="">Upload file images</label>
+                    <div class="input-group hdtuto control-group lst increment" >
+                        <input type="file" name="filenames[]" class="myfrm form-control">
+                        <div class="input-group-btn">
+                            <button class="btn btn-success" type="button"><i class="fldemo glyphicon glyphicon-plus"></i>Add</button>
+                        </div>
                     </div>
-                    <hr />
-
+                    <div class="clone hide">
+                        <div class="hdtuto control-group lst input-group" style="margin-top:10px">
+                            <input type="file" name="filenames[]" class="myfrm form-control">
+                            <div class="input-group-btn">
+                                <button class="btn btn-danger" type="button"><i class="fldemo glyphicon glyphicon-remove"></i> Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
                     <div class="form-group">
                         <label for="">Danh mục</label>
                         <select class="form-control w-25 @error('project_cat') is-invalid @enderror" id="" name="project_cat">
                             <option value="">Chọn danh mục</option>
                             @if(!empty($listCat))
                                 @foreach($listCat as $item)
-                                    <option @if ($item->id == $project->cat_id)
-                                            selected
-                                            @endif value="{{$item->id}}">{{$item->name}}</option>
+                                    <option @if ($item->id == old('project_cat'))
+                                        selected
+                                    @endif value="{{$item->id}}">{{$item->name}}</option>
                                 @endforeach
                             @endif
                         </select>
@@ -93,13 +69,13 @@
                     <div class="form-group">
                         <label for="">Trạng thái</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="2" @if($project->status == 2) checked  @endif>
+                            <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="2" checked>
                             <label class="form-check-label" for="exampleRadios1">
                                 Chờ duyệt
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="status" id="exampleRadios2" value="1" @if($project->status == 1) checked  @endif>
+                            <input class="form-check-input" type="radio" name="status" id="exampleRadios2" value="1">
                             <label class="form-check-label" for="exampleRadios2">
                                 Công khai
                             </label>
@@ -110,7 +86,7 @@
                         </div>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary">Cập nhật</button>
+                    <button type="submit" class="btn btn-primary">Thêm mới</button>
                 </form>
             </div>
         </div>
@@ -120,7 +96,7 @@
     <script>
         var editor_config = {
             path_absolute : "/",
-            height: 500,
+            height: 300,
             selector: '#mytextarea',
             relative_urls: false,
             plugins: [
@@ -156,6 +132,16 @@
         };
 
         tinymce.init(editor_config);
+
+        $(document).ready(function() {
+            $(".btn-success").click(function(){
+                var lsthmtl = $(".clone").html();
+                $(".increment").after(lsthmtl);
+            });
+            $("body").on("click",".btn-danger",function(){
+                $(this).parents(".hdtuto").remove();
+            });
+        });
     </script>
     <script src="{{asset('js/admin/project.js')}}"></script>
 @endsection

@@ -3,7 +3,7 @@
     <div id="content" class="container-fluid">
         <div class="card">
             <div class="card-header font-weight-bold">
-                Cập nhật Dự án
+                Cập nhật Thi công
             </div>
             @if (session('status'))
                 <div class="alert alert-success">
@@ -11,7 +11,7 @@
                 </div>
             @endif
             <div class="card-body">
-                <form method="POST" action="{{route('admin.saveProject',['id'=>$project->id])}}" enctype="multipart/form-data">
+                <form method="POST" action="{{route('admin.saveConstruction',['id'=>$project->id])}}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="name">Tiêu đề Dự án</label>
@@ -23,39 +23,10 @@
                         @enderror
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <label for="inputEmail4">Giá</label>
-                            <input type="text" name="price" class="form-control @error('price') is-invalid @enderror" id="inputEmail4" value="{{ $project->price }}">
-                            @error('price')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                            @enderror
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputPassword4">Số Tầng</label>
-                            <input type="text" name="floors" class="form-control @error('floors') is-invalid @enderror" id="inputPassword4" value="{{ $project->floors }}">
-                            @error('floors')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                            @enderror
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputPassword4">Diện tích</label>
-                            <input type="text" name="acreage" class="form-control @error('acreage') is-invalid @enderror" id="inputPassword4" value="{{ $project->acreage }}">
-                            @error('acreage')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                            @enderror
-                        </div>
-                    </div>
 
                     <div class="form-group">
                         <label for="content">Nội dung Dự án</label>
-                        <textarea id="mytextarea" class="form-control @error('content') is-invalid @enderror" name="content">{{ $project->title }}</textarea>
+                        <textarea id="mytextarea" class="form-control @error('content') is-invalid @enderror" name="content">{{ $project->content }}</textarea>
                         @error('content')
                         <div class="invalid-feedback">
                             {{ $message }}

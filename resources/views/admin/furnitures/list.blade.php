@@ -18,9 +18,9 @@
             @endif
             <div class="card-body">
                 <div class="analytic">
-                    <a href="{{route('admin.project',['status'=> 1])}}" class="text-primary">Công khai<span class="text-muted">({{$numberStatus['public']}})</span></a>
-                    <a href="{{route('admin.project',['status'=> 2])}}" class="text-primary">Chờ duyệt<span class="text-muted">({{$numberStatus['private']}})</span></a>
-                    <a href="{{route('admin.project',['status'=> 3])}}" class="text-primary">Thùng rác<span class="text-muted">({{$numberStatus['trash']}})</span></a>
+                    <a href="{{route('admin.furniture',['status'=> 1])}}" class="text-primary">Công khai<span class="text-muted">({{$numberStatus['public']}})</span></a>
+                    <a href="{{route('admin.furniture',['status'=> 2])}}" class="text-primary">Chờ duyệt<span class="text-muted">({{$numberStatus['private']}})</span></a>
+                    <a href="{{route('admin.furniture',['status'=> 3])}}" class="text-primary">Thùng rác<span class="text-muted">({{$numberStatus['trash']}})</span></a>
                 </div>
                 <form action="{{route('admin.actionProject')}}" method="POST">
                     @csrf
@@ -70,12 +70,12 @@
                                         <input type="checkbox" name="list_check[]" value="{{$item->id}}">
                                     </td>
                                     <td scope="row">{{$key + 1}}</td>
-                                    <td><img src="{{$item->image ? $item->image : 'http://via.placeholder.com/80X80'}}" style="width: 80px; height: 80px" alt=""></td>
+                                    <td><img src="{{$item->image ? $item->image[0] : 'http://via.placeholder.com/80X80'}}" style="width: 80px; height: 80px" alt=""></td>
                                     <td><a href="">{{$item->title}}</a></td>
-                                    <td>{{$item->project_cat->name}}</td>
+                                    <td>{{$item->furniture_cat->name}}</td>
                                     <td>{{Carbon\Carbon::parse($item->created_at)->format('d/m/Y')}}</td>
-                                    <td><a href="{{route('admin.saveProject',['id'=> $item->id])}}" class="btn btn-success btn-sm rounded-0"  data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                        <a href="{{route('admin.deleteProject',['id'=>$item->id])}}" class="btn btn-danger btn-sm rounded-0" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Xóa bài viết này ?')"><i class="fa fa-trash"></i></a>
+                                    <td><a href="{{route('admin.saveFurniture',['id'=> $item->id])}}" class="btn btn-success btn-sm rounded-0"  data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
+                                        <a href="{{route('admin.deleteFurnitureCat',['id'=>$item->id])}}" class="btn btn-danger btn-sm rounded-0" onclick="return confirm('Xóa bài viết này ?')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
                                     </td>
 
                                 </tr>
