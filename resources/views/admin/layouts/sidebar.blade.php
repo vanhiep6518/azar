@@ -1,14 +1,14 @@
 <div id="sidebar" class="bg-white">
     <ul id="sidebar-menu">
-        <li class="nav-link {{ (request()->segment(2) == '') ? 'active' : '' }}">
-            <a href="{{route('admin.dashboard')}}">
-                <div class="nav-link-icon d-inline-flex">
-                    <i class="far fa-folder"></i>
-                </div>
-                Dashboard
-            </a>
-            <i class="arrow fas fa-angle-right"></i>
-        </li>
+{{--        <li class="nav-link {{ (request()->segment(2) == '') ? 'active' : '' }}">--}}
+{{--            <a href="{{route('admin.dashboard')}}">--}}
+{{--                <div class="nav-link-icon d-inline-flex">--}}
+{{--                    <i class="far fa-folder"></i>--}}
+{{--                </div>--}}
+{{--                Dashboard--}}
+{{--            </a>--}}
+{{--            <i class="arrow fas fa-angle-right"></i>--}}
+{{--        </li>--}}
         <li class="nav-link {{ (request()->segment(2) == 'project') ? 'active' : '' }}">
             <a href="{{route('admin.project')}}">
                 <div class="nav-link-icon d-inline-flex">
@@ -38,7 +38,7 @@
                 <li><a href="{{route('admin.furnitureCat')}}">Danh mục</a></li>
             </ul>
         </li>
-        <li class="nav-link {{ (request()->segment(2) == 'constructions') ? 'active' : '' }}">
+        <li class="nav-link {{ (request()->segment(2) == 'construction') ? 'active' : '' }}">
             <a href="{{route('admin.construction')}}">
                 <div class="nav-link-icon d-inline-flex">
                     <i class="far fa-folder"></i>
@@ -53,28 +53,30 @@
             </ul>
         </li>
         <li class="nav-link {{ (request()->segment(2) == 'price') ? 'active' : '' }}">
-            <a href="?view=list-order">
+            <a href="{{route('admin.price')}}">
                 <div class="nav-link-icon d-inline-flex">
                     <i class="far fa-folder"></i>
                 </div>
                 Bảng giá
             </a>
-            <i class="arrow fas fa-angle-right"></i>
+            <i class="arrow fas fa-angle-down"></i>
             <ul class="sub-menu">
-                <li><a href="?view=list-order">Đơn hàng</a></li>
+                <li><a href="{{route('admin.savePrice')}}">Thêm mới</a></li>
+                <li><a href="{{route('admin.price')}}">Danh sách</a></li>
+                <li><a href="{{route('admin.priceCat')}}">Danh mục</a></li>
             </ul>
         </li>
-        <li class="nav-link {{ (request()->segment(2) == 'feng-shui') ? 'active' : '' }}">
-            <a href="?view=list-user">
+        <li class="nav-link {{ (request()->segment(2) == 'page') ? 'active' : '' }}">
+            <a href="{{route('admin.page')}}">
                 <div class="nav-link-icon d-inline-flex">
                     <i class="far fa-folder"></i>
                 </div>
-                Phong thủy
+                Trang
             </a>            <i class="arrow fas fa-angle-right"></i>
 
             <ul class="sub-menu">
-                <li><a href="?view=add-user">Thêm mới</a></li>
-                <li><a href="?view=list-user">Danh sách</a></li>
+                <li><a href="{{route('admin.savePage')}}">Thêm mới</a></li>
+                <li><a href="{{route('admin.page')}}">Danh sách</a></li>
             </ul>
         </li>
 

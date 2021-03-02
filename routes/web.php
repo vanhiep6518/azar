@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use \App\Http\Controllers\HomeController;
+use \App\Http\Controllers\ProjectController;
+use \App\Http\Controllers\FurnitureController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +15,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/', [HomeController::class,'index']);
+
+Route::group(['prefix' => 'du-an','as' => 'project.'], function () {
+    Route::get('/',[ProjectController::class,'index'])->name('list');
+    Route::get('/{slug}',[ProjectController::class,'projectCat'])->name('cat');
+    Route::get('/{cat_slug}/{slug}/{id}',[ProjectController::class,'projectDetail'])->name('detail');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::group(['prefix' => 'noi-that','as' => 'furniture.'], function () {
+    Route::get('/',[FurnitureController::class,'index'])->name('list');
+    Route::get('/{slug}',[FurnitureController::class,'projectCat'])->name('cat');
+    Route::get('/{cat_slug}/{slug}/{id}',[FurnitureController::class,'projectDetail'])->name('detail');
+});
+
+
+
 
 require __DIR__.'/auth.php';
 

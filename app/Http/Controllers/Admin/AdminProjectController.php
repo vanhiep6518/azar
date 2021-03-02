@@ -5,53 +5,51 @@ namespace App\Http\Controllers\Admin;
 use App\Helpers\DataHelpers;
 use App\Helpers\StringHelpers;
 use App\Http\Controllers\Controller;
-use App\Models\Furniture;
-use App\Models\FurnitureCat;
 use App\Models\Project;
 use App\Models\ProjectCat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Validator;
-use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Storage;
+Use Alert;
 
-class FurnitureController extends Controller
+class AdminProjectController extends Controller
 {
-    public function listFurniture($status = 1,Request $request){
-        $numberStatus['public'] = Furniture::where('status',1)->count();
-        $numberStatus['private'] = Furniture::where('status',2)->count();
-        $numberStatus['trash'] = Furniture::where('status',3)->count();
+    public function listProject($status = 1,Request $request){
+        $numberStatus['public'] = Project::where('status',1)->count();
+        $numberStatus['private'] = Project::where('status',2)->count();
+        $numberStatus['trash'] = Project::where('status',3)->count();
 
-        $projects = Furniture::with('furniture_cat')->where('status',$status);
+        $projects = Project::with('project_cat')->where('status',$status);
 
         if(!empty($request['search'])){
             $str = $request['search'];
             $projects->where('title','like','%'.$str.'%')
-                ->leftJoin('furniture_cats','furniture_cats.id','=','furnitures.cat_id')
-                ->orWhere('furniture_cats.name','like','%'.$str.'%');
+            ->leftJoin('project_cats','project_cats.id','=','projects.cat_id')
+            ->orWhere('project_cats.name','like','%'.$str.'%');
         }
 
         $projects = $projects->paginate(15);
-
-        return view('admin.furnitures.list',compact('numberStatus','projects'));
+        return view('admin.projects.list',compact('numberStatus','projects'));
     }
 
     public function deleteProject($id){
-        $project = Furniture::find($id);
+        $project = Project::find($id);
         if($project){
             $project->delete();
         }
-        return redirect()->back()->with('status', 'Xóa nội thất thành công');
+        return redirect()->back()->with('status', 'Xóa dự án thành công');
     }
 
-    public function saveFurniture($id=null,Request $request){
+    public function saveProject($id=null,Request $request){
         if ($request->getMethod() == 'GET') {
-            $listCat = FurnitureCat::all();
+            $listCat = ProjectCat::all();
             if($id){
-                $project = Furniture::find($id);
-                return view('admin.furnitures.edit',compact('listCat','project'));
+                $project = Project::find($id);
+                return view('admin.projects.edit',compact('listCat','project'));
             }
-            return view('admin.furnitures.add',compact('listCat'));
+            return view('admin.projects.add',compact('listCat'));
         }
 
         $messages = [
@@ -59,17 +57,21 @@ class FurnitureController extends Controller
         ];
         $customAttr = [
             'title' => 'Tiêu đề Dự án',
+            'price' => 'Giá',
+            'floors' => 'Số Tầng',
+            'acreage' => 'Diện tích',
             'content' => 'Nội dung Dự án',
             'project_cat' => 'Danh mục',
             'status' => 'Trạng thái',
         ];
         $validator = Validator::make($request->all(), [
             'title' => 'required|string',
-//            'content' => 'required|string',
+            // 'price' => 'required|string',
+            // 'floors' => 'required|string',
+            // 'acreage' => 'required|string',
+            'content' => 'required|string',
             'project_cat' => 'required|string',
             'status' => 'required|string',
-            'filenames' => 'required',
-            'filenames.*' => 'image'
         ],$messages,$customAttr);
 
         if ($validator->fails()) {
@@ -77,42 +79,47 @@ class FurnitureController extends Controller
                 ->withErrors($validator->errors());
         }
 
-        $files = [];
-        if($request->hasfile('filenames'))
-        {
-            foreach($request->file('filenames') as $file)
-            {
-                $file->storeAs('public/uploads', $file->getClientOriginalName());
-                $file_url = URL::asset('storage/uploads/'.$file->getClientOriginalName());
-                $files[] = $file_url;
+        $file = $request->file;
+        $file_url = '';
+        if($file){
+            $file->storeAs('public/uploads', $file->getClientOriginalName());
+            $file_url = URL::asset('storage/uploads/'.$file->getClientOriginalName());
+        }else{
+            if($id){
+                $file_url = Project::where('id',$id)->first()->image;
             }
         }
 
-
+        // $file_url = Storage::url($file->getClientOriginalName());
+        // dd($file_url);
         if($id){
-
-            Furniture::where('id',$id)->update([
+            Project::where('id',$id)->update([
                 'admin_id' => Auth::guard('admin')->user()->id,
                 'title' => $request->input('title'),
+                'price' => $request->input('price'),
+                'floors' => $request->input('floors'),
+                'acreage' => $request->input('acreage'),
                 'content' => $request->input('content'),
                 'cat_id' => $request->input('project_cat'),
                 'status' => $request->input('status'),
-                'image' => $files
+                'image' => $file_url
             ]);
-
             return redirect()->back()->with('status', 'Cập nhật dự án thành công');
         }
 
-        Furniture::create([
+        Project::create([
             'admin_id' => Auth::guard('admin')->user()->id,
             'title' => $request->input('title'),
+            'price' => $request->input('price'),
+            'floors' => $request->input('floors'),
+            'acreage' => $request->input('acreage'),
             'content' => $request->input('content'),
             'cat_id' => $request->input('project_cat'),
             'status' => $request->input('status'),
-            'image' => $files
+            'image' => $file_url
         ]);
 
-        return redirect()->back()->with('status', 'Thêm nội thất thành công');
+        return redirect()->back()->with('status', 'Thêm dự án thành công');
     }
 
     public function actionProject(Request $request){
@@ -137,22 +144,22 @@ class FurnitureController extends Controller
         $list_check = $request->input('list_check');
         //code action
         if($action != 4){
-            Furniture::whereIn('id',$list_check)->update(['status' => $action]);
+            Project::whereIn('id',$list_check)->update(['status' => $action]);
         }else{
-            Furniture::whereIn('id',$list_check)->delete();
-            return redirect()->back()->with('status', 'Xóa nội thất thành công');
+            Project::whereIn('id',$list_check)->delete();
+            return redirect()->back()->with('status', 'Xóa dự án thành công');
         }
 
-        return redirect()->back()->with('status', 'Cập nhật nội thất thành công');
+        return redirect()->back()->with('status', 'Cập nhật dự án thành công');
     }
 
     public function listCat(){
-        $listCat = FurnitureCat::all();
+        $listCat = ProjectCat::all();
 //        dd($listCat);
         $dataHelper = new DataHelpers();
         $listCat = $dataHelper->data_tree($listCat,0);
 
-        return view('admin.furnitures.list-cat',compact('listCat'));
+        return view('admin.projects.list-cat',compact('listCat'));
     }
 
     public function addCat(Request $request){
@@ -165,8 +172,8 @@ class FurnitureController extends Controller
             'slug' => 'Đường dẫn danh mục',
         ];
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|unique:furniture_cats',
-            'slug' => 'unique:furniture_cats',
+            'name' => 'required|string|unique:project_cats',
+            'slug' => 'unique:project_cats',
         ],$messages,$customAttr);
 
         if ($validator->fails()) {
@@ -178,7 +185,7 @@ class FurnitureController extends Controller
         $slug = $request->input('slug');
         $slug = empty($slug) ? StringHelpers::slugify($request->input('name')) : $slug;
 
-        FurnitureCat::create([
+        ProjectCat::create([
             'admin_id' => Auth::guard('admin')->user()->id,
             'name' => $request->input('name'),
             'slug' => $slug,
@@ -190,24 +197,24 @@ class FurnitureController extends Controller
     }
 
     public function ajaxEditCat(Request $request){
-        $projectCat = FurnitureCat::find($request->id);
-        $listCat = FurnitureCat::all();
-        return view('admin.elements.edit-furniture-cat',compact('listCat','projectCat'));
+        $projectCat = ProjectCat::find($request->id);
+        $listCat = ProjectCat::all();
+        return view('admin.elements.edit-project-cat',compact('listCat','projectCat'));
     }
 
     public function updateCat($id,Request $request){
         $name = $request->input('name');
         $slug = $request->input('slug');
-        $parent_id = $request->input('parent_id');
+        $parent_id = $request->input('parent_id') ?? 0;
 
-        $catCheck = FurnitureCat::where('id','!=',$id)
+        $catCheck = ProjectCat::where('id','!=',$id)
             ->where(function ($query) use ($name,$slug){
                 $query->where('name',$name)
                     ->orWhere('slug',$slug);
             })->first();
 //        dd($catCheck);
         if(!$catCheck){
-            $projectCat = FurnitureCat::find($id);
+            $projectCat = ProjectCat::find($id);
             $projectCat->name = $name;
             $projectCat->slug = $slug;
             $projectCat->parent_id = $parent_id;
@@ -221,7 +228,7 @@ class FurnitureController extends Controller
     }
 
     public function deleteCat($id){
-        $projectCat = FurnitureCat::find($id);
+        $projectCat = ProjectCat::find($id);
         if($projectCat){
             $projectCat->delete();
         }

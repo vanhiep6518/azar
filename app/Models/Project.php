@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\StringHelpers;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -22,8 +23,15 @@ class Project extends Model
         'image'
     ];
 
+    protected $appends = ['slug'];
+
     public function project_cat()
     {
         return $this->belongsTo(ProjectCat::class,'cat_id');
+    }
+
+    public function getSlugAttribute()
+    {
+        return StringHelpers::slugify($this->attributes['title']);
     }
 }

@@ -7,51 +7,50 @@ use App\Helpers\StringHelpers;
 use App\Http\Controllers\Controller;
 use App\Models\Construction;
 use App\Models\ConstructionCat;
-use App\Models\Project;
-use App\Models\ProjectCat;
+use App\Models\Price;
+use App\Models\PriceCat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Storage;
-Use Alert;
+use Alert;
 
-class ConstructionController extends Controller
+class AdminPriceController extends Controller
 {
-    public function listConstruction($status = 1,Request $request){
-        $numberStatus['public'] = Construction::where('status',1)->count();
-        $numberStatus['private'] = Construction::where('status',2)->count();
-        $numberStatus['trash'] = Construction::where('status',3)->count();
+    public function listPrice($status = 1,Request $request){
+        $numberStatus['public'] = Price::where('status',1)->count();
+        $numberStatus['private'] = Price::where('status',2)->count();
+        $numberStatus['trash'] = Price::where('status',3)->count();
 
-        $projects = Construction::with('construction_cat')->where('status',$status);
+        $projects = Price::with('price_cat')->where('status',$status);
 
         if(!empty($request['search'])){
             $str = $request['search'];
             $projects->where('title','like','%'.$str.'%')
-            ->leftJoin('construction_cats','construction_cats.id','=','constructions.cat_id')
-            ->orWhere('construction_cats.name','like','%'.$str.'%');
+                ->leftJoin('price_cats','price_cats.id','=','prices.cat_id')
+                ->orWhere('price_cats.name','like','%'.$str.'%');
         }
 
         $projects = $projects->paginate(15);
-        return view('admin.constructions.list',compact('numberStatus','projects'));
+        return view('admin.prices.list',compact('numberStatus','projects'));
     }
 
-    public function deleteConstruction($id){
-        $project = Construction::find($id);
+    public function deletePrice($id){
+        $project = Price::find($id);
         if($project){
             $project->delete();
         }
-        return redirect()->back()->with('status', 'Xóa thi công thành công');
+        return redirect()->back()->with('status', 'Xóa bảng giá thành công');
     }
 
-    public function saveConstruction($id=null,Request $request){
+    public function savePrice($id=null,Request $request){
         if ($request->getMethod() == 'GET') {
-            $listCat = ConstructionCat::all();
+            $listCat = PriceCat::all();
             if($id){
-                $project = Construction::find($id);
-                return view('admin.constructions.edit',compact('listCat','project'));
+                $project = Price::find($id);
+                return view('admin.prices.edit',compact('listCat','project'));
             }
-            return view('admin.constructions.add',compact('listCat'));
+            return view('admin.prices.add',compact('listCat'));
         }
 
         $messages = [
@@ -78,44 +77,33 @@ class ConstructionController extends Controller
                 ->withErrors($validator->errors());
         }
 
-        $file = $request->file;
-        $file_url = '';
-        if($file){
-            $file->storeAs('public/uploads', $file->getClientOriginalName());
-            $file_url = URL::asset('storage/uploads/'.$file->getClientOriginalName());
-        }else{
-            if($id){
-                $file_url = Construction::where('id',$id)->first()->image;
-            }
-        }
+
 
         // $file_url = Storage::url($file->getClientOriginalName());
         // dd($file_url);
         if($id){
-            Construction::where('id',$id)->update([
+            Price::where('id',$id)->update([
                 'admin_id' => Auth::guard('admin')->user()->id,
                 'title' => $request->input('title'),
                 'content' => $request->input('content'),
                 'cat_id' => $request->input('project_cat'),
                 'status' => $request->input('status'),
-                'image' => $file_url
             ]);
-            return redirect()->back()->with('status', 'Cập nhật bài viết thành công');
+            return redirect()->back()->with('status', 'Cập nhật Bảng giá thành công');
         }
 
-        Construction::create([
+        Price::create([
             'admin_id' => Auth::guard('admin')->user()->id,
             'title' => $request->input('title'),
             'content' => $request->input('content'),
             'cat_id' => $request->input('project_cat'),
             'status' => $request->input('status'),
-            'image' => $file_url
         ]);
 
-        return redirect()->back()->with('status', 'Thêm bài viết thành công');
+        return redirect()->back()->with('status', 'Thêm Bảng giá thành công');
     }
 
-    public function actionConstruction(Request $request){
+    public function actionPrice(Request $request){
         $messages = [
             'required' => 'Bạn phải chọn :attribute',
         ];
@@ -137,22 +125,22 @@ class ConstructionController extends Controller
         $list_check = $request->input('list_check');
         //code action
         if($action != 4){
-            Construction::whereIn('id',$list_check)->update(['status' => $action]);
+            Price::whereIn('id',$list_check)->update(['status' => $action]);
         }else{
-            Construction::whereIn('id',$list_check)->delete();
-            return redirect()->back()->with('status', 'Xóa thi công thành công');
+            Price::whereIn('id',$list_check)->delete();
+            return redirect()->back()->with('status', 'Xóa bảng giá thành công');
         }
 
-        return redirect()->back()->with('status', 'Cập nhật thi công thành công');
+        return redirect()->back()->with('status', 'Cập nhật bảng giá thành công');
     }
 
     public function listCat(){
-        $listCat = ConstructionCat::all();
+        $listCat = PriceCat::all();
 //        dd($listCat);
         $dataHelper = new DataHelpers();
         $listCat = $dataHelper->data_tree($listCat,0);
 
-        return view('admin.constructions.list-cat',compact('listCat'));
+        return view('admin.prices.list-cat',compact('listCat'));
     }
 
     public function addCat(Request $request){
@@ -174,11 +162,11 @@ class ConstructionController extends Controller
                 ->withErrors($validator->errors());
         }
 
-        $parent_cat = ConstructionCat::find($request->input('parent_id'));
+        $parent_cat = PriceCat::find($request->input('parent_id'));
         $slug = $request->input('slug');
         $slug = empty($slug) ? StringHelpers::slugify($request->input('name')) : $slug;
 
-        ConstructionCat::create([
+        PriceCat::create([
             'admin_id' => Auth::guard('admin')->user()->id,
             'name' => $request->input('name'),
             'slug' => $slug,
@@ -190,24 +178,24 @@ class ConstructionController extends Controller
     }
 
     public function ajaxEditCat(Request $request){
-        $projectCat = ConstructionCat::find($request->id);
-        $listCat = ConstructionCat::all();
-        return view('admin.elements.edit-construction-cat',compact('listCat','projectCat'));
+        $projectCat = PriceCat::find($request->id);
+        $listCat = PriceCat::all();
+        return view('admin.elements.edit-price-cat',compact('listCat','projectCat'));
     }
 
     public function updateCat($id,Request $request){
         $name = $request->input('name');
         $slug = $request->input('slug');
-        $parent_id = $request->input('parent_id');
+        $parent_id = $request->input('parent_id') ?? 0;
 
-        $catCheck = ConstructionCat::where('id','!=',$id)
+        $catCheck = PriceCat::where('id','!=',$id)
             ->where(function ($query) use ($name,$slug){
                 $query->where('name',$name)
                     ->orWhere('slug',$slug);
             })->first();
 //        dd($catCheck);
         if(!$catCheck){
-            $projectCat = ConstructionCat::find($id);
+            $projectCat = PriceCat::find($id);
             $projectCat->name = $name;
             $projectCat->slug = $slug;
             $projectCat->parent_id = $parent_id;
@@ -221,7 +209,7 @@ class ConstructionController extends Controller
     }
 
     public function deleteCat($id){
-        $projectCat = ConstructionCat::find($id);
+        $projectCat = PriceCat::find($id);
         if($projectCat){
             $projectCat->delete();
         }

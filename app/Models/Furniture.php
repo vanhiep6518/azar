@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\StringHelpers;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,6 +19,8 @@ class Furniture extends Model
         'status',
         'image'
     ];
+    protected $appends = ['slug'];
+
 
     public function furniture_cat()
     {
@@ -34,5 +37,10 @@ class Furniture extends Model
     public function getImageAttribute()
     {
         return json_decode($this->attributes['image']);
+    }
+
+    public function getSlugAttribute()
+    {
+        return StringHelpers::slugify($this->attributes['title']);
     }
 }

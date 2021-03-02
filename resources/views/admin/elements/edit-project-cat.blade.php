@@ -23,17 +23,17 @@
             <input class="form-control" required type="text" name="slug" id="name" value="{{ $projectCat->slug }}"
                    data-placement="bottom" data-toggle="tooltip" data-original-title="Bạn có thể bỏ trống.Đường dẫn sẽ được thay thế bằng tên danh mục">
         </div>
-        <div class="form-group">
-            <label for="">Danh mục cha</label>
-            <select class="form-control" name="parent_id" id="">
-                <option value="0">Chọn danh mục</option>
-                @if(!empty($listCat))
-                    @foreach($listCat as $item)
-                        <option @if($item->id == $projectCat->parent_id && $projectCat->level != 0) selected @endif value="{{$item->id}}">{{$item->name}}</option>
-                    @endforeach
-                @endif
-            </select>
-        </div>
+{{--        <div class="form-group">--}}
+{{--            <label for="">Danh mục cha</label>--}}
+{{--            <select class="form-control" name="parent_id" id="">--}}
+{{--                <option value="0">Chọn danh mục</option>--}}
+{{--                @if(!empty($listCat))--}}
+{{--                    @foreach($listCat as $item)--}}
+{{--                        <option @if($item->id == $projectCat->parent_id && $projectCat->level != 0) selected @endif value="{{$item->id}}">{{$item->name}}</option>--}}
+{{--                    @endforeach--}}
+{{--                @endif--}}
+{{--            </select>--}}
+{{--        </div>--}}
         <button type="submit" class="btn btn-primary">Cập nhật</button>
     </form>
 </div>

@@ -1,0 +1,10 @@
+.carousel-cell {
+    max-width: 33.33%!important;
+    height: auto;
+}
+.carousel-cell.size-180 { width: 180px; }
+.carousel-cell.size-large { width: 75%; }
+
+.project__item.ef__zoomin{
+    margin-right: 10px;
+}

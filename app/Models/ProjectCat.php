@@ -17,4 +17,9 @@ class ProjectCat extends Model
         'parent_id',
         'level',
     ];
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class,'cat_id');
+    }
 }
