@@ -9,13 +9,15 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
     public function index(){
-        $projects = Project::paginate(16);
+        $projects = Project::with('project_cat')
+            ->where('status','=',1)->paginate(16);
         return view('projects.index',compact('projects'));
     }
 
     public function projectCat($slug){
         $projects = Project::leftJoin('project_cats','project_cats.id','=','projects.cat_id')
                     ->where('project_cats.slug','=',$slug)
+                    ->where('projects.status','=',1)
                     ->select('projects.*')
                     ->with('project_cat')->paginate(16);
         $cat = ProjectCat::where('slug',$slug)->first();

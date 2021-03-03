@@ -33,7 +33,7 @@ Route::middleware('authAdmin')->name('admin.')->group(function (){
 
     Route::group(['prefix' => 'furniture'], function () {
         Route::get('/list/{status?}', [AdminFurnitureController::class, 'listFurniture'])->name('furniture');
-        Route::post('/action', [AdminFurnitureController::class, 'actionProject'])->name('actionProject');
+        Route::post('/action', [AdminFurnitureController::class, 'actionFurniture'])->name('actionFurniture');
 
         Route::match(['get', 'post'], '/save/{id?}', [AdminFurnitureController::class, 'saveFurniture'])->name('saveFurniture');
 

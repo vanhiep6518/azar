@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\HomeController;
 use \App\Http\Controllers\ProjectController;
 use \App\Http\Controllers\FurnitureController;
+use \App\Http\Controllers\ConstructionController;
+use \App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +32,13 @@ Route::group(['prefix' => 'noi-that','as' => 'furniture.'], function () {
     Route::get('/{cat_slug}/{slug}/{id}',[FurnitureController::class,'projectDetail'])->name('detail');
 });
 
+Route::group(['prefix' => 'thi-cong','as' => 'construction.'], function () {
+    Route::get('/',[ConstructionController::class,'index'])->name('list');
+    Route::get('/{slug}',[ConstructionController::class,'projectCat'])->name('cat');
+    Route::get('/{cat_slug}/{slug}/{id}',[ConstructionController::class,'projectDetail'])->name('detail');
+});
+
+Route::get('/gioi-thieu',[PageController::class,'introduce'])->name('introduce');
 
 
 

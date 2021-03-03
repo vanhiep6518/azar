@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $cats['project'] = ProjectCat::all();
         $cats['furniture'] = FurnitureCat::all();
-        $cats['contruction'] = ConstructionCat::all();
+        $cats['construction'] = ConstructionCat::all();
         View::share('cats', $cats);
         Paginator::useBootstrap();
     }

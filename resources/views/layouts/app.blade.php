@@ -57,12 +57,13 @@
                             </ul>
                         </li>
                         <li id="menu-item-212" class="menu-item menu-item-type-post_type_archive menu-item-object-thi-cong menu-item-has-children menu-item-212">
-                            <a href="thi-cong/index.html">Thi công</a>
+                            <a href="{{route('construction.list')}}">Thi công</a>
                             <ul class="sub-menu">
-                                <li id="menu-item-616" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-616"><a href="index.html%3Fp=599.html">Quy trình thi công</a></li>
-                                <li id="menu-item-614" class="menu-item menu-item-type-taxonomy menu-item-object-thi-cong_cat menu-item-614"><a href="danh-muc-thi-cong/thi-cong/index.html">Thi công</a></li>
-                                <li id="menu-item-1321" class="menu-item menu-item-type-taxonomy menu-item-object-thi-cong_cat menu-item-1321"><a href="danh-muc-thi-cong/cai-tao-azar/index.html">Cải tạo Nội thất – Ngoại thất</a></li>
-                                <li id="menu-item-615" class="menu-item menu-item-type-taxonomy menu-item-object-thi-cong_cat menu-item-615"><a href="danh-muc-thi-cong/tin-tuc/index.html">Tin tức</a></li>
+                                @if(isset($cats) && $cats['construction'])
+                                    @foreach($cats['construction'] as $item)
+                                        <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="{{route('construction.cat',['slug' => $item->slug])}}">{{$item->name}}</a></li>
+                                    @endforeach
+                                @endif
                             </ul>
                         </li>
                         <li id="menu-item-230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-230">
@@ -103,7 +104,7 @@
                                 <li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="index.html%3Fp=251.html">Thước lỗ ban</a></li>
                             </ul>
                         </li>
-                        <li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a href="index.html%3Fp=2.html">Giới thiệu</a></li>
+                        <li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a href="{{route('introduce')}}">Giới thiệu</a></li>
                         <li class="item__custom d-md-none"><a href="login.html" class="">Login</a></li>
                         <li class="item__custom d-md-none"><a href="https://www.facebook.com/KientrucAZAR/" class="d-inline-block"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w" class="d-inline-block"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                     </ul>

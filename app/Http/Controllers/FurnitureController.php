@@ -11,7 +11,8 @@ use Illuminate\Http\Request;
 class FurnitureController extends Controller
 {
     public function index(){
-        $projects = Furniture::with('furniture_cat')->paginate(16);
+        $projects = Furniture::with('furniture_cat')
+            ->where('status','=',1)->paginate(16);
 //        dd($projects);
         return view('furnitures.index',compact('projects'));
     }
@@ -19,6 +20,7 @@ class FurnitureController extends Controller
     public function projectCat($slug){
         $projects = Furniture::leftJoin('furniture_cats','furniture_cats.id','=','furnitures.cat_id')
             ->where('furniture_cats.slug','=',$slug)
+            ->where('furnitures.status','=',1)
             ->select('furnitures.*')
             ->with('furniture_cat')->paginate(16);
         $cat = FurnitureCat::where('slug',$slug)->first();

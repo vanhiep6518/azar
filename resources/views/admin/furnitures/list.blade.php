@@ -22,7 +22,7 @@
                     <a href="{{route('admin.furniture',['status'=> 2])}}" class="text-primary">Chờ duyệt<span class="text-muted">({{$numberStatus['private']}})</span></a>
                     <a href="{{route('admin.furniture',['status'=> 3])}}" class="text-primary">Thùng rác<span class="text-muted">({{$numberStatus['trash']}})</span></a>
                 </div>
-                <form action="{{route('admin.actionProject')}}" method="POST">
+                <form action="{{route('admin.actionFurniture')}}" method="POST">
                     @csrf
                     <div class="form-action form-inline py-3">
                         <select class="form-control mr-1" id="" name="action">
