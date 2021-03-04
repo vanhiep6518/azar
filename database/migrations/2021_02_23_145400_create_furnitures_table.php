@@ -22,7 +22,7 @@ class CreateFurnituresTable extends Migration
             $table->integer('status');
             $table->string('image',255)->nullable();
             $table->foreign('cat_id')
-                ->references('id')->on('project_cats')
+                ->references('id')->on('furniture_cats')
                 ->onDelete('cascade');
             $table->foreign('admin_id')
                 ->references('id')->on('admins')

@@ -21,7 +21,7 @@ class CreatePricesTable extends Migration
             $table->text('content');
             $table->integer('status');
             $table->foreign('cat_id')
-                ->references('id')->on('project_cats')
+                ->references('id')->on('price_cats')
                 ->onDelete('cascade');
             $table->foreign('admin_id')
                 ->references('id')->on('admins')
