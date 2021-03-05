@@ -6,6 +6,7 @@ use \App\Http\Controllers\ProjectController;
 use \App\Http\Controllers\FurnitureController;
 use \App\Http\Controllers\ConstructionController;
 use \App\Http\Controllers\PageController;
+use \App\Http\Controllers\PriceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,9 +39,19 @@ Route::group(['prefix' => 'thi-cong','as' => 'construction.'], function () {
     Route::get('/{cat_slug}/{slug}/{id}',[ConstructionController::class,'projectDetail'])->name('detail');
 });
 
+Route::group(['prefix' => 'bang-gia','as' => 'price.'], function () {
+    Route::get('/{slug}/{id}',[PriceController::class,'index'])->name('detail');
+});
+
 Route::get('/gioi-thieu',[PageController::class,'introduce'])->name('introduce');
 
+Route::get('/bao-gia-thiet-ke',[PriceController::class,'reportDesignPrice']);
+Route::get('/bao-gia-thi-cong',[PriceController::class,'reportConstructionPrice']);
 
+Route::get('/hop-dong-thiet-ke',[PriceController::class,'contractDesign']);
+Route::get('/hop-dong-thi-cong-doi-tac',[PriceController::class,'partnerContract']);
+Route::get('/hop-dong-thi-cong-khach-hang',[PriceController::class,'customerContract']);
+Route::get('/hop-dong-thi-cong-noi-that',[PriceController::class,'furnitureContract']);
 
 require __DIR__.'/auth.php';
 

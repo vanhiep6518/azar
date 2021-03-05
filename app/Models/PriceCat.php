@@ -17,4 +17,9 @@ class PriceCat extends Model
         'parent_id',
         'level',
     ];
+
+    public function prices()
+    {
+        return $this->hasMany(Price::class,'cat_id');
+    }
 }

@@ -67,33 +67,37 @@
                             </ul>
                         </li>
                         <li id="menu-item-230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-230">
-                            <a href="index.html%3Fp=224.html">Bảng giá</a>
+                            <a href="">Bảng giá</a>
                             <ul class="sub-menu">
-                                <li id="menu-item-625" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-625">
-                                    <a href="index.html#">Đơn giá</a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-617"><a href="index.html%3Fp=224.html">Bảng giá Thiết kế nhà Đà Nẵng 2020</a></li>
-                                        <li id="menu-item-629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-629"><a href="index.html%3Fp=226.html">Bảng giá thi công</a></li>
-                                    </ul>
-                                </li>
-                                <li id="menu-item-626" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-626">
-                                    <a href="index.html#">Báo giá</a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-620" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-620"><a href="bao-gia-thi-cong/bao-gia-thiet-ke.html">Báo giá thiết kế</a></li>
-                                        <li id="menu-item-618" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-618"><a href="bao-gia-thi-cong/bao-gia-thi-cong.html">Báo giá thi công</a></li>
-                                    </ul>
-                                </li>
-                                <li id="menu-item-627" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-627">
-                                    <a href="index.html#">Hợp đồng</a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-623" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-623"><a href="hop-dong-thiet-ke/index.html">Hợp đồng thiết kế</a></li>
-                                        <li id="menu-item-621" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-621"><a href="hop-dong-thi-cong-doi-tac/index.html">Hợp đồng ĐT</a></li>
-                                        <li id="menu-item-622" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-622"><a href="hop-dong-thi-cong-khach-hang/index.html">Hợp đồng KH</a></li>
-                                    </ul>
-                                </li>
-                                <li id="menu-item-624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-624"><a href="index.html%3Fp=461.html">Diễn giải vật liệu</a></li>
+                                @if(isset($cats) && $cats['price'])
+                                    @foreach($cats['price'] as $item)
+                                        <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="javascript:void(0)">{{$item->name}}</a>
+                                            @if($item->prices && count($item->prices) > 0)
+                                                <ul class="sub-menu">
+                                                @foreach($item->prices as $item2)
+                                                    <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="{{route('price.detail',['slug'=>$item2->slug,'id'=>$item2->id])}}">{{$item2->title}}</a></li>
+                                                @endforeach
+                                                </ul>
+                                            @elseif($item->id == 2)
+                                                <ul class="sub-menu">
+                                                    <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="/bao-gia-thiet-ke">Báo giá thiết kế</a></li>
+                                                    <li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="/bao-gia-thi-cong">Báo giá thi công</a></li>
+                                                </ul>
+                                            @elseif($item->id == 3)
+                                                <ul class="sub-menu">
+                                                    <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="/hop-dong-thiet-ke">Hợp đồng thiết kế</a></li>
+                                                    <li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="/hop-dong-thi-cong-doi-tac">Hợp đồng ĐT</a></li>
+                                                    <li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="/hop-dong-thi-cong-khach-hang">Hợp đồng KH</a></li>
+                                                </ul>
+                                            @endif
+                                        </li>
+                                    @endforeach
+                                @endif
                             </ul>
                         </li>
+{{--                        @php--}}
+{{--                            dd($cats['price']);--}}
+{{--                        @endphp--}}
                         <li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-260">
                             <a href="index.html#">Phong thủy</a>
                             <ul class="sub-menu">
