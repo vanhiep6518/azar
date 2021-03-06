@@ -35,7 +35,7 @@ class LoginController extends Controller
                 ->withInput();
         }
         if (Auth::guard('admin')->attempt($credentials,$remember)) {
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('admin.project');
         } else {
             return redirect()->back()->withInput()->withErrors(['login-err' => 'Tài khoản của bạn không tồn tại trên hệ thống']);
         }

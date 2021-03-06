@@ -1,77 +1,27 @@
 @extends('layouts.app')
 @section('content')
     <section class="slider">
-        <div class="dn__slider flickity slider">
-            <div class="slider__item">
-                <div class="item__thumb dnfix__thumb"> <img src="wp-content/uploads/2020/06/1-min.jpg" class="img-fluid mx-auto"/></div>
-                <div class="item__meta__wrap">
-                    <div class="container">
-                        <div class="item__meta d-sm-flex">
-                            <div class="item__box">
-                                <p class="item__title text-uppercase" data-animate="flipInX" data-animate-delay="5000">XÂY NHÀ NGAY - NHẬN QUÀ LIỀN TAY</p>
-                                <p class="item__sub" data-animate="bounceIn" data-animate-delay="5000">TƯNG BỪNG KHUYẾN MÃI _ Duy nhất trong tháng này <br/> <br/></p>
-                                <a href="index.html#" class="item__readmore" data-animate="flipInX" data-animate-delay="5000">Xem chi tiết</a>
+        <div class="main-carousel dn__slider">
+            @if($sliders)
+                @foreach($sliders as $item)
+                    <div class="carousel-cell">
+                        <div class="slider__item">
+                            <div class="item__thumb dnfix__thumb"> <img src="{{$item->image}}" class="img-fluid mx-auto"/></div>
+                            <div class="item__meta__wrap">
+                                <div class="container">
+                                    <div class="item__meta d-sm-flex">
+                                        <div class="item__box">
+                                            <p class="item__title text-uppercase" data-animate="flipInX" data-animate-delay="5000">{{$item->title}}</p>
+                                            <p class="item__sub" data-animate="bounceIn" data-animate-delay="5000">{{$item->sub_title}}<br/> <br/></p>
+                                            <a href="{{$item->detail_url}}" class="item__readmore" data-animate="flipInX" data-animate-delay="5000">Xem chi tiết</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="slider__item">
-                <div class="item__thumb dnfix__thumb"> <img src="wp-content/uploads/2020/06/2-min-1.jpg" class="img-fluid mx-auto"/></div>
-                <div class="item__meta__wrap">
-                    <div class="container">
-                        <div class="item__meta d-sm-flex">
-                            <div class="item__box">
-                                <p class="item__title text-uppercase" data-animate="fadeInRight" data-animate-delay="5000">XÂY DỰNG BỀN VỮNG</p>
-                                <p class="item__sub" data-animate="bounceInLeft" data-animate-delay="5000">Đội ngũ Thi công tay nghề cao với đơn giá cạnh tranh sẽ đáp ứng mọi nhu cầu của chủ nhà để đem đến sản phẩm chất lượng nhất. <br/> <br/></p>
-                                <a href="index.html%3Fp=599.html" class="item__readmore" data-animate="bounceInLeft" data-animate-delay="5000">Xem chi tiết</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider__item">
-                <div class="item__thumb dnfix__thumb"> <img src="wp-content/uploads/2020/06/3-min.jpg" class="img-fluid mx-auto"/></div>
-                <div class="item__meta__wrap">
-                    <div class="container">
-                        <div class="item__meta d-sm-flex">
-                            <div class="item__box">
-                                <p class="item__title text-uppercase" data-animate="bounceIn" data-animate-delay="5000">THIẾT KẾ KIẾN TRÚC</p>
-                                <p class="item__sub" data-animate="flipInY" data-animate-delay="5000">HIỆN ĐẠI - ĐẲNG CẤP<br/> <br/></p>
-                                <a href="index.html#" class="item__readmore" data-animate="bounceInUp" data-animate-delay="5000">Xem chi tiết</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider__item">
-                <div class="item__thumb dnfix__thumb"> <img src="wp-content/uploads/2020/06/4-min.jpg" class="img-fluid mx-auto"/></div>
-                <div class="item__meta__wrap">
-                    <div class="container">
-                        <div class="item__meta d-sm-flex">
-                            <div class="item__box">
-                                <p class="item__title text-uppercase" data-animate="bounceInUp" data-animate-delay="5000">THIẾT KẾ NỘI THẤT</p>
-                                <p class="item__sub" data-animate="flipInX" data-animate-delay="5000">TINH TẾ - SANG TRỌNG<br/> <br/></p>
-                                <a href="https://www.facebook.com/KientrucAZAR/" class="item__readmore" data-animate="flipInY" data-animate-delay="5000">Xem chi tiết</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider__item">
-                <div class="item__thumb dnfix__thumb"> <img src="wp-content/uploads/2020/06/5-min.jpg" class="img-fluid mx-auto"/></div>
-                <div class="item__meta__wrap">
-                    <div class="container">
-                        <div class="item__meta d-sm-flex">
-                            <div class="item__box">
-                                <p class="item__title text-uppercase" data-animate="bounceInUp" data-animate-delay="5000">TOP5 YẾU TỐ ĐỂ SỞ HỮU MỘT NGÔI NHÀ HOÀN HẢO NHẤT</p>
-                                <p class="item__sub" data-animate="flipInY" data-animate-delay="5000"><br/> <br/></p>
-                                <a href="https://www.facebook.com/KientrucAZAR/" class="item__readmore" data-animate="flipInX" data-animate-delay="5000">Xem chi tiết</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                @endforeach
+            @endif
         </div>
     </section>
     <section class="projectSlider__featured waypoint">
@@ -95,7 +45,7 @@
                                     @foreach($item1->projects as $item2)
                                         <div class="col-md-6 col-lg-3 item__wrap">
                                             <archive class="project__item ef__zoomin">
-                                                <a href="index.html%3Fp=1871.html" class="">
+                                                <a href="{{route('project.detail',['cat_slug'=>$item1->slug, 'slug' => $item2->slug, 'id' => $item2->id])}}" class="">
                                                     <div class="item__thumb">
                                                         <div class="dnfix__thumb">
                                                             <img width="300" height="300" src="{{$item2->image}}" class="img-fluid wp-post-image" alt="TOP NHÀ PHỐ TRÊN 990 TRIỆU ĐẸP NHẤT" /></div>
@@ -704,4 +654,25 @@
 {{--    </section>--}}
 </div>
     </div>
+@endsection
+@section('css')
+<style>
+    .carousel-cell {
+        width: 100%!important;; /* full width */
+        max-width: 100%!important;
+        height: 100vh!important;; /* height of carousel */
+        margin-right: 10px;
+    }
+</style>
+@endsection
+@section('custom-js')
+    <script>
+        $('.main-carousel').flickity({
+            // options
+            cellAlign: 'left',
+            contain: true,
+            autoPlay: false,
+            pauseAutoPlayOnHover: true,
+        });
+    </script>
 @endsection

@@ -209,6 +209,9 @@ class AdminPriceController extends Controller
     }
 
     public function deleteCat($id){
+        if($id == 2 || $id == 3){
+            return redirect()->back()->with('status-error', 'Bạn không được xóa danh mục này');
+        }
         $projectCat = PriceCat::find($id);
         if($projectCat){
             $projectCat->delete();

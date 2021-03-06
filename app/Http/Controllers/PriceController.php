@@ -10,7 +10,8 @@ use Illuminate\Http\Request;
 class PriceController extends Controller
 {
     public function index($slug,$id){
-        $price = Price::with('price_cat')->find($id);
+        $price = Price::with('price_cat')
+            ->where('status',1)->find($id);
         return view('prices.index',compact('price'));
     }
 

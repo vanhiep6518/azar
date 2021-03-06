@@ -79,7 +79,19 @@
                 <li><a href="{{route('admin.page')}}">Danh sách</a></li>
             </ul>
         </li>
+        <li class="nav-link {{ (request()->segment(2) == 'slider') ? 'active' : '' }}">
+            <a href="{{route('admin.slider')}}">
+                <div class="nav-link-icon d-inline-flex">
+                    <i class="far fa-folder"></i>
+                </div>
+                Slider
+            </a>            <i class="arrow fas fa-angle-right"></i>
 
+            <ul class="sub-menu">
+                <li><a href="{{route('admin.saveSlider')}}">Thêm mới</a></li>
+                <li><a href="{{route('admin.slider')}}">Danh sách</a></li>
+            </ul>
+        </li>
 
     </ul>
 </div>

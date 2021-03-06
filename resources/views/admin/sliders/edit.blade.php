@@ -3,7 +3,7 @@
     <div id="content" class="container-fluid">
         <div class="card">
             <div class="card-header font-weight-bold">
-                Thêm Bảng giá
+                Cập nhật Trang
             </div>
             @if (session('status'))
                 <div class="alert alert-success">
@@ -11,11 +11,11 @@
                 </div>
             @endif
             <div class="card-body">
-                <form method="POST" action="{{route('admin.savePrice')}}" enctype="multipart/form-data">
+                <form method="POST" action="{{route('admin.saveSlider',['id'=>$project->id])}}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label for="name">Tiêu đề</label>
-                        <input class="form-control @error('title') is-invalid @enderror" type="text" name="title" id="name" value="{{ old('title') }}">
+                        <label for="name">Tiêu đề Dự án</label>
+                        <input class="form-control @error('title') is-invalid @enderror" type="text" name="title" id="name" value="{{ $project->title }}">
                         @error('title')
                         <div class="invalid-feedback">
                             {{ $message }}
@@ -23,45 +23,47 @@
                         @enderror
                     </div>
 
+
                     <div class="form-group">
-                        <label for="content">Nội dung</label>
-                        <textarea id="mytextarea" class="form-control @error('content') is-invalid @enderror" name="content">{{ old('content') }}</textarea>
-                        @error('content')
+                        <label for="name">Tiêu đề phụ</label>
+                        <input class="form-control @error('sub_title') is-invalid @enderror" type="text" name="sub_title" id="name" value="{{ $project->sub_title }}">
+                        @error('sub_title')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                         @enderror
                     </div>
 
-
                     <div class="form-group">
-                        <label for="">Danh mục</label>
-                        <select class="form-control w-25 @error('project_cat') is-invalid @enderror" id="" name="project_cat">
-                            <option value="">Chọn danh mục</option>
-                            @if(!empty($listCat))
-                                @foreach($listCat as $item)
-                                    <option @if ($item->id == old('project_cat'))selected @endif
-                                        @if($item->id == 2 || $item->id == 3)  disabled @endif
-                                    value="{{$item->id}}">{{$item->name}}</option>
-                                @endforeach
-                            @endif
-                        </select>
-                        @error('project_cat')
+                        <label for="name">Đường dẫn</label>
+                        <input class="form-control @error('detail_url') is-invalid @enderror" type="text" name="detail_url" id="name" value="{{ $project->detail_url }}">
+                        @error('detail_url')
                         <div class="invalid-feedback">
                             {{ $message }}
                         </div>
                         @enderror
                     </div>
+
+                    <label for="fileupload">Ảnh đại diện</label><br>
+                    <input id="fileupload" name="file" type="file" multiple="multiple" />
+                    <br>
+                    <br />
+                    <b>Live Preview</b>
+                    <br />
+                    <div id="dvPreview">
+                    </div>
+                    <hr />
+
                     <div class="form-group">
                         <label for="">Trạng thái</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="2" checked>
+                            <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="2" @if($project->status == 2) checked  @endif>
                             <label class="form-check-label" for="exampleRadios1">
                                 Chờ duyệt
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="status" id="exampleRadios2" value="1">
+                            <input class="form-check-input" type="radio" name="status" id="exampleRadios2" value="1" @if($project->status == 1) checked  @endif>
                             <label class="form-check-label" for="exampleRadios2">
                                 Công khai
                             </label>
@@ -72,7 +74,7 @@
                         </div>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary">Thêm mới</button>
+                    <button type="submit" class="btn btn-primary">Cập nhật</button>
                 </form>
             </div>
         </div>

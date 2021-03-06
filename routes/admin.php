@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\AdminConstructionController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\AdminPriceController;
 use App\Http\Controllers\Admin\AdminPageController;
+use App\Http\Controllers\Admin\AdminSliderController;
 use Illuminate\Support\Facades\Route;
 
 Route::match(['get', 'post'], '/login', [LoginController::class, 'login'])->name('admin.login');
@@ -78,6 +79,15 @@ Route::middleware('authAdmin')->name('admin.')->group(function (){
 
         Route::match(['get', 'post'], '/save/{id?}', [AdminPageController::class, 'savePage'])->name('savePage');
         Route::get('/delete/{id}', [AdminPageController::class, 'deletePage'])->name('deletePage');
+
+    });
+
+    Route::group(['prefix' => 'slider'], function () {
+        Route::get('/list/{status?}', [AdminSliderController::class, 'listSlider'])->name('slider');
+        Route::post('/action', [AdminSliderController::class, 'actionSlider'])->name('actionSlider');
+
+        Route::match(['get', 'post'], '/save/{id?}', [AdminSliderController::class, 'saveSlider'])->name('saveSlider');
+        Route::get('/delete/{id}', [AdminSliderController::class, 'deleteSlider'])->name('deleteSlider');
 
     });
 });

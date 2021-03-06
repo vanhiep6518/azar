@@ -20,6 +20,6 @@ class PriceCat extends Model
 
     public function prices()
     {
-        return $this->hasMany(Price::class,'cat_id');
+        return $this->hasMany(Price::class,'cat_id')->where('status',1);
     }
 }

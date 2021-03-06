@@ -98,16 +98,16 @@
 {{--                        @php--}}
 {{--                            dd($cats['price']);--}}
 {{--                        @endphp--}}
-                        <li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-260">
-                            <a href="index.html#">Phong thủy</a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="index.html%3Fp=270.html">Xem hướng nhà</a></li>
-                                <li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="index.html%3Fp=273.html">Xem hướng bếp</a></li>
-                                <li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="index.html%3Fp=275.html">Xem màu hợp mệnh</a></li>
-                                <li id="menu-item-279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-279"><a href="index.html%3Fp=277.html">Xem tuổi xây nhà</a></li>
-                                <li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="index.html%3Fp=251.html">Thước lỗ ban</a></li>
-                            </ul>
-                        </li>
+{{--                        <li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-260">--}}
+{{--                            <a href="index.html#">Phong thủy</a>--}}
+{{--                            <ul class="sub-menu">--}}
+{{--                                <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="index.html%3Fp=270.html">Xem hướng nhà</a></li>--}}
+{{--                                <li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="index.html%3Fp=273.html">Xem hướng bếp</a></li>--}}
+{{--                                <li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="index.html%3Fp=275.html">Xem màu hợp mệnh</a></li>--}}
+{{--                                <li id="menu-item-279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-279"><a href="index.html%3Fp=277.html">Xem tuổi xây nhà</a></li>--}}
+{{--                                <li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="index.html%3Fp=251.html">Thước lỗ ban</a></li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
                         <li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a href="{{route('introduce')}}">Giới thiệu</a></li>
                         <li class="item__custom d-md-none"><a href="login.html" class="">Login</a></li>
                         <li class="item__custom d-md-none"><a href="https://www.facebook.com/KientrucAZAR/" class="d-inline-block"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w" class="d-inline-block"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
@@ -462,8 +462,8 @@
     </nav>
 </div>
 <div id="arcontactus"></div>
-<script src="{{asset('js/jquery.bind-first-0.2.3.min.js')}}"></script>
 <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('js/jquery.bind-first-0.2.3.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/popper.min.js')}}"></script>
 <script src="{{asset('js/js.cookie-2.1.3.min.js')}}"></script>
