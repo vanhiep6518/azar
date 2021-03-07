@@ -28,7 +28,7 @@
             <div class="sc__wrap d-flex justify-content-between">
                 <div class="header__brand d-flex align-items-center">
                     <h1 class="logo">
-                        <a href="index.html" class="d-flex justify-content-between" title="Thiết kế &amp; Xây dựng Nhà đẹp AZAR">
+                        <a href="/" class="d-flex justify-content-between" title="Thiết kế &amp; Xây dựng Nhà đẹp AZAR">
                             <div class="logo1__wrap"><img src="{{asset('images/LOGO-HINH.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp AZAR" class="img-fluid --st1"/></div>
                             <div class="logo2__wrap btn__effect --st2"><img src="{{asset('images/lgotexxt.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp AZAR" class="img-fluid --st2"/></div>
                         </a>
