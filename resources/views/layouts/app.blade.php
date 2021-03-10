@@ -23,14 +23,14 @@
 </head>
 <body data-rsssl="1" class="home blog">
 <div class="wrapper">
-    <header class="header header__fix">
+    <header class="header header__fix active">
         <div class="container-fluid">
             <div class="sc__wrap d-flex justify-content-between">
                 <div class="header__brand d-flex align-items-center">
                     <h1 class="logo">
                         <a href="/" class="d-flex justify-content-between" title="Thiết kế &amp; Xây dựng Nhà đẹp AZAR">
-                            <div class="logo1__wrap"><img src="{{asset('images/LOGO-HINH.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp AZAR" class="img-fluid --st1"/></div>
-                            <div class="logo2__wrap btn__effect --st2"><img src="{{asset('images/lgotexxt.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp AZAR" class="img-fluid --st2"/></div>
+                            <div class="logo1__wrap"><img src="{{asset('images/Logo.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp AZAR" class="img-fluid --st1"/></div>
+{{--                            <div class="logo2__wrap btn__effect --st2"><img src="{{asset('images/lgotexxt.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp AZAR" class="img-fluid --st2"/></div>--}}
                         </a>
                     </h1>
                 </div>
@@ -110,12 +110,12 @@
 {{--                        </li>--}}
                         <li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a href="{{route('introduce')}}">Giới thiệu</a></li>
                         <li class="item__custom d-md-none"><a href="login.html" class="">Login</a></li>
-                        <li class="item__custom d-md-none"><a href="https://www.facebook.com/KientrucAZAR/" class="d-inline-block"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w" class="d-inline-block"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                        <li class="item__custom d-md-none"><a href="https://www.facebook.com/Thietkenhatrongoigiare/" class="d-inline-block"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w" class="d-inline-block"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                     </ul>
                     <ul class="el__right">
                         <li class=""><a href="login.html" class=""><i class="fa fa-user" aria-hidden="true"></i></a></li>
                         <li class=""><a href="danh-muc-noi-that/sieu-thi-noi-that.html" class=""><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                        <li class=""><a href="https://www.facebook.com/KientrucAZAR/" class=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li class=""><a href="https://www.facebook.com/Thietkenhatrongoigiare/" class=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li class=""><a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w" class=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                         <li class=" hbtn__search">
                             <a href="index.html#" class=""><i class="fa fa-search" aria-hidden="true"></i></a>
@@ -261,22 +261,24 @@
                             <p class="ft__title btn__effect btn--active button_hover">Liên hệ với chúng tôi</p>
                         </div>
                         <address class="footer__address mb-4">
-                            <p class="company__name">CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ <br/>&amp; XÂY DỰNG AZAR</p>
-                            <p class="mb-3">CHI NHÁNH 1: 29 PHÚ XUÂN 2, HÒA MINH, LIÊN CHIỂU , ĐÀ NẴNG</p>
-                            <p class="mb-3">CHI NHÁNH 2: 34 NHẤT CHI MAI, HÒA XUÂN, CẨM LỆ, ĐÀ NẴNG</p>
-                            <p class="mb-3">Hotline: <a href="tel: 0898 234 779"> 0898 234 779</a> - <a href="tel: 0905 770 456"> 0905 770 456</a></p>
-                            <p>Email: KIENTRUCAZAR@GMAIL.COM</p>
-                            <p>MST: 0401992979</p>
+                            <p class="company__name">CÔNG TY TƯ VẤN THIẾT KẾ VÀ <br>XÂY DỰNG 81Art</p>
+                            <p class="mb-3">CHI NHÁNH 1: 78 NGUYÊN MINH CHẤN, HÒA KHÁNH NAM, LIÊN CHIỂU ĐÀ NẴNG.</p>
+                            <p class="mb-3">CHI NHÁNH 2: 71/17 TRẦN ĐẠI NGHĨA, TỔ 6, YÊN THẾ, TP.PLEIKU, GIA LAI</p>
+                            <p class="mb-3">Hotline: <a href="tel: 0374 059 517"> 0374 059 517</a></p>
+                            <p>Email: 81ARTSTUDIO@GMAIL.COM</p>
+{{--                            <p>MST: 0401992979</p>--}}
                         </address>
-                        <div class="social__box --s1 flex-grow-1 mb-2"> <a href="https://www.facebook.com/KientrucAZAR/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> <a href="https://www.tiktok.com/@azar.vn" class="ic--tiktok"><img src="{{asset('images/tiktok.png')}}" alt=""/></a> <a href="index.html"><i class="fa fa-instagram" aria-hidden="true"></i></a> <a href="index.html"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></div>
+                        <div class="social__box --s1 flex-grow-1 mb-2"> <a href="https://www.facebook.com/Thietkenhatrongoigiare"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> <a href="https://www.tiktok.com/@azar.vn" class="ic--tiktok"><img src="{{asset('images/tiktok.png')}}" alt=""/></a> <a href="index.html"><i class="fa fa-instagram" aria-hidden="true"></i></a> <a href="index.html"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="custom__mw">
                             <div class="footer__box">
-                                <div class="fb-page" data-href="https://www.facebook.com/KientrucAZAR/" data-tabs="" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+                                <div class="fb-page" data-href="https://www.facebook.com/Thietkenhatrongoigiare/" data-tabs="" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
                             </div>
                             <div id="" class="footer__box">
-                                <div class="gmap__footer"> <iframe style="border: 0;" tabindex="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.868705331649!2d108.16257871485851!3d16.072301588879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142190cba92b73b%3A0x6c1bf7644e552fc1!2zVGhp4bq_dCBr4bq_IFjDonkgZOG7sW5nIE5ow6AgxJHhurlwIEFaQVI!5e0!3m2!1svi!2s!4v1591858054258!5m2!1svi!2s" width="600" height="450" frameborder="0" allowfullscreen="" aria-hidden="false"></iframe></div>
+                                <div class="gmap__footer">
+                                    <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=78%20Nguy%E1%BB%85n%20Minh%20Ch%E1%BA%A5n%2C%20H%C3%B2a%20Kh%C3%A1nh%20Nam%2C%20Li%C3%AAn%20Chi%E1%BB%83u%2C%20%C4%90%C3%A0%20N%E1%BA%B5ng%2C%20Vietnam&key=AIzaSyBMMiAwb58mAVGONPBiGud5OT1Kjh-64w4"></iframe>
+                                </div>
                                 <div id="dktv_formsc"></div>
                             </div>
                         </div>
@@ -318,15 +320,15 @@
                                 <div class="item__honline">
                                     <div class="item__sonline2">
                                         <img src="wp-content/themes/blogdefault/assets/img/phone-call.svg" class="" alt=""/>
-                                        <div class="ml-1 d-inline-block"> 0898 234 779</div>
+                                        <div class="ml-1 d-inline-block"> 0374 059 517</div>
                                     </div>
                                 </div>
-                                <div class="item__honline">
-                                    <div class="item__sonline2">
-                                        <img src="wp-content/themes/blogdefault/assets/img/phone-call.svg" class="" alt=""/>
-                                        <div class="ml-1 d-inline-block"> 0905 770 456</div>
-                                    </div>
-                                </div>
+{{--                                <div class="item__honline">--}}
+{{--                                    <div class="item__sonline2">--}}
+{{--                                        <img src="wp-content/themes/blogdefault/assets/img/phone-call.svg" class="" alt=""/>--}}
+{{--                                        <div class="ml-1 d-inline-block"> 0905 770 456</div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
                             </div>
                         </div>
                     </div>
@@ -339,17 +341,17 @@
     </section>
     <div class="support-online">
         <div class="support-content">
-            <a class="mes d-none d-md-block " href="https://www.messenger.com/t/KientrucAZAR">
+            <a class="mes d-none d-md-block " href="https://www.facebook.com/messages/t/101371428384619">
                 <img src="{{asset('images/messenger-2.png')}}" class="" alt=""/> <span>Nhắn tin với chúng tôi qua facebook</span>
                 <p class="support__mb--text d-md-none">Messenger</p>
             </a>
-            <a class="zalo d-none d-md-block " href="https://zalo.me/0905770456">
+            <a class="zalo d-none d-md-block " href="https://zalo.me/0374059517">
                 <img src="{{asset('images/zalo-2.png')}}" class="" alt=""/> <span>Nhắn tin với chúng tôi qua Zalo</span>
                 <p class="support__mb--text d-md-none">Gọi ngay</p>
             </a>
-            <a href="tel:0898234779" class="call-nowz" rel="nofollow">
+            <a href="tel:0374059517" class="call-nowz" rel="nofollow">
                 <img src="{{asset('images/icon-phone.gif')}}" class="" alt=""/> <span>Gọi ngay cho chúng tôi</span>
-                <p class="support__mb--text">Gọi ngay <span class="d-none d-md-inline-block"> 0898 234 779</span></p>
+                <p class="support__mb--text">Gọi ngay <span class="d-none d-md-inline-block"> 0374 059 517</span></p>
             </a>
             <a href="index.html#dktv_formsc" class="call-form" rel="nofollow">
                 <i class="fa fa-user-o d-block d-md-none" aria-hidden="true"></i> <span>Để lại lời nhắn cho chúng tôi</span>
@@ -456,7 +458,7 @@
                 </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a href="index.html%3Fp=2.html">Giới thiệu</a></li>
                 <li class="item__custom d-md-none"><a href="login.html" class="">Login</a></li>
-                <li class="item__custom d-md-none"><a href="https://www.facebook.com/KientrucAZAR/" class="d-inline-block"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w" class="d-inline-block"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                <li class="item__custom d-md-none"><a href="https://www.facebook.com/Thietkenhatrongoigiare/" class="d-inline-block"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w" class="d-inline-block"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -470,7 +472,15 @@
 <script src="{{asset('js/flickity.pkgd.min.js')}}"></script>
 
 @yield('custom-js')
-<script></script>
+{{--<script>--}}
+{{--    $(document).scroll(function() {--}}
+{{--        if($(document).scrollTop() > 0){--}}
+{{--            $('.header__fix').addClass('active');--}}
+{{--        }else{--}}
+{{--            $('.header__fix').removeClass('active');--}}
+{{--        }--}}
+{{--    })--}}
+{{--</script>--}}
 </body>
 </html>
 
