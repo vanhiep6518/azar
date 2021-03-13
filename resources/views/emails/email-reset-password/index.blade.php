@@ -10,7 +10,7 @@
 <body>
 <table width="680" border="0" cellspacing="0" cellpadding="0" style="background:#f5f5f5;border-top:5px #2292d0 solid;margin:0 auto;border-left:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd">
     <tbody><tr>
-        <td><h1 style="font-size:28px;font-weight:normal;text-align:center;padding:25px 0px;margin:0">Lấy lại mật khẩu trên Azar.vn</h1></td>
+        <td><h1 style="font-size:28px;font-weight:normal;text-align:center;padding:25px 0px;margin:0">Lấy lại mật khẩu trên 81ART.vn</h1></td>
     </tr>
     <tr>
         <td>
@@ -18,7 +18,7 @@
                 <div style="float:left;width:580px;border-bottom:1px #dddddd solid;margin:0 0 0 46px;display:inline;padding:25px 0px;line-height:18px">
                     <span><i>Chào <b>{{$user->name}}}</b>,</i></span>
                     <p style="padding:10px 0px 15px 0px;margin:0;line-height:24px">
-                        Azar.vn vừa nhận được một yêu cầu lấy lại mật khẩu trên tài khoản của bạn. Để thiết lập lại mật khẩu bạn vui lòng click vào link bên dưới:<br>
+                        81art.vn vừa nhận được một yêu cầu lấy lại mật khẩu trên tài khoản của bạn. Để thiết lập lại mật khẩu bạn vui lòng click vào link bên dưới:<br>
                         <a href="{{route('admin.reset-pass')}}?email={{$user->email}}&token={{$token}}" style="color:#15c" target="_blank" >{{route('admin.reset-pass')}}/?<wbr>email={{$user->email}}<wbr>&amp;token=<wbr>{{$token}}<wbr></a>
                         <br>Nếu không phải yêu cầu của bạn, hãy bỏ qua email này.
                     </p>

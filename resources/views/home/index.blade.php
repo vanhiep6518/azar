@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title','Thiết kế & Xây dựng Nhà đẹp 81ART')
 @section('content')
     <section class="slider">
         <div class="main-carousel dn__slider">
@@ -77,13 +78,13 @@
         <div class="container-fluid">
             <header class="h-header s2 text-center wow fadeInUp">
                 <p class="h-title color--white text-uppercase">VỀ CHÚNG TÔI</p>
-                <p class="h-sub color--white mt-2">Công ty Cổ phần Tư vấn thiết kế &amp; Xây dựng AZAR với 5 kinh nghiệm hoạt động cùng hàng trăm dự án lớn nhỏ khắp khu vực miền Trung.<br/> AZAR Thiết kế và Thi công từ Nhà phố, Biệt thự cho đến những công trình lớn như Khách sạn, Homestay, Nhà hàng, Coffee, Office, Shophouse, Resort, . . . với chi phí cực kỳ cạnh tranh và tự tin đem đến khách hàng sản phẩm tốt nhất trong từng phân khúc.</p>
+                <p class="h-sub color--white mt-2">Công ty Cổ phần Tư vấn thiết kế &amp; Xây dựng 81ART với 5 kinh nghiệm hoạt động cùng hàng trăm dự án lớn nhỏ khắp khu vực miền Trung.<br/> 81ART Thiết kế và Thi công từ Nhà phố, Biệt thự cho đến những công trình lớn như Khách sạn, Homestay, Nhà hàng, Coffee, Office, Shophouse, Resort, . . . với chi phí cực kỳ cạnh tranh và tự tin đem đến khách hàng sản phẩm tốt nhất trong từng phân khúc.</p>
             </header>
         </div>
         <div class="container-fluid">
             <div class="item__thumb pb-5 pb-md-3 wow fadeInUp">
-                <div class="mb-2"> <img src="{{asset('images/LOGO-HINH.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp AZAR" class="img-flnnnnid"/></div>
-                <div> <img src="{{asset('images/LOGO-CHU.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp AZAR" class="img-fluid"/></div>
+                <div class="mb-2"> <img src="{{asset('images/LOGO-HINH.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-flnnnnid"/></div>
+                <div> <img src="{{asset('images/LOGO-CHU.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid"/></div>
                 <a href="gioi-thieu.html" class="thumb__readmore">Khám phá thêm</a>
             </div>
         </div>
@@ -94,7 +95,7 @@
                         <div class="intro__item text-center wow fadeInUp">
                             <div class="item__meta">
                                 <p class="item__title">Lịch sử</p>
-                                <p class="item__excerpt">Với 5 năm thành lập và phát triển, đến nay AZAR đã mở rộng quy mô và trở thành công ty với 3 ngành nghề chính Kiến trúc - Xây dựng - Nội thất.</p>
+                                <p class="item__excerpt">Với 5 năm thành lập và phát triển, đến nay 81ART đã mở rộng quy mô và trở thành công ty với 3 ngành nghề chính Kiến trúc - Xây dựng - Nội thất.</p>
                             </div>
                         </div>
                     </div>
@@ -102,7 +103,7 @@
                         <div class="intro__item text-center wow fadeInUp">
                             <div class="item__meta">
                                 <p class="item__title">Tầm nhìn</p>
-                                <p class="item__excerpt">AZAR không ngừng đổi mới, cập nhật xu hướng thiết kế, sáng tạo để kiến tạo các sản phẩm, dịch vụ đẳng cấp, mục tiêu trở thành doanh nghiệp dẫn đầu thị trường khu vực.</p>
+                                <p class="item__excerpt">81ART không ngừng đổi mới, cập nhật xu hướng thiết kế, sáng tạo để kiến tạo các sản phẩm, dịch vụ đẳng cấp, mục tiêu trở thành doanh nghiệp dẫn đầu thị trường khu vực.</p>
                             </div>
                         </div>
                     </div>
@@ -110,7 +111,7 @@
                         <div class="intro__item text-center wow fadeInUp">
                             <div class="item__meta">
                                 <p class="item__title">Sứ mệnh</p>
-                                <p class="item__excerpt">Kiến tạo không gian sống đẳng cấp, phù hợp với Công năng - Phong thủy - Chi phí của khách hàng đưa tra, đem đến những sản phẩm, trải nghiệm dịch vụ cạnh tranh nhất trong từng phân khúc, hướng tới tương lai vững bền với thương hiệu cao cấp mang tên AZAR.</p>
+                                <p class="item__excerpt">Kiến tạo không gian sống đẳng cấp, phù hợp với Công năng - Phong thủy - Chi phí của khách hàng đưa tra, đem đến những sản phẩm, trải nghiệm dịch vụ cạnh tranh nhất trong từng phân khúc, hướng tới tương lai vững bền với thương hiệu cao cấp mang tên 81ART.</p>
                             </div>
                         </div>
                     </div>
@@ -145,7 +146,7 @@
 {{--                                            <h5 class="mb-0"> <button class="btn btn-link " data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">2. ĐO ĐẠC KHẢO SÁT HIỆN TRẠNG, KÝ HĐ THIẾT KẾ VÀ TẠM ỨNG THEO HĐ</button></h5>--}}
 {{--                                        </div>--}}
 {{--                                        <div id="collapse2" class="collapse " aria-labelledby="heading2" data-parent="#accordion">--}}
-{{--                                            <div class="card-body">- Đo dạc kích thước khu đất, hoặc kích thước hiện trạng công trình.<br/> - Lập bảng tiến độ thiết kế và tiến độ thanh toán gửi chủ đầu tư.<br/> - Hoàn thiện phương án Mặt bằng .<br/> - Số lần đưa phương án sơ bộ không quá 03 lần, nếu không phù hợp chủ đầu tư có thể chấm dứt việc hợp tác.<br/> - Sau khi thống nhất quy trình thiết kế đo đạc khảo sát lập bản vẽ hiện trạng gửi chủ đầu tư AZAR tạm ứng số tiền 40%.</div>--}}
+{{--                                            <div class="card-body">- Đo dạc kích thước khu đất, hoặc kích thước hiện trạng công trình.<br/> - Lập bảng tiến độ thiết kế và tiến độ thanh toán gửi chủ đầu tư.<br/> - Hoàn thiện phương án Mặt bằng .<br/> - Số lần đưa phương án sơ bộ không quá 03 lần, nếu không phù hợp chủ đầu tư có thể chấm dứt việc hợp tác.<br/> - Sau khi thống nhất quy trình thiết kế đo đạc khảo sát lập bản vẽ hiện trạng gửi chủ đầu tư 81ART tạm ứng số tiền 40%.</div>--}}
 {{--                                        </div>--}}
 {{--                                    </div>--}}
 {{--                                    <div class="card ">--}}
@@ -161,7 +162,7 @@
 {{--                                            <h5 class="mb-0"> <button class="btn btn-link " data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">4. TRIỂN KHAI PHƯƠNG ÁN 3D VÀ XUẤT HỒ SƠ KỸ THUẬT THI CÔNG</button></h5>--}}
 {{--                                        </div>--}}
 {{--                                        <div id="collapse4" class="collapse " aria-labelledby="heading4" data-parent="#accordion">--}}
-{{--                                            <div class="card-body">- Triển khai phương án 3D không quá 3 lần.<br/> - Sau khi chủ đầu tư lựa chọn phương án 3D phù hợp AZAR sẽ tiến hành triển khai hồ sơ kỹ thuật thi công.<br/> - Khi xuất hồ sơ kỹ thuật thi công số lần chỉnh sửa phương án chọn không quá 02 lần mỗi lần không quá 30%.<br/> - Nếu chỉnh sửa bản vẽ do sai sót từ AZAR thì hoàn toàn không phát sinh chi phí.<br/> - Thời gian chỉnh sửa bản vẽ không được tính vào hợp đồng đã ký.</div>--}}
+{{--                                            <div class="card-body">- Triển khai phương án 3D không quá 3 lần.<br/> - Sau khi chủ đầu tư lựa chọn phương án 3D phù hợp 81ART sẽ tiến hành triển khai hồ sơ kỹ thuật thi công.<br/> - Khi xuất hồ sơ kỹ thuật thi công số lần chỉnh sửa phương án chọn không quá 02 lần mỗi lần không quá 30%.<br/> - Nếu chỉnh sửa bản vẽ do sai sót từ 81ART thì hoàn toàn không phát sinh chi phí.<br/> - Thời gian chỉnh sửa bản vẽ không được tính vào hợp đồng đã ký.</div>--}}
 {{--                                        </div>--}}
 {{--                                    </div>--}}
 {{--                                    <div class="card ">--}}
@@ -169,7 +170,7 @@
 {{--                                            <h5 class="mb-0"> <button class="btn btn-link " data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">5. BÀN GIAO HỒ SƠ VÀ THANH TOÁN HỢP ĐỒNG</button></h5>--}}
 {{--                                        </div>--}}
 {{--                                        <div id="collapse5" class="collapse " aria-labelledby="heading5" data-parent="#accordion">--}}
-{{--                                            <div class="card-body">- Sau khi AZAR bàn giao đầy đủ hồ sơ kỹ thuật thi công chủ đầu tư chuyển nốt số tiền còn lại 30%. - Thời hạn thanh toán không quá 10 ngày sau khi bàn giao bản vẽ.</div>--}}
+{{--                                            <div class="card-body">- Sau khi 81ART bàn giao đầy đủ hồ sơ kỹ thuật thi công chủ đầu tư chuyển nốt số tiền còn lại 30%. - Thời hạn thanh toán không quá 10 ngày sau khi bàn giao bản vẽ.</div>--}}
 {{--                                        </div>--}}
 {{--                                    </div>--}}
 {{--                                    <div class="card ">--}}
@@ -202,9 +203,9 @@
 {{--                        <div class="row no-guttersz">--}}
 {{--                            <div class="col-md-6">--}}
 {{--                                <div class="item__meta wow fadeInLeft">--}}
-{{--                                    <p class="item__title"><span>AZAR</span> <span>STORE</span></p>--}}
+{{--                                    <p class="item__title"><span>81ART</span> <span>STORE</span></p>--}}
 {{--                                    <div>--}}
-{{--                                        <p>HÀNG NGÀN MẪU MÃ ĐA DẠNG, HIỆN ĐẠI<br/> ĐƯỢC AZAR CẬP NHẬT LIÊN TỤC<br/> ĐỂ ĐƯA ĐÊN KHÁCH HÀNG</p>--}}
+{{--                                        <p>HÀNG NGÀN MẪU MÃ ĐA DẠNG, HIỆN ĐẠI<br/> ĐƯỢC 81ART CẬP NHẬT LIÊN TỤC<br/> ĐỂ ĐƯA ĐÊN KHÁCH HÀNG</p>--}}
 {{--                                    </div>--}}
 {{--                                    <div class="mt-auto"> <a href="danh-muc-noi-that/sieu-thi-noi-that/index.html" class="item__readmore color--black">Xem chi tiết</a></div>--}}
 {{--                                </div>--}}
@@ -231,7 +232,7 @@
 {{--                        <a href="index.html%3Fp=1581.html" class="item__thumb dnfix__thumb"> <img width="300" height="200" src="wp-content/uploads/2020/08/ban-tho-to-tien.jpg" class="img-fluid wp-post-image" alt="THỦ TỤC MƯỢN TUỔI LÀM NHÀ _ THI CÔNG NHÀ ĐẸP 2020" srcset="wp-content/uploads/2020/08/ban-tho-to-tien.jpg 1000w, wp-content/uploads/2020/08/ban-tho-to-tien-768x512.jpg 768w, wp-content/uploads/2020/08/ban-tho-to-tien-150x100.jpg 150w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px"/> </a>--}}
 {{--                        <div class="item__meta">--}}
 {{--                            <div class="item__title text__truncate text__truncate--1"><a href="index.html%3Fp=1581.html">THỦ TỤC MƯỢN TUỔI LÀM NHÀ _ THI CÔNG NHÀ ĐẸP 2020</a></div>--}}
-{{--                            <div class="item__excerpt text__truncate text__truncate--2">HÔM NAY AZAR XIN CHIA SẺ VỚI ANH CHỊ VỀ THỦ TỤC MƯỢN TUỔI LÀM NHÀ GỒM 6 ĐIỀU CƠ BẢN CẦN BIẾT 1. MƯỢN TUỔI LÀM NHÀ CÓ TỐT KHÔNG? Để trả lời câu hỏi có nên cho mượn tuổi làm nhà không, trước hết cùng tìm hiểu quan niệm mượn tuổi xây nhà là gì. Xem tuổi…</div>--}}
+{{--                            <div class="item__excerpt text__truncate text__truncate--2">HÔM NAY 81ART XIN CHIA SẺ VỚI ANH CHỊ VỀ THỦ TỤC MƯỢN TUỔI LÀM NHÀ GỒM 6 ĐIỀU CƠ BẢN CẦN BIẾT 1. MƯỢN TUỔI LÀM NHÀ CÓ TỐT KHÔNG? Để trả lời câu hỏi có nên cho mượn tuổi làm nhà không, trước hết cùng tìm hiểu quan niệm mượn tuổi xây nhà là gì. Xem tuổi…</div>--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
 {{--                </div>--}}
@@ -240,7 +241,7 @@
 {{--                        <a href="index.html%3Fp=1594.html" class="item__thumb dnfix__thumb"> <img width="300" height="300" src="wp-content/uploads/2020/08/Untitled-3-min-21.jpg" class="img-fluid wp-post-image" alt="XEM PHONG THỦY CHÍNH XÁC 2020" srcset="wp-content/uploads/2020/08/Untitled-3-min-21.jpg 500w, wp-content/uploads/2020/08/Untitled-3-min-21-100x100.jpg 100w, wp-content/uploads/2020/08/Untitled-3-min-21-150x150.jpg 150w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px"/> </a>--}}
 {{--                        <div class="item__meta">--}}
 {{--                            <div class="item__title text__truncate text__truncate--1"><a href="index.html%3Fp=1594.html">XEM PHONG THỦY CHÍNH XÁC 2020</a></div>--}}
-{{--                            <div class="item__excerpt text__truncate text__truncate--2">HƯỚNG DẪN XEM PHONG THỦY NGAY TRÊN AZAR.VN MỘT CÁCH CHI TIẾT NHẤT Bước 1: Truy cập azar.vn  →  Chọn mục Phong thủy mà bạn muốn xem tại Tab Phong thủy ở thanh Menu dấu 3 gạch ở bản Mobile góc phải trên   Bước 2: Xem hướng nhà  →  Điền “Năm…</div>--}}
+{{--                            <div class="item__excerpt text__truncate text__truncate--2">HƯỚNG DẪN XEM PHONG THỦY NGAY TRÊN 81ART.VN MỘT CÁCH CHI TIẾT NHẤT Bước 1: Truy cập 81ART.vn  →  Chọn mục Phong thủy mà bạn muốn xem tại Tab Phong thủy ở thanh Menu dấu 3 gạch ở bản Mobile góc phải trên   Bước 2: Xem hướng nhà  →  Điền “Năm…</div>--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
 {{--                </div>--}}
@@ -255,9 +256,9 @@
 {{--                </div>--}}
 {{--                <div class="col-md-4 item__wrap">--}}
 {{--                    <div class="item__ttnoithat ef__zoomin">--}}
-{{--                        <a href="index.html%3Fp=1609.html" class="item__thumb dnfix__thumb"> <img width="300" height="190" src="wp-content/uploads/2020/08/02a.jpg" class="img-fluid wp-post-image" alt="TOP NHỮNG CÔNG TRÌNH THI CÔNG TRỌN GÓI CỦA AZAR" srcset="wp-content/uploads/2020/08/02a.jpg 1848w, wp-content/uploads/2020/08/02a-768x487.jpg 768w, wp-content/uploads/2020/08/02a-1536x973.jpg 1536w, wp-content/uploads/2020/08/02a-1568x994.jpg 1568w, wp-content/uploads/2020/08/02a-158x100.jpg 158w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px"/> </a>--}}
+{{--                        <a href="index.html%3Fp=1609.html" class="item__thumb dnfix__thumb"> <img width="300" height="190" src="wp-content/uploads/2020/08/02a.jpg" class="img-fluid wp-post-image" alt="TOP NHỮNG CÔNG TRÌNH THI CÔNG TRỌN GÓI CỦA 81ART" srcset="wp-content/uploads/2020/08/02a.jpg 1848w, wp-content/uploads/2020/08/02a-768x487.jpg 768w, wp-content/uploads/2020/08/02a-1536x973.jpg 1536w, wp-content/uploads/2020/08/02a-1568x994.jpg 1568w, wp-content/uploads/2020/08/02a-158x100.jpg 158w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px"/> </a>--}}
 {{--                        <div class="item__meta">--}}
-{{--                            <div class="item__title text__truncate text__truncate--1"><a href="index.html%3Fp=1609.html">TOP NHỮNG CÔNG TRÌNH THI CÔNG TRỌN GÓI CỦA AZAR</a></div>--}}
+{{--                            <div class="item__title text__truncate text__truncate--1"><a href="index.html%3Fp=1609.html">TOP NHỮNG CÔNG TRÌNH THI CÔNG TRỌN GÓI CỦA 81ART</a></div>--}}
 {{--                            <div class="item__excerpt text__truncate text__truncate--2">Sau bước chọn lựa đơn vị thiết kế kiến trúc là bước tìm kiếm đơn vị thi công xây dựng công trình nhà ở. Đây là một công đoạn vất vả chẳng kém việc lọc các công ty thiết kế kiến trúc. Bởi, số lượng các công ty xây dựng hiện nay là rất nhiều, khó phân…</div>--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
@@ -267,7 +268,7 @@
 {{--                        <a href="index.html%3Fp=1583.html" class="item__thumb dnfix__thumb"> <img width="300" height="251" src="wp-content/uploads/2020/08/cac-buoc-tien-hanh-le-cung-dong-tho-lam-nha.jpg" class="img-fluid wp-post-image" alt="CÚNG ĐỘNG THỔ KHỞI CÔNG LÀM NHÀ _ THI CÔNG TRỌN GÓI 2020" srcset="wp-content/uploads/2020/08/cac-buoc-tien-hanh-le-cung-dong-tho-lam-nha.jpg 940w, wp-content/uploads/2020/08/cac-buoc-tien-hanh-le-cung-dong-tho-lam-nha-768x644.jpg 768w, wp-content/uploads/2020/08/cac-buoc-tien-hanh-le-cung-dong-tho-lam-nha-119x100.jpg 119w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px"/> </a>--}}
 {{--                        <div class="item__meta">--}}
 {{--                            <div class="item__title text__truncate text__truncate--1"><a href="index.html%3Fp=1583.html">CÚNG ĐỘNG THỔ KHỞI CÔNG LÀM NHÀ _ THI CÔNG TRỌN GÓI 2020</a></div>--}}
-{{--                            <div class="item__excerpt text__truncate text__truncate--2">HÔM NAY AZAR XIN CHIA SẺ VỚI ANH CHỊ VỀ THỦ TỤC CÚNG ĐỘNG THỔ KHỞI CÔNG LÀM NHÀ _ CÁCH SẮM LỄ VẬT, BÀI CÚNG CHUẨN Văn khấn, bài cúng động thổ xây nhà, khởi công nhà máy, dự án, cách sắm lễ vật, mâm cúng thổ công gồm những gì để vạn sự hanh thông. Tro…</div>--}}
+{{--                            <div class="item__excerpt text__truncate text__truncate--2">HÔM NAY 81ART XIN CHIA SẺ VỚI ANH CHỊ VỀ THỦ TỤC CÚNG ĐỘNG THỔ KHỞI CÔNG LÀM NHÀ _ CÁCH SẮM LỄ VẬT, BÀI CÚNG CHUẨN Văn khấn, bài cúng động thổ xây nhà, khởi công nhà máy, dự án, cách sắm lễ vật, mâm cúng thổ công gồm những gì để vạn sự hanh thông. Tro…</div>--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
 {{--                </div>--}}
@@ -296,7 +297,7 @@
 {{--                                        <div class="item__sub">Hòa Xuân</div>--}}
 {{--                                    </div>--}}
 {{--                                </div>--}}
-{{--                                <div class="item__comment">Thiết kế đã đẹp rồi lên hoàn thiện còn đẹp hơn. Cảm ơn AZAR đội ngũ trẻ đầy nhiệt huyết và chỉnh chu giúp chị hoàn thành ngôi nhà mơ ước của mình</div>--}}
+{{--                                <div class="item__comment">Thiết kế đã đẹp rồi lên hoàn thiện còn đẹp hơn. Cảm ơn 81ART đội ngũ trẻ đầy nhiệt huyết và chỉnh chu giúp chị hoàn thành ngôi nhà mơ ước của mình</div>--}}
 {{--                            </div>--}}
 {{--                        </div>--}}
 {{--                        <div class="col-md-4 item__wrap">--}}
@@ -308,7 +309,7 @@
 {{--                                        <div class="item__sub">Nguyễn Thành Hãn, Hải Châu</div>--}}
 {{--                                    </div>--}}
 {{--                                </div>--}}
-{{--                                <div class="item__comment">Cảm ơn AZAR đã đem đến căn nhà quá đẹp với mức giá quá tốt. Thi công nhanh với trang thiết bị hiện đại cho anh cảm giác an tâm khi xây nhà.</div>--}}
+{{--                                <div class="item__comment">Cảm ơn 81ART đã đem đến căn nhà quá đẹp với mức giá quá tốt. Thi công nhanh với trang thiết bị hiện đại cho anh cảm giác an tâm khi xây nhà.</div>--}}
 {{--                            </div>--}}
 {{--                        </div>--}}
 {{--                        <div class="col-md-4 item__wrap">--}}
@@ -320,7 +321,7 @@
 {{--                                        <div class="item__sub">Văn phòng cho thuê Q5</div>--}}
 {{--                                    </div>--}}
 {{--                                </div>--}}
-{{--                                <div class="item__comment">Giao cho AZAR Thiết kế một phương án hơn cả mong đợi. Đường nét hiện đại đã làm tòa nhà của Công ty thực sự nổi bật</div>--}}
+{{--                                <div class="item__comment">Giao cho 81ART Thiết kế một phương án hơn cả mong đợi. Đường nét hiện đại đã làm tòa nhà của Công ty thực sự nổi bật</div>--}}
 {{--                            </div>--}}
 {{--                        </div>--}}
 {{--                        <div class="col-md-4 item__wrap">--}}
@@ -344,7 +345,7 @@
 {{--                                        <div class="item__sub">Biệt thự nhà anh Long</div>--}}
 {{--                                    </div>--}}
 {{--                                </div>--}}
-{{--                                <div class="item__comment">Đội ngũ thi công của AZAR đã giúp anh hoàn thành ngôi nhà của mình quá đẹp và vượt ngoài mong đợi.</div>--}}
+{{--                                <div class="item__comment">Đội ngũ thi công của 81ART đã giúp anh hoàn thành ngôi nhà của mình quá đẹp và vượt ngoài mong đợi.</div>--}}
 {{--                            </div>--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
@@ -534,12 +535,12 @@
 {{--                            <p><span style="color: #339966;"><strong>1. Thiết kế kiến trúc và thiết kế nội thất</strong></span></p>--}}
 {{--                            <p><strong><span style="color: #808080;">Bước 1:</span> Khách hàng gửi yêu cầu – Lên phương án cơ bản và báo giá theo phương án</strong></p>--}}
 {{--                            <p>– Chủ đầu tư xem xét quy trình thiết kế và sắp xếp thời gian địa điểm gặp gỡ.<br/> – Lên phương án cơ bản và báo giá theo phương án.<br/> – Lấy thông tin thiết kế từ chủ đầu tư bao gồm các yêu cầu về thiết kế, không gian chức năng, phong thủy,…</p>--}}
-{{--                            <p><strong><span style="color: #808080;">Bước 2:</span> Đo đạc khảo sát hiện trạng – Ký HĐ thiết kế và tạm ứng theo HĐ</strong><br/> – Đo dạc kích thước khu đất, hoặc kích thước hiện trạng công trình.<br/> – Lập bảng tiến độ thiết kế và tiến độ thanh toán gửi chủ đầu tư.<br/> – Hoàn thiện phương án Mặt bằng .<br/> – Số lần đưa phương án sơ bộ không quá 03 lần, nếu không phù hợp chủ đầu tư có thể chấm dứt việc hợp tác.<br/> – Sau khi thống nhất quy trình thiết kế đo đạc khảo sát lập bản vẽ hiện trạng gửi chủ đầu tư AZAR tạm ứng số tiền 40%.</p>--}}
+{{--                            <p><strong><span style="color: #808080;">Bước 2:</span> Đo đạc khảo sát hiện trạng – Ký HĐ thiết kế và tạm ứng theo HĐ</strong><br/> – Đo dạc kích thước khu đất, hoặc kích thước hiện trạng công trình.<br/> – Lập bảng tiến độ thiết kế và tiến độ thanh toán gửi chủ đầu tư.<br/> – Hoàn thiện phương án Mặt bằng .<br/> – Số lần đưa phương án sơ bộ không quá 03 lần, nếu không phù hợp chủ đầu tư có thể chấm dứt việc hợp tác.<br/> – Sau khi thống nhất quy trình thiết kế đo đạc khảo sát lập bản vẽ hiện trạng gửi chủ đầu tư 81ART tạm ứng số tiền 40%.</p>--}}
 {{--                            <p><strong><span style="color: #808080;">Bước 3:</span> Triển khai Hồ sơ kiến trúc theo phương án đã thống nhất</strong><br/> – Chủ đầu tư chọn ra phương án phù hợp để triển khai hoặc chỉnh sửa trước khi triển khai hồ sơ kỹ thuật thi công.<br/> – Sau khi chủ đầu tư đồng ý với phương án thiết kế sơ với bộ chủ đầu tư và tạm ứng lần hai 30%.</p>--}}
 {{--                            <p><strong><span style="color: #808080;">Bước 4:</span> Triển khai Phương án 3D và xuất Hồ sơ kỹ thuật thi công</strong></p>--}}
-{{--                            <p>– Triển khai phương án 3D không quá 3 lần.<br/> – Sau khi chủ đầu tư lựa chọn phương án 3D phù hợp AZAR sẽ tiến hành triển khai hồ sơ kỹ thuật thi công.<br/> – Khi xuất hồ sơ kỹ thuật thi công số lần chỉnh sửa phương án chọn không quá 02 lần mỗi lần không quá 30%.<br/> – Nếu chỉnh sửa bản vẽ do sai sót từ AZAR thì hoàn toàn không phát sinh chi phí.<br/> – Thời gian chỉnh sửa bản vẽ không được tính vào hợp đồng đã ký.</p>--}}
+{{--                            <p>– Triển khai phương án 3D không quá 3 lần.<br/> – Sau khi chủ đầu tư lựa chọn phương án 3D phù hợp 81ART sẽ tiến hành triển khai hồ sơ kỹ thuật thi công.<br/> – Khi xuất hồ sơ kỹ thuật thi công số lần chỉnh sửa phương án chọn không quá 02 lần mỗi lần không quá 30%.<br/> – Nếu chỉnh sửa bản vẽ do sai sót từ 81ART thì hoàn toàn không phát sinh chi phí.<br/> – Thời gian chỉnh sửa bản vẽ không được tính vào hợp đồng đã ký.</p>--}}
 {{--                            <p><strong><span style="color: #808080;">Bước 5:</span> Bàn giao Hồ sơ và thanh toán hợp đồng</strong></p>--}}
-{{--                            <p>– Sau khi AZAR bàn giao đầy đủ hồ sơ kỹ thuật thi công chủ đầu tư chuyển nốt số tiền còn lại 30%. – Thời hạn thanh toán không quá 10 ngày sau khi bàn giao bản vẽ.</p>--}}
+{{--                            <p>– Sau khi 81ART bàn giao đầy đủ hồ sơ kỹ thuật thi công chủ đầu tư chuyển nốt số tiền còn lại 30%. – Thời hạn thanh toán không quá 10 ngày sau khi bàn giao bản vẽ.</p>--}}
 {{--                            <p><strong><span style="color: #808080;">Bước 6:</span> Thảo luận và Thỏa thuận về thi công</strong></p>--}}
 {{--                            <p><span style="color: #339966;"><strong>2. Thi công hạng mục Kiến trúc :</strong></span><br/> Hai bên thỏa thuận thi công , theo nhu cầu và các hạng mục trong bản vẽ,. Sau khi kí hợp đồng, bên CĐT sẽ thứ tự tạm ứng và phương thức thanh toán theo hợp đồng như sau:</p>--}}
 {{--                            <p><strong>PHƯƠNG THỨC THANH TOÁN</strong></p>--}}
@@ -552,7 +553,7 @@
 {{--                            <p><strong>• Đợt 07:</strong> 2% GTHĐ sau 6tháng kể từ ngày hoàn thiện bàn giao .</p>--}}
 {{--                            <p>Các khoản thanh toán trên sẽ được thực hiện trong vòng ba (03) ngày kể từ ngày công ty thông báo hoàn thành các công đoạn thi công tương ứng. Về các phương diện còn lại như: tiến độ, tư vấn kĩ thuật, quyền và trách nhiệm, các chế độ bảo hành… sẽ có trong chi tiết của từng mẫu hợp đồng riêng biệt.</p>--}}
 {{--                            <p><span style="color: #339966;"><strong>3. Thi công hạng mục nội thất</strong></span></p>--}}
-{{--                            <p>Trước khi nhận thi công nội thất trọn gói của các công trình bạn cần phải có hồ sơ đã thiết kế nội thất và có bản vẽ kỹ thuật hoàn chỉnh gồm: bản vẽ thiết kế nội thất 3D và bản vẽ chi tiết kỹ thuật thi công thì đội ngũ thi công Nội Thất Morehome mới đảm bảo hoàn thiện thi công theo đúng yêu cầu của quý khách hàng. <strong>Sau đây là quy trình thi công nội thất của AZAR Architecture:</strong></p>--}}
+{{--                            <p>Trước khi nhận thi công nội thất trọn gói của các công trình bạn cần phải có hồ sơ đã thiết kế nội thất và có bản vẽ kỹ thuật hoàn chỉnh gồm: bản vẽ thiết kế nội thất 3D và bản vẽ chi tiết kỹ thuật thi công thì đội ngũ thi công Nội Thất Morehome mới đảm bảo hoàn thiện thi công theo đúng yêu cầu của quý khách hàng. <strong>Sau đây là quy trình thi công nội thất của 81ART Architecture:</strong></p>--}}
 {{--                            <p>• 1. Dự toán báo giá</p>--}}
 {{--                            <p>• 2. Trao đổi hạng mục thi công</p>--}}
 {{--                            <p>• 3. Ký hợp đồng thi công nội thất</p>--}}

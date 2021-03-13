@@ -41,7 +41,7 @@
                 <p></p>
                 <br>
                 <div class="text-center font-italic">
-                    <div class="logo2__wrap"><img src="https://azar.vn/wp-content/uploads/2020/05/28925e707b368668df27.jpg" alt="Thiết kế &amp; Xây dựng Nhà đẹp AZAR" class="img-fluid"></div>
+                    <div class="logo2__wrap"><img src="https://81ART.vn/wp-content/uploads/2020/05/28925e707b368668df27.jpg" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid"></div>
                 </div>
                 <h1 style="text-align:center;margin:0 0 20px;font-size:26px;"><strong>HỢP ĐỒNG THIẾT KẾ</strong></h1>
                 <p class="text-center">Số RL:<span class="qr_code" id="contract_code">...</span>/RS - <span class="qr_code2" id="contract_code2">...</span></p>
@@ -56,7 +56,7 @@
                     <tbody>
                     <tr>
                         <th width="50%" style="vertical-align: top;"><strong>BÊN A: <span class="recipient">CHỦ ĐẦU TƯ</span></strong></th>
-                        <th><strong>BÊN B: <span class="office_info_auto-name">CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG AZAR</span></strong></th>
+                        <th><strong>BÊN B: <span class="office_info_auto-name">CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></strong></th>
                     </tr>
                     <tr>
                         <td>
@@ -74,7 +74,7 @@
                             <p>- Điện thoại: 0905.770.456</p>
                             <p>- STK: 99798868 - ACB Thanh Khê</p>
                             <p>- Mã số thuế: 0401992979</p>
-                            <p>- Email: kientrucazar@gmail.com – azar.vn</p>
+                            <p>- Email: kientruc81ART@gmail.com – 81art.vn</p>
                         </td>
                     </tr>
                     </tbody>

@@ -93,5 +93,14 @@
             </ul>
         </li>
 
+        <li class="nav-link {{ (request()->segment(2) == 'video') ? 'active' : '' }}">
+            <a href="{{route('admin.video')}}">
+                <div class="nav-link-icon d-inline-flex">
+                    <i class="far fa-folder"></i>
+                </div>
+                Video
+            </a>
+{{--            <i class="arrow fas fa-angle-right"></i>--}}
+        </li>
     </ul>
 </div>

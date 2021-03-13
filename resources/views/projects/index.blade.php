@@ -1,38 +1,9 @@
 @extends('layouts.app')
+@section('title','Dự án - Thiết kế & Xây dựng Nhà đẹp 81ART')
 @section('content')
     <div class="wrap__page archive__project">
-        <div class="wrap__ytplayer"><iframe id="ytplayer" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="1350" height="512" src="https://www.youtube.com/embed/5JAIC35ZIoo?autoplay=1&amp;loop=1&amp;controls=0&amp;rel=0&amp;fs=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fazar.vn&amp;widgetid=1"></iframe></div>
-        <script>// Load the IFrame Player API code asynchronously.
-            var tag = document.createElement('script');
-            tag.src = "https://www.youtube.com/player_api";
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        @include('layouts.video')
 
-            // Replace the 'ytplayer' element with an <iframe> and
-            // YouTube player after the API code downloads.
-            var player;
-            function onYouTubePlayerAPIReady() {
-                player = new YT.Player('ytplayer', {
-                    height: '512',
-                    width: '1350',
-                    playerVars: {
-                        'autoplay': 1,
-                        'loop':1,
-                        'controls': 0,
-                        'rel' : 0,
-                        'fs' : 0,
-                    },
-                    videoId: '5JAIC35ZIoo',
-                    events: {
-                        'onStateChange': function(e) {
-                            if (e.data === YT.PlayerState.ENDED) {
-                                player.playVideo();
-                            }
-                        }
-                    }
-                });
-            }
-        </script>
         <div class="container-fluidz">
             <div class="page__content sc__wrap">
                 <header class="page__header">

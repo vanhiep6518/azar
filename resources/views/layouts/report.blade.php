@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Báo giá thiết kế - Thiết kế &amp; Xây dựng Nhà đẹp AZAR</title>
+    <title>Báo giá thiết kế - Thiết kế &amp; Xây dựng Nhà đẹp 81ART</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">

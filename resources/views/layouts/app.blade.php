@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;display=swap" rel="stylesheet"/>
-    <title>Thiết kế &amp; Xây dựng Nhà đẹp AZAR</title>
+    <title>@yield('title')</title>
     <link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect"/>
     <link data-minify="1" rel="stylesheet" id="contact-form-7-css" href="{{asset('css/styles-659c78715297af5a1e12b8358b540b51.css')}}" type="text/css" media="all"/>
     <link data-minify="1" rel="stylesheet" id="taxonomy-image-plugin-public-css" href="{{asset('css/style-843175da3b18f4497c2360158e20f1d7.css')}}" type="text/css" media="screen"/>
@@ -28,9 +28,9 @@
             <div class="sc__wrap d-flex justify-content-between">
                 <div class="header__brand d-flex align-items-center">
                     <h1 class="logo">
-                        <a href="/" class="d-flex justify-content-between" title="Thiết kế &amp; Xây dựng Nhà đẹp AZAR">
-                            <div class="logo1__wrap"><img src="{{asset('images/Logo.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp AZAR" class="img-fluid --st1"/></div>
-{{--                            <div class="logo2__wrap btn__effect --st2"><img src="{{asset('images/lgotexxt.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp AZAR" class="img-fluid --st2"/></div>--}}
+                        <a href="/" class="d-flex justify-content-between" title="Thiết kế &amp; Xây dựng Nhà đẹp 81ART">
+                            <div class="logo1__wrap"><img src="{{asset('images/Logo.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid --st1"/></div>
+{{--                            <div class="logo2__wrap btn__effect --st2"><img src="{{asset('images/lgotexxt.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid --st2"/></div>--}}
                         </a>
                     </h1>
                 </div>
@@ -171,7 +171,7 @@
 {{--                                        <div class="item__meta">--}}
 {{--                                            <p class="item__title">Đội ngũ chuyên nghiệp</p>--}}
 {{--                                            <div class="item__excerpt">--}}
-{{--                                                <p>Trong 5 năm hoạt động AZAR với hơn 20 Kiến trúc sư - Nội thất sư - Kỹ sư cùng Đội ngũ xây dựng tay nghề cao và làm việc đầy tâm huyết để tạo ra những sản phẩm và dịch vụ chất lượng nhất.</p>--}}
+{{--                                                <p>Trong 5 năm hoạt động 81ART với hơn 20 Kiến trúc sư - Nội thất sư - Kỹ sư cùng Đội ngũ xây dựng tay nghề cao và làm việc đầy tâm huyết để tạo ra những sản phẩm và dịch vụ chất lượng nhất.</p>--}}
 {{--                                            </div>--}}
 {{--                                        </div>--}}
 {{--                                    </div>--}}
@@ -188,7 +188,7 @@
 {{--                                        <div class="item__meta">--}}
 {{--                                            <p class="item__title">Chất lượng sản phẩm</p>--}}
 {{--                                            <div class="item__excerpt">--}}
-{{--                                                <p>AZAR tập trung vào các Vật liệu mới Kết hợp với trình độ thi công cao sẽ đem đến cho khách hàng chất lượng công trình tốt nhất với mức giá cạnh tranh nhất trong từng phân khúc mà khách hàng hướng tới</p>--}}
+{{--                                                <p>81ART tập trung vào các Vật liệu mới Kết hợp với trình độ thi công cao sẽ đem đến cho khách hàng chất lượng công trình tốt nhất với mức giá cạnh tranh nhất trong từng phân khúc mà khách hàng hướng tới</p>--}}
 {{--                                            </div>--}}
 {{--                                        </div>--}}
 {{--                                    </div>--}}
@@ -205,7 +205,7 @@
 {{--                                        <div class="item__meta">--}}
 {{--                                            <p class="item__title">Uy tín hàng đầu</p>--}}
 {{--                                            <div class="item__excerpt">--}}
-{{--                                                <p>AZAR là thương hiệu được khẳng định bằng chất lượng sản phẩm với hàng trăm khách hàng và cùng chất lượng dịch vụ tốt trong nhiều năm qua</p>--}}
+{{--                                                <p>81ART là thương hiệu được khẳng định bằng chất lượng sản phẩm với hàng trăm khách hàng và cùng chất lượng dịch vụ tốt trong nhiều năm qua</p>--}}
 {{--                                            </div>--}}
 {{--                                        </div>--}}
 {{--                                    </div>--}}
@@ -239,7 +239,7 @@
 {{--                                        <div class="item__meta">--}}
 {{--                                            <p class="item__title">Đảm bảo sự hài lòng của khách hàng</p>--}}
 {{--                                            <div class="item__excerpt">--}}
-{{--                                                <p>AZAR với đội ngũ chăm sóc khách hàng cam kết sẽ đem đến cho khách hàng với Dịch vụ và Chất lượng đi kèm tốt nhất thị trường.</p>--}}
+{{--                                                <p>81ART với đội ngũ chăm sóc khách hàng cam kết sẽ đem đến cho khách hàng với Dịch vụ và Chất lượng đi kèm tốt nhất thị trường.</p>--}}
 {{--                                            </div>--}}
 {{--                                        </div>--}}
 {{--                                    </div>--}}
@@ -268,7 +268,7 @@
                             <p>Email: 81ARTSTUDIO@GMAIL.COM</p>
 {{--                            <p>MST: 0401992979</p>--}}
                         </address>
-                        <div class="social__box --s1 flex-grow-1 mb-2"> <a href="https://www.facebook.com/Thietkenhatrongoigiare"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> <a href="https://www.tiktok.com/@azar.vn" class="ic--tiktok"><img src="{{asset('images/tiktok.png')}}" alt=""/></a> <a href="index.html"><i class="fa fa-instagram" aria-hidden="true"></i></a> <a href="index.html"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></div>
+                        <div class="social__box --s1 flex-grow-1 mb-2"> <a href="https://www.facebook.com/Thietkenhatrongoigiare"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> <a href="https://www.tiktok.com/@81ART.vn" class="ic--tiktok"><img src="{{asset('images/tiktok.png')}}" alt=""/></a> <a href="index.html"><i class="fa fa-instagram" aria-hidden="true"></i></a> <a href="index.html"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="custom__mw">
@@ -337,7 +337,7 @@
         </div>
     </footer>
     <section id="copyright" class="copyright text-center">
-        <div class="container">© 2020 Domain. All rights reserved. Thiết kế bởi <a href="index.html#">www.azar.vn</a></div>
+        <div class="container">© 2020 Domain. All rights reserved. Thiết kế bởi <a href="index.html#">www.81art.vn</a></div>
     </section>
     <div class="support-online">
         <div class="support-content">
@@ -414,7 +414,7 @@
                     <ul class="sub-menu">
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-616"><a href="index.html%3Fp=599.html">Quy trình thi công</a></li>
                         <li class="menu-item menu-item-type-taxonomy menu-item-object-thi-cong_cat menu-item-614"><a href="danh-muc-thi-cong/thi-cong/index.html">Thi công</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-thi-cong_cat menu-item-1321"><a href="danh-muc-thi-cong/cai-tao-azar/index.html">Cải tạo Nội thất – Ngoại thất</a></li>
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-thi-cong_cat menu-item-1321"><a href="danh-muc-thi-cong/cai-tao-81ART/index.html">Cải tạo Nội thất – Ngoại thất</a></li>
                         <li class="menu-item menu-item-type-taxonomy menu-item-object-thi-cong_cat menu-item-615"><a href="danh-muc-thi-cong/tin-tuc/index.html">Tin tức</a></li>
                     </ul>
                 </li>

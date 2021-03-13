@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\AdminPriceController;
 use App\Http\Controllers\Admin\AdminPageController;
 use App\Http\Controllers\Admin\AdminSliderController;
+use App\Http\Controllers\Admin\AdminVideoController;
 use Illuminate\Support\Facades\Route;
 
 Route::match(['get', 'post'], '/login', [LoginController::class, 'login'])->name('admin.login');
@@ -89,6 +90,13 @@ Route::middleware('authAdmin')->name('admin.')->group(function (){
         Route::match(['get', 'post'], '/save/{id?}', [AdminSliderController::class, 'saveSlider'])->name('saveSlider');
         Route::get('/delete/{id}', [AdminSliderController::class, 'deleteSlider'])->name('deleteSlider');
 
+    });
+
+    Route::group(['prefix' => 'video'], function () {
+        Route::get('/', [AdminVideoController::class, 'index'])->name('video');
+        Route::post('/add', [AdminVideoController::class, 'addVideo'])->name('addVideo');
+        Route::post('/update/{id}', [AdminVideoController::class, 'updateVideo'])->name('updateVideo');
+        Route::get('/ajax-edit', [AdminVideoController::class, 'ajaxEdit']);
     });
 });
 
