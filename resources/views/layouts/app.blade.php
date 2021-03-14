@@ -29,7 +29,7 @@
                 <div class="header__brand d-flex align-items-center">
                     <h1 class="logo">
                         <a href="/" class="d-flex justify-content-between" title="Thiết kế &amp; Xây dựng Nhà đẹp 81ART">
-                            <div class="logo1__wrap"><img src="{{asset('images/Logo.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid --st1"/></div>
+                            <div class="logo1__wrap btn__effect --st2"><img src="{{asset('images/Logo.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid --st1"/></div>
 {{--                            <div class="logo2__wrap btn__effect --st2"><img src="{{asset('images/lgotexxt.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid --st2"/></div>--}}
                         </a>
                     </h1>
@@ -472,15 +472,17 @@
 <script src="{{asset('js/flickity.pkgd.min.js')}}"></script>
 
 @yield('custom-js')
-{{--<script>--}}
-{{--    $(document).scroll(function() {--}}
-{{--        if($(document).scrollTop() > 0){--}}
-{{--            $('.header__fix').addClass('active');--}}
-{{--        }else{--}}
-{{--            $('.header__fix').removeClass('active');--}}
-{{--        }--}}
-{{--    })--}}
-{{--</script>--}}
+<script>
+    $(document).scroll(function() {
+        if($(document).scrollTop() > 0){
+            // $('.header__fix').addClass('active');
+            $('.logo1__wrap').addClass('btn--active');
+        }else{
+            // $('.header__fix').removeClass('active');
+            $('.logo1__wrap').removeClass('btn--active');
+        }
+    })
+</script>
 </body>
 </html>
 
