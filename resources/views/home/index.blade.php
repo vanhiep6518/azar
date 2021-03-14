@@ -83,8 +83,8 @@
         </div>
         <div class="container-fluid">
             <div class="item__thumb pb-5 pb-md-3 wow fadeInUp">
-                <div class="mb-2"> <img src="{{asset('images/LOGO-HINH.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-flnnnnid"/></div>
-                <div> <img src="{{asset('images/LOGO-CHU.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid"/></div>
+                <div class="mb-2" style="width: 400px;margin: 0 auto;"> <img src="{{asset('images/Logo.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-flnnnnid"/></div>
+{{--                <div> <img src="{{asset('images/LOGO-CHU.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid"/></div>--}}
                 <a href="gioi-thieu.html" class="thumb__readmore">Khám phá thêm</a>
             </div>
         </div>
