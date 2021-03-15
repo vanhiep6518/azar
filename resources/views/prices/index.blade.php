@@ -21,6 +21,18 @@
                                         @endforeach
                                     </ul>
                                 @endif
+                                @if($item->id == 2)
+                                    <ul class="sub-menu">
+                                        <li id="menu-item-440" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-224 current_page_item menu-item-440 active "><a href="/bao-gia-thiet-ke">Thiết kế</a></li>
+                                        <li id="menu-item-440" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-224 current_page_item menu-item-440 active "><a href="/bao-gia-thi-cong">Thi công</a></li>
+                                    </ul>
+                                @elseif($item->id == 3)
+                                    <ul class="sub-menu">
+                                        <li id="menu-item-440" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-224 current_page_item menu-item-440 active "><a href="/hop-dong-thiet-ke">Thiết kế</a></li>
+                                        <li id="menu-item-440" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-224 current_page_item menu-item-440 active "><a href="/hop-dong-thi-cong-doi-tac">Thi công ĐT</a></li>
+                                        <li id="menu-item-440" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-224 current_page_item menu-item-440 active "><a href="/hop-dong-thi-cong-khach-hang">Thi công KH</a></li>
+                                    </ul>
+                                @endif
                             </li>
                         @endforeach
                     @endif

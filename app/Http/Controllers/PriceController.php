@@ -16,11 +16,11 @@ class PriceController extends Controller
     }
 
     public function reportDesignPrice(){
-        return view('prices.price-report');
+        return view('prices.report-design');
     }
 
     public function reportConstructionPrice(){
-        return view('prices.construction-report');
+        return view('prices.report-construction');
     }
 
     public function contractDesign(){
@@ -28,15 +28,15 @@ class PriceController extends Controller
     }
 
     public function partnerContract(){
-        return view('prices.partner-contract');
+        return view('prices.contract-partner');
     }
 
     public function customerContract(){
-        return view('prices.customer-contract');
+        return view('prices.contract-customer');
     }
 
     public function furnitureContract(){
-        return view('prices.furniture-contract');
+        return view('prices.contract-furniture');
     }
 
 }

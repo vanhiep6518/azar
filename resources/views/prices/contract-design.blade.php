@@ -4,7 +4,7 @@
     <form method="post" action="" id="f-contract" name="f-contract">
         <div id="response" style="display:none;"></div>
         <div id="input">
-            @include('prices.menu-left')
+            @include('prices.menu-left-contract')
             <div id="inputdata">
                 <p></p>
                 <div class="form-group typeahead"> <input type="text" id="contract_code" name="contract_code" value="" class="form-control form-control-sm typeahead" data-type="" placeholder="Số RL" data-toggle="tooltip" title="" data-original-title="Số RL"></div>
@@ -41,7 +41,7 @@
                 <p></p>
                 <br>
                 <div class="text-center font-italic">
-                    <div class="logo2__wrap"><img src="https://81ART.vn/wp-content/uploads/2020/05/28925e707b368668df27.jpg" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid"></div>
+                    <div class="logo2__wrap"><img style="width: 250px" src="{{asset('images/Logo.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid"></div>
                 </div>
                 <h1 style="text-align:center;margin:0 0 20px;font-size:26px;"><strong>HỢP ĐỒNG THIẾT KẾ</strong></h1>
                 <p class="text-center">Số RL:<span class="qr_code" id="contract_code">...</span>/RS - <span class="qr_code2" id="contract_code2">...</span></p>
@@ -68,13 +68,13 @@
                             <p class="idata" style="width: 95%;">- Điện thoại: <span class="party_phone"></span></p>
                         </td>
                         <td>
-                            <p>- Đại diện: <strong>Ông. LÊ QUANG TRUNG</strong></p>
+                            <p>- Đại diện: <strong>Ông. PHẠM VĂN THÔNG</strong></p>
                             <p>- Chức vụ: Giám đốc</p>
-                            <p>- Địa chỉ: 29 Phú Xuân 2, Phường Hòa Minh, Quận Liên Chiểu, Tp. Đà Nẵng.</p>
-                            <p>- Điện thoại: 0905.770.456</p>
-                            <p>- STK: 99798868 - ACB Thanh Khê</p>
-                            <p>- Mã số thuế: 0401992979</p>
-                            <p>- Email: kientruc81ART@gmail.com – 81art.vn</p>
+                            <p>- Địa chỉ: 78 Nguyễn Minh Chấn, Hòa Khánh Nam, Q.Liên Chiểu, TP.Đà Nẵng.</p>
+                            <p>- Điện thoại: 0374.059.517</p>
+{{--                            <p>- STK: 99798868 - ACB Thanh Khê</p>--}}
+{{--                            <p>- Mã số thuế: 0401992979</p>--}}
+                            <p>- Email: 81ARTSTUDIO@GMAIL.COM – 81art.vn</p>
                         </td>
                     </tr>
                     </tbody>
@@ -233,7 +233,7 @@
                     </tr>
                     <tr>
                         <td><span>..................................</span></td>
-                        <td><span class="office_info_auto-representative">LÊ QUANG TRUNG</span></td>
+                        <td><span class="office_info_auto-representative">PHẠM VĂN THÔNG</span></td>
                     </tr>
                     </tbody>
                 </table>

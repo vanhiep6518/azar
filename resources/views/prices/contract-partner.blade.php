@@ -4,7 +4,7 @@
     <form method="post" action="" id="f-contract" name="f-contract">
         <div id="response" style="display:none;"></div>
         <div id="input">
-            @include('prices.menu-left')
+            @include('prices.menu-left-contract')
             <div id="inputdata">
                 <p></p>
                 <div class="form-group typeahead"> <input type="text" id="contract_code" name="contract_code" value="" class="form-control form-control-sm typeahead" data-type="" placeholder="Mã số hợp đồng" data-toggle="tooltip" title="" data-original-title="Mã số hợp đồng"></div>
@@ -43,7 +43,9 @@
                         <th><strong>BÊN B: <span class="recipient"></span></strong></th>
                     </tr>
                     <tr>
-                        <td> <span class="idata" style="width: 95%;">Đại diện: <span class="office_info_auto-representative">LÊ QUANG TRUNG</span></span><br> <span class="idata" style="width: 95%;">Chức vụ: <span class="office_info_auto-position">Giám đốc</span></span><br> <span class="idata" style="width: 95%;">Địa chỉ: <span class="office_info_auto-address">29 Phú Xuân 2, Hòa Minh, Q. Liên chiểu, TP. Đà Nẵng</span></span></td>
+                        <td> <span class="idata" style="width: 95%;">Đại diện: <span class="office_info_auto-representative">PHẠM VĂN THÔNG</span></span><br>
+                            <span class="idata" style="width: 95%;">Chức vụ: <span class="office_info_auto-position">Giám đốc</span></span><br>
+                            <span class="idata" style="width: 95%;">Địa chỉ: <span class="office_info_auto-address">78 Nguyễn Minh Chấn, Hòa Khánh Nam, Q.Liên Chiểu, TP.Đà Nẵng</span></span></td>
                         <td> <span class="idata" style="width: 100%;">Đại diện: <span class="party_name"><span id="ngDaiDien"></span></span></span><br> <span class="idata" style="width: 100%;">Chức vụ: <span class="party_email"></span></span><br> <span class="idata" style="width: 100%;">Điện thoại: <span class="party_phone"></span></span></td>
                     </tr>
                     </tbody>
@@ -86,7 +88,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td><span>LÊ QUANG TRUNG</span></td>
+                        <td><span>PHẠM VĂN THÔNG</span></td>
                         <td><span class="party_name idata" style="min-width: 241px;"><span id="ngDaiDien"></span></span></td>
                     </tr>
                     </tbody>

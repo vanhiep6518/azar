@@ -6,9 +6,9 @@
         <div id="input">
             <div id="menu">
                 <div class="header__logo">
-                    <a href="https://81ART.vn" class="d-flex justify-content-between" title="Thiết kế &amp; Xây dựng Nhà đẹp 81ART">
-                        <div class="logo1__wrap"><img src="https://81ART.vn/wp-content/uploads/2020/04/LOGO-HINH.png" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid --st1"></div>
-                        <div class="logo2__wrap"><img src="https://81ART.vn/wp-content/uploads/2020/04/lgotexxt.png" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid --st2"></div>
+                    <a href="https://81art.vn" class="d-flex justify-content-between" title="Thiết kế &amp; Xây dựng Nhà đẹp 81ART">
+                        <div class="logo1__wrap"><img src="{{asset('images/Logo.png')}}" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid --st1"></div>
+{{--                        <div class="logo2__wrap"><img src="https://81ART.vn/wp-content/uploads/2020/04/lgotexxt.png" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid --st2"></div>--}}
                     </a>
                 </div>
                 <div><a id="menu-bgtk" href="/bao-gia-thiet-ke" class="btn btn-light" title="" data-toggle="tooltip" data-original-title="Báo giá thiết kế">Báo giá thiết kế</a></div>
@@ -58,7 +58,7 @@
                 <p>Số: <span class="qr_code"><span id="mabgtk">...</span></span><span class="signed_date_auto_bgtk" style="float:right;">Đà Nẵng, ngày 05 tháng 03 năm 2021</span></p>
                 <p style="font-weight: bold;">Kính gửi: <span class="recipient">Công ty ...</span></p>
                 <p>Chúng tôi: <span class="office_info_auto-name">CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></p>
-                <p>Địa chỉ: <span class="office_info_auto-address">29 Phú Xuân 2, Hòa Minh, Q. Liên chiểu, TP. Đà Nẵng</span></p>
+                <p>Địa chỉ: <span class="office_info_auto-address">78 Nguyễn Minh Chấn, Hòa Khánh Nam, Q.Liên Chiểu, TP.Đà Nẵng</span></p>
                 <p>Trân trọng báo giá thiết kế công trình: <span class="building_type_auto-title">...</span> - Trạng thái: <span class="building_status_auto-title">...</span></p>
                 <p>Địa chỉ công trình: <span class="building_address">...</span></p>
                 <table class="price" id="tablePrice">
@@ -136,7 +136,7 @@
                     </tr>
                     <tr>
                         <td><span>..................................</span></td>
-                        <td><span class="office_info_auto-representative">LÊ QUANG TRUNG</span></td>
+                        <td><span class="office_info_auto-representative">PHẠM VĂN THÔNG</san></td>
                     </tr>
                     </tbody>
                 </table>

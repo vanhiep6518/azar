@@ -4,7 +4,7 @@
     <form method="post" action="" id="f-contract" name="f-contract">
         <div id="response" style="display:none;"></div>
         <div id="input">
-            @include('prices.menu-left')
+            @include('prices.menu-left-contract')
             <div id="inputdata">
                 <p></p>
                 <div class="form-group typeahead"> <input type="text" id="contract_code" name="contract_code" value="" class="form-control form-control-sm typeahead" data-type="" placeholder="Mã số hợp đồng" data-toggle="tooltip" title="" data-original-title="Mã số hợp đồng"></div>
@@ -82,12 +82,12 @@
                 <p><strong>BÊN B : BÊN NHẬN THẦU</strong></p>
                 <ul>
                     <li><span class="idata" style="width: 16%; border-bottom: none;">Tên đơn vị</span><span>: </span><span class="office_info_auto-name">CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></li>
-                    <li><span class="idata" style="width: 16%; border-bottom: none;">Đại diện</span><span>: </span><span class="office_info_auto-representative">Ông. LÊ QUANG TRUNG</span></li>
+                    <li><span class="idata" style="width: 16%; border-bottom: none;">Đại diện</span><span>: </span><span class="office_info_auto-representative">Ông. PHẠM VĂN THÔNG</span></li>
                     <li><span class="idata" style="width: 16%; border-bottom: none;">Chức vụ</span><span>: </span><span class="office_info_auto-position">Giám đốc</span></li>
-                    <li><span class="idata" style="width: 16%; border-bottom: none;">Địa chỉ</span><span>: </span><span class="office_info_auto-address">29 Phú Xuân 2, Hòa Minh, Q. Liên chiểu, TP. Đà Nẵng</span></li>
-                    <li><span class="idata" style="width: 16%; border-bottom: none;">Điện thoại</span><span>: </span><span class="office_info_auto-phone">0905.770.456</span></li>
-                    <li><span class="idata" style="width: 16%; border-bottom: none;">Mã số thuế</span><span>: </span><span class="office_info_auto-tax_code">0401992979</span></li>
-                    <li><span class="idata" style="width: 16%; border-bottom: none;">Số tài khoản</span><span>: </span><span class="office_info_auto-bank">99798868 - ACB Thanh Khê</span></li>
+                    <li><span class="idata" style="width: 16%; border-bottom: none;">Địa chỉ</span><span>: </span><span class="office_info_auto-address">78 Nguyễn Minh Chấn, Hòa Khánh Nam, Q.Liên Chiểu, TP.Đà Nẵng</span></li>
+                    <li><span class="idata" style="width: 16%; border-bottom: none;">Điện thoại</span><span>: </span><span class="office_info_auto-phone">0374.059.517</span></li>
+{{--                    <li><span class="idata" style="width: 16%; border-bottom: none;">Mã số thuế</span><span>: </span><span class="office_info_auto-tax_code">0401992979</span></li>--}}
+{{--                    <li><span class="idata" style="width: 16%; border-bottom: none;">Số tài khoản</span><span>: </span><span class="office_info_auto-bank">99798868 - ACB Thanh Khê</span></li>--}}
                 </ul>
                 <p>Hai bên thống nhất ký kết hợp đồng <span class="contract_type_auto-title">thi công trọn gói</span> công trình với các điều khoản cụ thể như sau:</p>
                 <p><strong>ĐIỀU 1: QUY MÔ VÀ ĐỊA ĐIỂM XÂY DỰNG</strong></p>
@@ -312,7 +312,7 @@
                     </tr>
                     <tr>
                         <td><span>..................................</span></td>
-                        <td><span class="office_info_auto-representative">LÊ QUANG TRUNG</span></td>
+                        <td><span class="office_info_auto-representative">PHẠM VĂN THÔNG</span></td>
                     </tr>
                     </tbody>
                 </table>

@@ -1,5 +1,8 @@
 <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-<div id="player"></div>
+<div id="video">
+    <div id="player"></div>
+</div>
+
 
 <script>
     // 2. This code loads the IFrame Player API code asynchronously.
@@ -15,7 +18,7 @@
     function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
             height: '512',
-            width: '100%',
+            width: '1350',
             playerVars: {
                 'autoplay': 1,
                 'loop':1,
@@ -38,3 +41,19 @@
     }
 
 </script>
+
+<style>
+    #video {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+    }
+
+    #video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>

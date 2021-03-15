@@ -36,7 +36,7 @@
                 </div>
                 <nav class="main__nav d-flex">
                     <ul id="menu-main-menu" class="dn__menu d-none d-lg-block">
-                        <li id="menu-item-268" class="menu-item menu-item-type-post_type_archive menu-item-object-project menu-item-has-children menu-item-268">
+                        <li id="menu-item-268" class="menu-item menu-item-type-post_type_archive menu-item-object-project menu-item-has-children menu-item-268 {{ (request()->segment(1) == 'du-an') ? 'active' : '' }}">
                             <a href="{{route('project.list')}}">Dự án</a>
                             <ul class="sub-menu">
                                 @if(isset($cats) && $cats['project'])
@@ -46,7 +46,7 @@
                                 @endif
                             </ul>
                         </li>
-                        <li id="menu-item-267" class="menu-item menu-item-type-post_type_archive menu-item-object-noi-that menu-item-has-children menu-item-267">
+                        <li id="menu-item-267" class="menu-item menu-item-type-post_type_archive menu-item-object-noi-that menu-item-has-children menu-item-267 {{ (request()->segment(1) == 'noi-that') ? 'active' : '' }}">
                             <a href="{{route('furniture.list')}}">Nội thất</a>
                             <ul class="sub-menu">
                                 @if(isset($cats) && $cats['furniture'])
@@ -56,7 +56,7 @@
                                 @endif
                             </ul>
                         </li>
-                        <li id="menu-item-212" class="menu-item menu-item-type-post_type_archive menu-item-object-thi-cong menu-item-has-children menu-item-212">
+                        <li id="menu-item-212" class="menu-item menu-item-type-post_type_archive menu-item-object-thi-cong menu-item-has-children menu-item-212 {{ (request()->segment(1) == 'thi-cong') ? 'active' : '' }}">
                             <a href="{{route('construction.list')}}">Thi công</a>
                             <ul class="sub-menu">
                                 @if(isset($cats) && $cats['construction'])
@@ -66,8 +66,8 @@
                                 @endif
                             </ul>
                         </li>
-                        <li id="menu-item-230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-230">
-                            <a href="">Bảng giá</a>
+                        <li id="menu-item-230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-230 {{ (request()->segment(1) == 'bang-gia') ? 'active' : '' }}">
+                            <a href="javascript:void(0)">Bảng giá</a>
                             <ul class="sub-menu">
                                 @if(isset($cats) && $cats['price'])
                                     @foreach($cats['price'] as $item)
@@ -95,9 +95,7 @@
                                 @endif
                             </ul>
                         </li>
-{{--                        @php--}}
-{{--                            dd($cats['price']);--}}
-{{--                        @endphp--}}
+{{--
 {{--                        <li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-260">--}}
 {{--                            <a href="index.html#">Phong thủy</a>--}}
 {{--                            <ul class="sub-menu">--}}
@@ -108,18 +106,18 @@
 {{--                                <li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="index.html%3Fp=251.html">Thước lỗ ban</a></li>--}}
 {{--                            </ul>--}}
 {{--                        </li>--}}
-                        <li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a href="{{route('introduce')}}">Giới thiệu</a></li>
+                        <li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269 {{ (request()->segment(1) == 'gioi-thieu') ? 'active' : '' }}"><a href="{{route('introduce')}}">Giới thiệu</a></li>
                         <li class="item__custom d-md-none"><a href="login.html" class="">Login</a></li>
                         <li class="item__custom d-md-none"><a href="https://www.facebook.com/Thietkenhatrongoigiare/" class="d-inline-block"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w" class="d-inline-block"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                     </ul>
                     <ul class="el__right">
-                        <li class=""><a href="login.html" class=""><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                        <li class=""><a href="danh-muc-noi-that/sieu-thi-noi-that.html" class=""><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+{{--                        <li class=""><a href="login.html" class=""><i class="fa fa-user" aria-hidden="true"></i></a></li>--}}
+                        <li class=""><a href="" class=""><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
                         <li class=""><a href="https://www.facebook.com/Thietkenhatrongoigiare/" class=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li class=""><a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w" class=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                        <li class=""><a href="https://www.youtube.com/channel/UCcGQ2f9G8tYUtoy5NUixRGw" class=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                         <li class=" hbtn__search">
                             <a href="index.html#" class=""><i class="fa fa-search" aria-hidden="true"></i></a>
-                            <form role="search" method="get" class="search-form search__form" action="index.html">
+                            <form role="search" method="get" class="search-form search__form" action="">
                                 <div class="input-group">
                                     <input type="search" id="search-form-5fefb62161333" class="search-field form-control" placeholder="Nhập từ khóa cần tìm …" value="" name="s"/>
                                     <div class="input-group-append"> <button class="search-submit btn btn-outline-secondary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button></div>
@@ -268,7 +266,13 @@
                             <p>Email: 81ARTSTUDIO@GMAIL.COM</p>
 {{--                            <p>MST: 0401992979</p>--}}
                         </address>
-                        <div class="social__box --s1 flex-grow-1 mb-2"> <a href="https://www.facebook.com/Thietkenhatrongoigiare"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w"><i class="fa fa-youtube-play" aria-hidden="true"></i></a> <a href="https://www.tiktok.com/@81ART.vn" class="ic--tiktok"><img src="{{asset('images/tiktok.png')}}" alt=""/></a> <a href="index.html"><i class="fa fa-instagram" aria-hidden="true"></i></a> <a href="index.html"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></div>
+                        <div class="social__box --s1 flex-grow-1 mb-2">
+                            <a href="https://www.facebook.com/Thietkenhatrongoigiare"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/channel/UCcGQ2f9G8tYUtoy5NUixRGw"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                            <a href="" class="ic--tiktok"><img src="{{asset('images/tiktok.png')}}" alt=""/></a>
+                            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href=""><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="custom__mw">
@@ -290,7 +294,7 @@
                         <div id="dktv_form" class="mb-3">
                             <div role="form" class="wpcf7" id="wpcf7-f256-o1" lang="vi" dir="ltr">
                                 <div class="screen-reader-response" role="alert" aria-live="polite"></div>
-                                <form action="index.html#wpcf7-f256-o1" method="post" class="wpcf7-form init" novalidate="novalidate">
+                                <form action="" method="post" class="wpcf7-form init" novalidate="novalidate">
                                     <div style="display: none;"> <input type="hidden" name="_wpcf7" value="256"/> <input type="hidden" name="_wpcf7_version" value="5.2"/> <input type="hidden" name="_wpcf7_locale" value="vi"/> <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f256-o1"/> <input type="hidden" name="_wpcf7_container_post" value="0"/> <input type="hidden" name="_wpcf7_posted_data_hash" value=""/></div>
                                     <div class="row contact-form">
                                         <div class="col-md-6">
@@ -309,7 +313,7 @@
                                             <div class="form-group"> <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="3" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Dịch vụ yêu cầu"></textarea></span></div>
                                         </div>
                                         <div class="col-md-6"> <span class="btn_dlh flex-grow-1">Để lại thông tin của quý khách <br/> &amp; Kiến trúc sư sẽ liên hệ tư vấn miễn phí</span></div>
-                                        <div class="col-md-6"> <input type="submit" value="Gửi đi" class="wpcf7-form-control wpcf7-submit btn form-control btn__success"/></div>
+                                        <div class="col-md-6"> <input type="submit" value="Gửi đi" disabled class="wpcf7-form-control wpcf7-submit btn form-control btn__success"/></div>
                                     </div>
                                     <div class="wpcf7-response-output" role="alert" aria-hidden="true"></div>
                                 </form>
@@ -374,11 +378,11 @@
                 <div class="modal-body">
                     <div role="form" class="wpcf7" id="wpcf7-f887-o2" lang="vi" dir="ltr">
                         <div class="screen-reader-response" role="alert" aria-live="polite"></div>
-                        <form action="index.html#wpcf7-f887-o2" method="post" class="wpcf7-form init" novalidate="novalidate">
+                        <form action="" method="post" class="wpcf7-form init" novalidate="novalidate">
                             <div style="display: none;"> <input type="hidden" name="_wpcf7" value="887"/> <input type="hidden" name="_wpcf7_version" value="5.2"/> <input type="hidden" name="_wpcf7_locale" value="vi"/> <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f887-o2"/> <input type="hidden" name="_wpcf7_container_post" value="0"/> <input type="hidden" name="_wpcf7_posted_data_hash" value=""/></div>
                             <div class="form-group"><span class="wpcf7-form-control-wrap tel-314"><input type="tel" name="tel-314" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control" aria-required="true" aria-invalid="false" placeholder="Số điện thoại"/></span></div>
                             <div class="form-group"><span class="wpcf7-form-control-wrap your-message"><input type="text" name="your-message" value="" size="40" class="wpcf7-form-control wpcf7-text form-control" aria-invalid="false" placeholder="Để lại lời nhắn"/></span></div>
-                            <div class="form-group text-center"><input type="submit" value="Gửi đi" class="wpcf7-form-control wpcf7-submit"/></div>
+                            <div class="form-group text-center"><input type="submit" disabled value="Gửi đi" class="wpcf7-form-control wpcf7-submit"/></div>
                             <div class="wpcf7-response-output" role="alert" aria-hidden="true"></div>
                         </form>
                     </div>
