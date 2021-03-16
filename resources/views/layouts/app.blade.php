@@ -14,14 +14,74 @@
     <link rel="stylesheet" id="flickity-css" href="{{asset('css/flickity.min.css')}}" type="text/css" media="all"/>
     <link rel="stylesheet" id="fancybox-style-css" href="{{asset('css/jquery.fancybox.min.css')}}" type="text/css" media="all"/>
     <link rel="stylesheet" id="animate-css" href="{{asset('css/animate.min.css')}}" type="text/css" media="all"/>
-    <link data-minify="1" rel="stylesheet" id="mmenu-css" href="{{asset('css/mmenu-532c7b4b74947e618fbfbd8e44d8fc12.css')}}" type="text/css" media="all"/>
+    <link data-minify="1" rel="stylesheet" id="mmenu-css" href="{{asset('css/mmenu.css')}}" type="text/css" media="all"/>
     <link data-minify="1" rel="stylesheet" id="dn-style-css" href="{{asset('css/style-41955f29b45f44b0f7e53369fa839b95.css')}}" type="text/css" media="all"/>
     <link rel="stylesheet" id="jquery.contactus.css-css" href="{{asset('css/jquery.contactus.min.css')}}" type="text/css" media="all"/>
     <link data-minify="1" rel="stylesheet" id="contactus.generated.desktop.css-css" href="{{asset('css/generated-desktop-ef915ff20effb64b1a0e42394ef61123.css')}}" type="text/css" media="all"/>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     @yield('css')
 </head>
-<body data-rsssl="1" class="home blog">
+<body data-rsssl="1" class="home blog mm-wrapper">
+<nav id="menu">
+    <ul>
+        <li><a href="{{route('project.list')}}">Dự án</a>
+            @if(isset($cats) && $cats['project'])
+                <ul>
+                @foreach($cats['project'] as $item)
+                    <li><a href="{{route('project.cat',['slug' => $item->slug])}}">{{$item->name}}</a></li>
+                @endforeach
+                </ul>
+            @endif
+        </li>
+        <li><a href="{{route('furniture.list')}}">Nội thất</a>
+            @if(isset($cats) && $cats['furniture'])
+                <ul>
+                    @foreach($cats['furniture'] as $item)
+                        <li><a href="{{route('furniture.cat',['slug' => $item->slug])}}">{{$item->name}}</a></li>
+                    @endforeach
+                </ul>
+            @endif
+        </li>
+        <li><a href="{{route('construction.list')}}">Thi công</a>
+            @if(isset($cats) && $cats['construction'])
+                <ul>
+                    @foreach($cats['construction'] as $item)
+                        <li><a href="{{route('construction.cat',['slug' => $item->slug])}}">{{$item->name}}</a></li>
+                    @endforeach
+                </ul>
+            @endif
+        </li>
+        <li><a href="javascript:void(0)">Bảng giá</a>
+        @if(isset($cats) && $cats['price'])
+                <ul>
+            @foreach($cats['price'] as $item)
+                <li><a href="javascript:void(0)">{{$item->name}}</a>
+                    @if($item->prices && count($item->prices) > 0)
+                        <ul>
+                            @foreach($item->prices as $item2)
+                                <li><a href="{{route('price.detail',['slug'=>$item2->slug,'id'=>$item2->id])}}">{{$item2->title}}</a></li>
+                            @endforeach
+                        </ul>
+                    @elseif($item->id == 2)
+                        <ul>
+                            <li><a href="/bao-gia-thiet-ke">Báo giá thiết kế</a></li>
+                            <li><a href="/bao-gia-thi-cong">Báo giá thi công</a></li>
+                        </ul>
+                    @elseif($item->id == 3)
+                        <ul>
+                            <li><a href="/hop-dong-thiet-ke">Hợp đồng thiết kế</a></li>
+                            <li><a href="/hop-dong-thi-cong-doi-tac">Hợp đồng ĐT</a></li>
+                            <li><a href="/hop-dong-thi-cong-khach-hang">Hợp đồng KH</a></li>
+                        </ul>
+                    @endif
+                </li>
+                @endforeach
+                </ul>
+                @endif
+        </li>
+        <li><a href="{{route('introduce')}}">Giới thiệu</a></li>
+    </ul>
+</nav>
 <div class="wrapper">
     <header class="header header__fix active">
         <div class="container-fluid">
@@ -128,7 +188,7 @@
                     <ul class="el__right --mb">
                         <li class=""><a href="danh-muc-noi-that/sieu-thi-noi-that.html" class=""><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
                     </ul>
-                    <a href="index.html#menu__mobile" class="menu__mobile ml-2"> <span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></span> <span class="ml-1 icon-bar__text d-none"> MENU</span> </a>
+                    <a href="#menu" class="menu__mobile ml-2"> <span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></span> <span class="ml-1 icon-bar__text d-none"> MENU</span> </a>
                 </nav>
             </div>
         </div>
@@ -390,83 +450,9 @@
             </div>
         </div>
     </div>
-    <nav id="menu__mobile" class="nav__mobile">
-        <div>
-            <ul id="menu-main-menu-1" class="">
-                <li class="menu-item menu-item-type-post_type_archive menu-item-object-project menu-item-has-children menu-item-268">
-                    <a href="project/index.html">Dự án</a>
-                    <ul class="sub-menu">
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="danh-muc-du-an/biet-thu/index.html">Biệt thự – Nhà phố</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-288"><a href="danh-muc-du-an/hotel-homestay/index.html">Hotel – Homestay</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-286"><a href="danh-muc-du-an/ca-phe-nha-hang-bar/index.html">Nhà hàng – Coffee</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-1323"><a href="danh-muc-du-an/office-apartment/index.html">Office – Apartment</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-1324"><a href="danh-muc-du-an/cong-trinh-khac/index.html">Công trình khác</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-1322"><a href="danh-muc-du-an/phong-cach-kien-truc/index.html">Phong cách Kiến trúc</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item menu-item-type-post_type_archive menu-item-object-noi-that menu-item-has-children menu-item-267">
-                    <a href="noi-that/index.html">Nội thất</a>
-                    <ul class="sub-menu">
-                        <li class="menu-item menu-item-type-post_type_archive menu-item-object-noi-that menu-item-484"><a href="noi-that/index.html">Nội thất</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-noi-that_cat menu-item-505"><a href="danh-muc-noi-that/noi-that-360/index.html">Nội thất 360</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-noi-that_cat menu-item-485"><a href="danh-muc-noi-that/sieu-thi-noi-that/index.html">Siêu thị nội thất</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-noi-that_cat menu-item-1325"><a href="danh-muc-noi-that/phong-cach-noi-that/index.html">Phong cách Nội thất</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item menu-item-type-post_type_archive menu-item-object-thi-cong menu-item-has-children menu-item-212">
-                    <a href="thi-cong/index.html">Thi công</a>
-                    <ul class="sub-menu">
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-616"><a href="index.html%3Fp=599.html">Quy trình thi công</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-thi-cong_cat menu-item-614"><a href="danh-muc-thi-cong/thi-cong/index.html">Thi công</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-thi-cong_cat menu-item-1321"><a href="danh-muc-thi-cong/cai-tao-81ART/index.html">Cải tạo Nội thất – Ngoại thất</a></li>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-thi-cong_cat menu-item-615"><a href="danh-muc-thi-cong/tin-tuc/index.html">Tin tức</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-230">
-                    <a href="index.html%3Fp=224.html">Bảng giá</a>
-                    <ul class="sub-menu">
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-625">
-                            <a href="index.html#">Đơn giá</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-617"><a href="index.html%3Fp=224.html">Bảng giá Thiết kế nhà Đà Nẵng 2020</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-629"><a href="index.html%3Fp=226.html">Bảng giá thi công</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-626">
-                            <a href="index.html#">Báo giá</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-620"><a href="bao-gia-thi-cong/bao-gia-thiet-ke.html">Báo giá thiết kế</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-618"><a href="bao-gia-thi-cong/bao-gia-thi-cong.html">Báo giá thi công</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-627">
-                            <a href="index.html#">Hợp đồng</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-623"><a href="hop-dong-thiet-ke/index.html">Hợp đồng thiết kế</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-621"><a href="hop-dong-thi-cong-doi-tac/index.html">Hợp đồng ĐT</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-622"><a href="hop-dong-thi-cong-khach-hang/index.html">Hợp đồng KH</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-624"><a href="index.html%3Fp=461.html">Diễn giải vật liệu</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-260">
-                    <a href="index.html#">Phong thủy</a>
-                    <ul class="sub-menu">
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="index.html%3Fp=270.html">Xem hướng nhà</a></li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="index.html%3Fp=273.html">Xem hướng bếp</a></li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="index.html%3Fp=275.html">Xem màu hợp mệnh</a></li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-279"><a href="index.html%3Fp=277.html">Xem tuổi xây nhà</a></li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="index.html%3Fp=251.html">Thước lỗ ban</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a href="index.html%3Fp=2.html">Giới thiệu</a></li>
-                <li class="item__custom d-md-none"><a href="login.html" class="">Login</a></li>
-                <li class="item__custom d-md-none"><a href="https://www.facebook.com/Thietkenhatrongoigiare/" class="d-inline-block"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w" class="d-inline-block"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
-    </nav>
 </div>
+
+
 <div id="arcontactus"></div>
 <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
 <script src="{{asset('js/jquery.bind-first-0.2.3.min.js')}}"></script>
@@ -474,6 +460,7 @@
 <script src="{{asset('js/popper.min.js')}}"></script>
 <script src="{{asset('js/js.cookie-2.1.3.min.js')}}"></script>
 <script src="{{asset('js/flickity.pkgd.min.js')}}"></script>
+<script src="{{asset('js/mmenu.js')}}"></script>
 
 @yield('custom-js')
 <script>
@@ -486,6 +473,24 @@
             $('.logo1__wrap').removeClass('btn--active');
         }
     })
+
+    document.addEventListener(
+        "DOMContentLoaded", () => {
+            new Mmenu( "#menu", {
+                "navbars": [
+                    {
+                        "position": "top",
+                        "content": [
+                            "searchfield"
+                        ]
+                    }
+                ]
+            });
+        }
+    );
+
+
+
 </script>
 </body>
 </html>

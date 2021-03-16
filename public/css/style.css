@@ -8,3 +8,17 @@
 .project__item.ef__zoomin{
     margin-right: 10px;
 }
+
+.mm-wrapper_opening .mm-menu_offcanvas.mm-menu_opened~.mm-slideout{
+    -webkit-transform: translate3d(0px,0,0);
+    transform: translate3d(0px,0,0);
+}
+.mm-menu{
+    z-index: 1;
+}
+
+.mm-searchfield input, .mm-searchfield input:focus, .mm-searchfield input:hover{
+    background: rgb(255 255 255 / 5%);
+    color: rgb(255 255 255 / 75%);
+}
+
