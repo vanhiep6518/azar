@@ -21,4 +21,14 @@
     background: rgb(255 255 255 / 5%);
     color: rgb(255 255 255 / 75%);
 }
+@media (max-width: 576px){
+    .wp-logo{
+        width: 100%!important;
+    }
+}
+@media (max-width: 767.98px){
+    .dn__slider .slider__item .dnfix__thumb {
+         height: 100vh;
+    }
+}
 
