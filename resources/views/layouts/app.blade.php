@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;display=swap" rel="stylesheet"/>
     <title>@yield('title')</title>
+    <link rel="icon" href="{{asset('images/LOGO.jpg')}}">
     <link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect"/>
     <link data-minify="1" rel="stylesheet" id="contact-form-7-css" href="{{asset('css/styles-659c78715297af5a1e12b8358b540b51.css')}}" type="text/css" media="all"/>
     <link data-minify="1" rel="stylesheet" id="taxonomy-image-plugin-public-css" href="{{asset('css/style-843175da3b18f4497c2360158e20f1d7.css')}}" type="text/css" media="screen"/>
@@ -176,10 +177,10 @@
                         <li class=""><a href="https://www.facebook.com/Thietkenhatrongoigiare/" class=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li class=""><a href="https://www.youtube.com/channel/UCcGQ2f9G8tYUtoy5NUixRGw" class=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                         <li class=" hbtn__search">
-                            <a href="index.html#" class=""><i class="fa fa-search" aria-hidden="true"></i></a>
-                            <form role="search" method="get" class="search-form search__form" action="">
+                            <a href="#" class=""><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <form role="search"  method="get" class="search-form search__form" action="">
                                 <div class="input-group">
-                                    <input type="search" id="search-form-5fefb62161333" class="search-field form-control" placeholder="Nhập từ khóa cần tìm …" value="" name="s"/>
+                                    <input type="search" name="q" id="search-form-5fefb62161333" class="search-field form-control" placeholder="Nhập từ khóa cần tìm …" value=""/>
                                     <div class="input-group-append"> <button class="search-submit btn btn-outline-secondary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button></div>
                                 </div>
                             </form>

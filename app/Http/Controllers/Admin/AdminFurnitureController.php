@@ -115,7 +115,7 @@ class AdminFurnitureController extends Controller
         return redirect()->back()->with('status', 'Thêm nội thất thành công');
     }
 
-    public function actionProject(Request $request){
+    public function actionFurniture(Request $request){
         $messages = [
             'required' => 'Bạn phải chọn :attribute',
         ];

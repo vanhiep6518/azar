@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Construction extends Model
 {
     use HasFactory;
-    protected $table = 'constructions';
+    public $table = 'constructions';
 
     protected $fillable = [
         'cat_id',
