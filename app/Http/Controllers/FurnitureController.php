@@ -35,6 +35,7 @@ class FurnitureController extends Controller
             ['cat_id','=',$cat_id],
             ['id','!=',$id],
         ])->with('furniture_cat')->get();
+//        dd($project);
         if($project && $relatedProject){
             return view('furnitures.detail',compact('project','relatedProject'));
         }

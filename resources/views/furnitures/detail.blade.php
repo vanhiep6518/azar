@@ -17,6 +17,15 @@
                                 <h1 class="entry-title">{{$project->title}}</h1>
                                 <span class="title__line"></span>
                             </header>
+                            <div class="row no-guttersz">
+                                @if($project && $project->image)
+                                    @foreach($project->image as $item)
+                                        <div class="col-md-4 col-lg-3">
+                                            <div class="sgallery__item"> <a href="{{$item}}" data-fancybox="group" data-caption="Chung cư phòng " class="dnfix__thumb"> <img width="300" height="225" src="{{$item}}" class="attachment-medium size-medium"> </a></div>
+                                        </div>
+                                    @endforeach
+                                @endif
+                            </div>
                             <div class="entry-content --custom">
                                 {!! $project->content !!}
                             </div>
