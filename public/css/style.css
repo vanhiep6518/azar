@@ -32,3 +32,17 @@
     }
 }
 
+.order_num {
+    position: absolute;
+    color: white;
+    top: -9px;
+    right: -11px;
+    /* padding: 0px 6px; */
+    border-radius: 50%;
+    background: red;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+

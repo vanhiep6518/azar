@@ -51,6 +51,20 @@ return [
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
         ],
+        'ftp' => [
+            'driver' => 'ftp',
+            'host' => '202.92.4.46',
+            'username' => 'account_upload@81art.vn',
+            'password' => '[7x*RH=Slh*5',
+
+            // Optional FTP Settings...
+            'port' => 21,
+            'root' => '',
+            'passive' => true,
+            // 'ssl' => true,
+            // 'timeout' => 30,
+            'url' => env('APP_URL').'/storage',
+        ],
 
     ],
 

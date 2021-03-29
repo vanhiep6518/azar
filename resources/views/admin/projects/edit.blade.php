@@ -55,7 +55,7 @@
 
                     <div class="form-group">
                         <label for="content">Nội dung Dự án</label>
-                        <textarea id="mytextarea" class="form-control @error('content') is-invalid @enderror" name="content">{{ $project->title }}</textarea>
+                        <textarea id="mytextarea" class="form-control @error('content') is-invalid @enderror" name="content">{{ $project->content }}</textarea>
                         @error('content')
                         <div class="invalid-feedback">
                             {{ $message }}

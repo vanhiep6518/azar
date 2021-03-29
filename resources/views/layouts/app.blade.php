@@ -80,6 +80,7 @@
                 </ul>
                 @endif
         </li>
+        <li><a href="{{route('shop.index')}}">Shop</a></li>
         <li><a href="{{route('introduce')}}">Giới thiệu</a></li>
     </ul>
 </nav>
@@ -167,13 +168,16 @@
 {{--                                <li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="index.html%3Fp=251.html">Thước lỗ ban</a></li>--}}
 {{--                            </ul>--}}
 {{--                        </li>--}}
+                        <li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-260 {{ (request()->segment(1) == 'shop') ? 'active' : '' }}">
+                            <a href="{{route('shop.index')}}">Shop</a>
+                        </li>
                         <li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269 {{ (request()->segment(1) == 'gioi-thieu') ? 'active' : '' }}"><a href="{{route('introduce')}}">Giới thiệu</a></li>
                         <li class="item__custom d-md-none"><a href="login.html" class="">Login</a></li>
                         <li class="item__custom d-md-none"><a href="https://www.facebook.com/Thietkenhatrongoigiare/" class="d-inline-block"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://www.youtube.com/channel/UC6gIm2yTkuAtJK1kMC0zH3w" class="d-inline-block"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                     </ul>
                     <ul class="el__right">
 {{--                        <li class=""><a href="login.html" class=""><i class="fa fa-user" aria-hidden="true"></i></a></li>--}}
-                        <li class=""><a href="" class=""><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                        <li class="position-relative"><a href="{{route('cart.cart')}}" class=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>@if(Cart::count() > 0)<span class="order_num">{{Cart::count()}}</span>@endif</li>
                         <li class=""><a href="https://www.facebook.com/Thietkenhatrongoigiare/" class=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li class=""><a href="https://www.youtube.com/channel/UCcGQ2f9G8tYUtoy5NUixRGw" class=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                         <li class=" hbtn__search">

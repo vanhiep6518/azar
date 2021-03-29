@@ -7,6 +7,7 @@ use \App\Http\Controllers\FurnitureController;
 use \App\Http\Controllers\ConstructionController;
 use \App\Http\Controllers\PageController;
 use \App\Http\Controllers\PriceController;
+use \App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +20,7 @@ use \App\Http\Controllers\PriceController;
 */
 
 
-Route::get('/', [HomeController::class,'index']);
+Route::get('/', [HomeController::class,'index'])->name('home');
 
 Route::group(['prefix' => 'du-an','as' => 'project.'], function () {
     Route::get('/',[ProjectController::class,'index'])->name('list');
@@ -52,6 +53,26 @@ Route::get('/hop-dong-thiet-ke',[PriceController::class,'contractDesign']);
 Route::get('/hop-dong-thi-cong-doi-tac',[PriceController::class,'partnerContract']);
 Route::get('/hop-dong-thi-cong-khach-hang',[PriceController::class,'customerContract']);
 Route::get('/hop-dong-thi-cong-noi-that',[PriceController::class,'furnitureContract']);
+
+Route::group(['prefix' => 'shop','as' => 'shop.'], function () {
+    Route::get('/',[OrderController::class,'index'])->name('index');
+    Route::get('/{cat_slug}',[OrderController::class,'cat'])->name('cat');
+    Route::get('/{cat_slug}/{product_slug}/{id}',[OrderController::class,'detailProduct'])->name('detailProduct');
+
+});
+
+Route::group(['prefix' => 'cart','as' => 'cart.'], function () {
+    Route::get('/',[OrderController::class,'cart'])->name('cart');
+    Route::get('/checkout',[OrderController::class,'checkout'])->name('checkout');
+
+    Route::match(['get', 'post'],'/add/{id}',[OrderController::class,'addToCart'])->name('add');
+    Route::get('/delete/{rowId}',[OrderController::class,'delete'])->name('delete');
+    Route::post('/update',[OrderController::class,'update'])->name('update');
+    Route::get('/deleteAll',[OrderController::class,'deleteAll'])->name('deleteAll');
+    Route::get('/buyNow/{id}',[OrderController::class,'buyNow'])->name('buyNow');
+
+    Route::post('/order',[OrderController::class,'order'])->name('order');
+});
 
 require __DIR__.'/auth.php';
 

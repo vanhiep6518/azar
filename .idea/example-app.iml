@@ -117,6 +117,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/realrashid/sweet-alert" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/unisharp/laravel-filemanager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/intervention/image" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/staudenmeir/laravel-adjacency-list" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/staudenmeir/laravel-cte" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/hardevine/shoppingcart" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/brian2694/laravel-toastr" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

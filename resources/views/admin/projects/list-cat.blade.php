@@ -40,17 +40,17 @@
                                 </div>
                                 @enderror
                             </div>
-{{--                            <div class="form-group">--}}
-{{--                                <label for="">Danh mục cha</label>--}}
-{{--                                <select class="form-control" name="parent_id" id="">--}}
-{{--                                    <option value="">Chọn danh mục</option>--}}
-{{--                                    @if(!empty($listCat))--}}
-{{--                                        @foreach($listCat as $item)--}}
-{{--                                            <option value="{{$item->id}}">{{$item->name}}</option>--}}
-{{--                                        @endforeach--}}
-{{--                                    @endif--}}
-{{--                                </select>--}}
-{{--                            </div>--}}
+                            <div class="form-group">
+                                <label for="">Danh mục cha</label>
+                                <select class="form-control" name="parent_id" id="">
+                                    <option value="">Chọn danh mục</option>
+                                    @if(!empty($listCat))
+                                        @foreach($listCat as $item)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                            </div>
                             <button type="submit" class="btn btn-primary">Thêm mới</button>
                         </form>
                     </div>

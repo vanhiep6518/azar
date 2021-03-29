@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\AdminPriceController;
 use App\Http\Controllers\Admin\AdminPageController;
 use App\Http\Controllers\Admin\AdminSliderController;
 use App\Http\Controllers\Admin\AdminVideoController;
+use App\Http\Controllers\Admin\AdminProductController;
+use App\Http\Controllers\Admin\AdminOrderController;
 use Illuminate\Support\Facades\Route;
 
 Route::match(['get', 'post'], '/login', [LoginController::class, 'login'])->name('admin.login');
@@ -97,6 +99,30 @@ Route::middleware('authAdmin')->name('admin.')->group(function (){
         Route::post('/add', [AdminVideoController::class, 'addVideo'])->name('addVideo');
         Route::post('/update/{id}', [AdminVideoController::class, 'updateVideo'])->name('updateVideo');
         Route::get('/ajax-edit', [AdminVideoController::class, 'ajaxEdit']);
+    });
+
+    Route::group(['prefix' => 'product'], function () {
+        Route::get('/list/{status?}', [AdminProductController::class, 'listProduct'])->name('product');
+        Route::post('/action', [AdminProductController::class, 'actionProduct'])->name('actionProduct');
+
+        Route::match(['get', 'post'], '/save/{id?}', [AdminProductController::class, 'saveProduct'])->name('saveProduct');
+        Route::get('/delete/{id}', [AdminProductController::class, 'deleteProduct'])->name('deleteProduct');
+
+        Route::get('/list-cat', [AdminProductController::class, 'listCat'])->name('productCat');
+        Route::post('/add-cat', [AdminProductController::class, 'addCat'])->name('addProductCat');
+        Route::post('/update-cat/{id}', [AdminProductController::class, 'updateCat'])->name('updateProductCat');
+        Route::get('/ajax-edit-cat', [AdminProductController::class, 'ajaxEditCat']);
+        Route::get('/delete-cat/{id}', [AdminProductController::class, 'deleteCat'])->name('deleteProductCat');
+    });
+
+    Route::group(['prefix' => 'order'], function () {
+        Route::get('/list/{status?}', [AdminOrderController::class, 'listOrder'])->name('order');
+        Route::post('/action', [AdminOrderController::class, 'actionOrder'])->name('actionOrder');
+        Route::get('/delete/{id}', [AdminOrderController::class, 'deleteOrder'])->name('deleteOrder');
+
+        Route::get('/detail/{id}', [AdminOrderController::class, 'detail'])->name('orderDetail');
+        Route::get('/ajax-customer-info', [AdminOrderController::class, 'ajaxCustomerInfo']);
+
     });
 });
 

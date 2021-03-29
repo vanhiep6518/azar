@@ -153,8 +153,8 @@ class AdminPriceController extends Controller
             'slug' => 'Đường dẫn danh mục',
         ];
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|unique:project_cats',
-            'slug' => 'unique:project_cats',
+            'name' => 'required|string|unique:price_cats',
+            'slug' => 'unique:price_cats',
         ],$messages,$customAttr);
 
         if ($validator->fails()) {

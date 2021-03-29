@@ -93,14 +93,45 @@
             </ul>
         </li>
 
+        <li class="nav-link {{ (request()->segment(2) == 'product') ? 'active' : '' }}">
+            <a href="{{route('admin.product')}}">
+                <div class="nav-link-icon d-inline-flex">
+                    <i class="far fa-folder"></i>
+                </div>
+                Sản phẩm
+            </a>
+            <i class="arrow fas fa-angle-right"></i>
+
+            <ul class="sub-menu">
+                <li><a href="{{route('admin.saveProduct')}}">Thêm mới</a></li>
+                <li><a href="{{route('admin.product')}}">Danh sách</a></li>
+                <li><a href="{{route('admin.productCat')}}">Danh mục</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-link {{ (request()->segment(2) == 'order') ? 'active' : '' }}">
+            <a href="{{route('admin.order')}}">
+                <div class="nav-link-icon d-inline-flex">
+                    <i class="far fa-folder"></i>
+                </div>
+                Bán hàng
+            </a>
+            <i class="arrow fas fa-angle-right"></i>
+            <ul class="sub-menu">
+                <li><a href="{{route('admin.order')}}">Danh sách đơn hàng</a></li>
+            </ul>
+        </li>
+
         <li class="nav-link {{ (request()->segment(2) == 'video') ? 'active' : '' }}">
             <a href="{{route('admin.video')}}">
                 <div class="nav-link-icon d-inline-flex">
                     <i class="far fa-folder"></i>
                 </div>
-                Video
+               Video
             </a>
 {{--            <i class="arrow fas fa-angle-right"></i>--}}
         </li>
+
+
     </ul>
 </div>

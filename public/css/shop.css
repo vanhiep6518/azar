@@ -1,0 +1,52 @@
+/*STYLE*/
+@import '../css/import/fonts.css';
+@import '../css/import/global.css';
+@import '../css/import/header.css';
+@import '../css/import/footer.css';
+@import '../css/import/home.css';
+@import '../css/import/category_product.css';
+@import '../css/import/blog.css';
+@import '../css/import/detail_product.css';
+@import '../css/import/detail_blog.css';
+@import '../css/import/cart.css';
+@import '../css/import/checkout.css';
+
+#site {
+    margin-top: 70px;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
+    font-size: 30px;
+}
+
+.owl-theme .owl-nav{
+    position: absolute;
+    top: -60px;
+    right: 5px;
+}
+
+.xzoom{
+    width: 350px!important;
+    height: 350px!important;;
+}
+
+.xzoom-preview {
+    top: 40px!important;
+}
+
+.xzoom-source{
+    top: 40px!important;
+}
+
+.xzoom-gallery{
+    width: 80px;
+    height: 80px;
+}
+
+#list-product-wp .section-detail .list-item li img {
+    height: 200px;
+}
+
+.toast-top-right{
+    top: 75px!important;
+}
