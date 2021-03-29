@@ -70,6 +70,31 @@ class AdminOrderController extends Controller
         return redirect()->back()->with('status', 'Cập nhật Đơn hàng thành công');
     }
 
+    public function updateStatusOrder($id,Request $request){
+        $messages = [
+            'required' => 'Bạn phải chọn :attribute',
+        ];
+        $customAttr = [
+            'status' => 'Tác vụ',
+        ];
+        $validator = Validator::make($request->all(), [
+            'status' => 'required|integer',
+        ],$messages,$customAttr);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withInput()
+                ->withErrors($validator->errors());
+        }
+
+        $status = $request->input('status');
+        //code action
+        $order = Order::find($id);
+        $order->status = $status;
+        $order->save();
+
+        return redirect()->back()->with('status', 'Cập nhật Đơn hàng thành công');
+    }
+
     public function detail($id){
         if($id){
             $detail = Order::with('customer','order_items')->find($id);

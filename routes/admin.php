@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\AdminSliderController;
 use App\Http\Controllers\Admin\AdminVideoController;
 use App\Http\Controllers\Admin\AdminProductController;
 use App\Http\Controllers\Admin\AdminOrderController;
+use App\Http\Controllers\Admin\AdminConstructionProgressController;
 use Illuminate\Support\Facades\Route;
 
 Route::match(['get', 'post'], '/login', [LoginController::class, 'login'])->name('admin.login');
@@ -122,6 +123,15 @@ Route::middleware('authAdmin')->name('admin.')->group(function (){
 
         Route::get('/detail/{id}', [AdminOrderController::class, 'detail'])->name('orderDetail');
         Route::get('/ajax-customer-info', [AdminOrderController::class, 'ajaxCustomerInfo']);
+        Route::post('/update-status/{id}', [AdminOrderController::class, 'updateStatusOrder'])->name('updateStatusOrder');
+    });
+
+    Route::group(['prefix' => 'con-progress'], function () {
+        Route::get('/list/{status?}', [AdminConstructionProgressController::class, 'listProgress'])->name('progress');
+        Route::post('/action', [AdminConstructionProgressController::class, 'actionProgress'])->name('actionProgress');
+
+        Route::match(['get', 'post'], '/save/{id?}', [AdminConstructionProgressController::class, 'saveProgress'])->name('saveProgress');
+        Route::get('/delete/{id}', [AdminConstructionProgressController::class, 'deleteProgress'])->name('deleteProgress');
 
     });
 });

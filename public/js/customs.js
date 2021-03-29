@@ -91,6 +91,7 @@ $(document).ready(function() {
             success : function (data){
                 toastr.success('Sản phẩm đã được thêm vào giỏ hàng')
                 $(".order_num").text(data.num_order);
+                $(".order_num").removeClass('d-none')
             }
         });
         return false;
@@ -106,6 +107,7 @@ $(document).ready(function() {
                 // console.log(data)
                 toastr.success('Sản phẩm đã được thêm vào giỏ hàng')
                 $(".order_num").text(data.num_order);
+                $(".order_num").removeClass('d-none')
             },
             error: function(xhr, ajaxOptions, thrownError) {
                 alert(xhr.status);

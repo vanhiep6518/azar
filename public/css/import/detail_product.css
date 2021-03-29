@@ -1,8 +1,11 @@
 /*DETAIL PRODUCT*/
 
-#detail-product-wp .thumb-wp,
-#detail-product-wp .thumb-respon-wp {
+#detail-product-wp .thumb-wp{
     width: 42%;
+}
+
+#detail-product-wp .thumb-respon-wp{
+    width: 100%;
 }
 
 #detail-product-wp .thumb-respon-wp {

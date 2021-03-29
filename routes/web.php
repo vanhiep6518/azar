@@ -8,6 +8,7 @@ use \App\Http\Controllers\ConstructionController;
 use \App\Http\Controllers\PageController;
 use \App\Http\Controllers\PriceController;
 use \App\Http\Controllers\OrderController;
+use \App\Http\Controllers\ConstructionProgressController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,23 @@ use \App\Http\Controllers\OrderController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/migrate', function () {
+    Artisan::call('migrate');
+    return 'success';
+});
+
+Route::get('/rollback', function () {
+    Artisan::call('migrate:rollback');
+    return 'success';
+});
+
+
+Route::get('/clear', function () {
+    Artisan::call('config:clear');
+    Artisan::call('cache:clear');
+    return 'success';
+});
 
 
 Route::get('/', [HomeController::class,'index'])->name('home');
@@ -39,6 +57,8 @@ Route::group(['prefix' => 'thi-cong','as' => 'construction.'], function () {
     Route::get('/{slug}',[ConstructionController::class,'projectCat'])->name('cat');
     Route::get('/{cat_slug}/{slug}/{id}',[ConstructionController::class,'projectDetail'])->name('detail');
 });
+Route::get('/tim-kiem-tien-do',[ConstructionProgressController::class,'index'])->name('conProgress');
+Route::get('/tien-do-thi-cong',[ConstructionProgressController::class,'store'])->name('storeProgress');
 
 Route::group(['prefix' => 'bang-gia','as' => 'price.'], function () {
     Route::get('/{slug}/{id}',[PriceController::class,'index'])->name('detail');

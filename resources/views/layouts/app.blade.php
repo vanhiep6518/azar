@@ -80,7 +80,9 @@
                 </ul>
                 @endif
         </li>
-        <li><a href="{{route('shop.index')}}">Shop</a></li>
+        <li><a href="{{route('shop.index')}}">Shop</a>
+            {{showCategories($cats['product'])}}
+        </li>
         <li><a href="{{route('introduce')}}">Giới thiệu</a></li>
     </ul>
 </nav>
@@ -126,6 +128,7 @@
                                         <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="{{route('construction.cat',['slug' => $item->slug])}}">{{$item->name}}</a></li>
                                     @endforeach
                                 @endif
+                                    <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="{{route('conProgress')}}">Tiến độ thi công</a></li>
                             </ul>
                         </li>
                         <li id="menu-item-230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-230 {{ (request()->segment(1) == 'bang-gia') ? 'active' : '' }}">
@@ -177,7 +180,7 @@
                     </ul>
                     <ul class="el__right">
 {{--                        <li class=""><a href="login.html" class=""><i class="fa fa-user" aria-hidden="true"></i></a></li>--}}
-                        <li class="position-relative"><a href="{{route('cart.cart')}}" class=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>@if(Cart::count() > 0)<span class="order_num">{{Cart::count()}}</span>@endif</li>
+                        <li class="position-relative"><a href="{{route('cart.cart')}}" class=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span class="order_num {{(Cart::count() == 0) ? 'd-none':'' }}" >{{Cart::count()}}</span></li>
                         <li class=""><a href="https://www.facebook.com/Thietkenhatrongoigiare/" class=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li class=""><a href="https://www.youtube.com/channel/UCcGQ2f9G8tYUtoy5NUixRGw" class=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                         <li class=" hbtn__search">
@@ -191,7 +194,7 @@
                         </li>
                     </ul>
                     <ul class="el__right --mb">
-                        <li class=""><a href="danh-muc-noi-that/sieu-thi-noi-that.html" class=""><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                        <li class="position-relative"><a href="{{route('cart.cart')}}" class=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span class="order_num {{(Cart::count() == 0) ? 'd-none':'' }}" >{{Cart::count()}}</span></li>
                     </ul>
                     <a href="#menu" class="menu__mobile ml-2"> <span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></span> <span class="ml-1 icon-bar__text d-none"> MENU</span> </a>
                 </nav>

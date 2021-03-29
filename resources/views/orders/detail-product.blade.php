@@ -17,6 +17,9 @@
                             <div class="section-detail clearfix">
                                 <div class="thumb-wp fl-left">
                                     <img class="xzoom" id="xzoom-default" src="{{$product->image[0]}}" xoriginal="{{$product->image[0]}}" />
+                                    <div class="thumb-respon-wp">
+                                        <img src="{{$product->image[0]}}" alt="">
+                                    </div>
                                     <div class="xzoom-thumbs d-flex mt-2">
                                         @if($product->image && count($product->image) > 0)
                                             @foreach($product->image as $item)
@@ -24,9 +27,6 @@
                                             @endforeach
                                         @endif
                                     </div>
-                                </div>
-                                <div class="thumb-respon-wp fl-left">
-                                    <img src="public/images/img-pro-01.png" alt="">
                                 </div>
                                 <div class="info fl-right">
                                     <h3 class="product-name">{{$product->name}}</h3>

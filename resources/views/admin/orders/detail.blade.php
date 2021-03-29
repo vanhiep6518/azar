@@ -21,18 +21,24 @@
                     <h3 class="title"><i class="fab fa-opencart"></i> Thông tin vận chuyển</h3>
                     <span class="detail">{{transport_info($detail->payment_type)}}</span>
                 </li>
-                <form method="POST" action="">
+                <form method="POST" action="{{route('admin.updateStatusOrder',['id'=>$detail->id])}}">
+                    @csrf
                     <li>
                         <h3 class="title"><i class="fas fa-exclamation"></i> Tình trạng đơn hàng</h3>
                         <select name="status">
-                            <option value="private" @if($detail->status == 1) selected="selected" @endif>Chờ duyệt</option>
-                            <option value="in_transit" @if($detail->status == 2) selected="selected" @endif>Đang vận chuyển</option>
-                            <option value="success" @if($detail->status == 3) selected="selected" @endif>Thành công</option>
-                            <option value="success" @if($detail->status == 4) selected="selected" @endif>Thùng rác</option>
+                            <option value="1" @if($detail->status == 1) selected="selected" @endif>Chờ duyệt</option>
+                            <option value="2" @if($detail->status == 2) selected="selected" @endif>Đang vận chuyển</option>
+                            <option value="3" @if($detail->status == 3) selected="selected" @endif>Thành công</option>
+                            <option value="4" @if($detail->status == 4) selected="selected" @endif>Thùng rác</option>
                         </select>
                         <input type="submit" name="sm_status" value="Cập nhật đơn hàng">
                     </li>
                 </form>
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
             </ul>
         </div>
         <div class="section">

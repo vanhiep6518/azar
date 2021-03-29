@@ -6,6 +6,7 @@ use App\Models\ConstructionCat;
 use App\Models\FurnitureCat;
 use App\Models\Price;
 use App\Models\PriceCat;
+use App\Models\ProductCat;
 use App\Models\ProjectCat;
 use App\Models\Video;
 use Illuminate\Support\ServiceProvider;
@@ -35,6 +36,7 @@ class AppServiceProvider extends ServiceProvider
         $cats['furniture'] = FurnitureCat::all();
         $cats['construction'] = ConstructionCat::all();
         $cats['price'] = PriceCat::with('prices')->get();
+        $cats['product'] = ProductCat::all();
         $video_id = Video::first()->video_id;
         View::share('cats', $cats);
         View::share('video_id', $video_id);

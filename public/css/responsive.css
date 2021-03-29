@@ -34,7 +34,7 @@
     .sidebar{ display: none;}
     .main-content{ width: 100%; float: none; margin-left: 0;}
     /*DETAIL PRODUCT*/
-    .thumb-wp{ display: none;}
+    .xzoom{ display: none;}
     .thumb-respon-wp{ display: block;}
     /*FOOTER*/
 
@@ -174,4 +174,27 @@
     .detail-product-page #add-to-cart, .detail-product-page #buy-now{ font-size: 13px; padding: 13px 23px;}
     /*CART & CHECKOUT*/
     .place-order-wp input[type="submit"]{ padding: 15px 30px;}
+}
+
+@media screen and (max-width: 414px){
+    .thumb-respon-wp {
+        width: 100%!important;
+        margin-bottom: 15px;
+    }
+
+    #detail-product-wp .thumb-wp{
+        width: 100%;
+    }
+
+    #customer-info-wp , #order-review-wp{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 992px){
+.sc__wrap{
+    padding: 10px 0px;
+}
+
 }

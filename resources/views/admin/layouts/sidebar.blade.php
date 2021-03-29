@@ -52,6 +52,19 @@
                 <li><a href="{{route('admin.constructionCat')}}">Danh mục</a></li>
             </ul>
         </li>
+        <li class="nav-link {{ (request()->segment(2) == 'con-progress') ? 'active' : '' }}">
+            <a href="{{route('admin.progress')}}">
+                <div class="nav-link-icon d-inline-flex">
+                    <i class="far fa-folder"></i>
+                </div>
+                Tiến độ thi công
+            </a>            <i class="arrow fas fa-angle-right"></i>
+
+            <ul class="sub-menu">
+                <li><a href="{{route('admin.saveProgress')}}">Thêm mới</a></li>
+                <li><a href="{{route('admin.progress')}}">Danh sách</a></li>
+            </ul>
+        </li>
         <li class="nav-link {{ (request()->segment(2) == 'price') ? 'active' : '' }}">
             <a href="{{route('admin.price')}}">
                 <div class="nav-link-icon d-inline-flex">
