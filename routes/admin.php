@@ -20,7 +20,10 @@ Route::get('/logout',[LoginController::class, 'logout'])->name('admin.logout');
 Route::match(['get', 'post'], '/send-reset-pass', [LoginController::class, 'sendResetPassword'])->name('admin.send-reset-pass');
 Route::match(['get', 'post'], '/reset-pass', [ResetPasswordController::class, 'passwordResetProcess'])->name('admin.reset-pass');
 Route::middleware('authAdmin')->name('admin.')->group(function (){
-    Route::get('/', [AdminDashboardController::class, 'index'])->name('dashboard');
+//    Route::get('/', [AdminDashboardController::class, 'index'])->name('dashboard');
+    Route::get('/', function(){
+        return redirect()->route('admin.project');
+    });
 
     Route::group(['prefix' => 'project'], function () {
         Route::get('/list/{status?}', [AdminProjectController::class, 'listProject'])->name('project');

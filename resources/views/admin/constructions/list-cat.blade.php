@@ -82,8 +82,11 @@
                                         </td>
                                         <td><span class="pd-cat" title="phu-kien">{{$item->slug}}</span></td>
                                         <td class="feature">
+
                                             <a data-id="{{$item->id}}" class="btn btn-success btn-sm rounded-0 text-white btn-edit" type="button" ><i class="fa fa-edit"></i></a>
+                                            @if($item->id != 1)
                                             <a href="{{route('admin.deleteConstructionCat',['id'=>$item->id])}}" data-id="{{$item->id}}" class="btn btn-danger btn-sm rounded-0 text-white btn-delete" type="button" onclick="return confirm('Dữ liệu bài viết sẽ bị xoá nếu bạn xoá danh mục này')"><i class="fa fa-trash"></i></a>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach

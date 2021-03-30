@@ -75,7 +75,9 @@
                                     <td>{{$item->construction_cat->name}}</td>
                                     <td>{{Carbon\Carbon::parse($item->created_at)->format('d/m/Y')}}</td>
                                     <td><a href="{{route('admin.saveConstruction',['id'=> $item->id])}}" class="btn btn-success btn-sm rounded-0"  data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
+                                        @if($item->cat_id != 1)
                                         <a href="{{route('admin.deleteConstruction',['id'=>$item->id])}}" class="btn btn-danger btn-sm rounded-0" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Xóa bài viết này ?')"><i class="fa fa-trash"></i></a>
+                                            @endif
                                     </td>
 
                                 </tr>

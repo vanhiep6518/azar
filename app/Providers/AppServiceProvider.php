@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Construction;
 use App\Models\ConstructionCat;
 use App\Models\FurnitureCat;
 use App\Models\Price;
@@ -37,9 +38,11 @@ class AppServiceProvider extends ServiceProvider
         $cats['construction'] = ConstructionCat::all();
         $cats['price'] = PriceCat::with('prices')->get();
         $cats['product'] = ProductCat::all();
+        $procCon = Construction::where('cat_id',1)->first();
         $video_id = Video::first()->video_id;
         View::share('cats', $cats);
         View::share('video_id', $video_id);
+        View::share('procCon', $procCon);
         Paginator::useBootstrap();
     }
 }

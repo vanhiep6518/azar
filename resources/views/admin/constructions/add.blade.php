@@ -48,9 +48,11 @@
                             <option value="">Chọn danh mục</option>
                             @if(!empty($listCat))
                                 @foreach($listCat as $item)
+                                    @if($item->id != 1)
                                     <option @if ($item->id == old('project_cat'))
                                         selected
                                     @endif value="{{$item->id}}">{{$item->name}}</option>
+                                    @endif
                                 @endforeach
                             @endif
                         </select>

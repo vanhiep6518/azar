@@ -125,7 +125,11 @@
                             <ul class="sub-menu">
                                 @if(isset($cats) && $cats['construction'])
                                     @foreach($cats['construction'] as $item)
-                                        <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="{{route('construction.cat',['slug' => $item->slug])}}">{{$item->name}}</a></li>
+                                        @if($item->id == 1)
+                                            <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="{{route('procProgress')}}">{{$procCon->title ?? 'Quy trình thi công'}}</a></li>
+                                        @else
+                                            <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="{{route('construction.cat',['slug' => $item->slug])}}">{{$item->name}}</a></li>
+                                        @endif
                                     @endforeach
                                 @endif
                                     <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="{{route('conProgress')}}">Tiến độ thi công</a></li>

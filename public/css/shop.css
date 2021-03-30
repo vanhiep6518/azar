@@ -50,3 +50,26 @@
 .toast-top-right{
     top: 75px!important;
 }
+
+@media (min-width: 1600px){
+    #main-content-wp .container {
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1800px){
+    #main-content-wp .container {
+        max-width: 1600px;
+    }
+
+    #list-product-wp .section-detail .list-item li{
+        width: 20.25%;
+    }
+}
+
+@media (min-width: 2000px){
+    #main-content-wp .container {
+        max-width: 1800px;
+    }
+}
+

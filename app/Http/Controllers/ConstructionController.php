@@ -38,4 +38,9 @@ class ConstructionController extends Controller
             return view('constructions.detail',compact('project','relatedProject'));
         }
     }
+
+    public function constructionProgress(){
+        $procProgress = Construction::where('cat_id',1)->first();
+        return view('constructions.procProgress',compact('procProgress'));
+    }
 }

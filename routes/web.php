@@ -57,6 +57,9 @@ Route::group(['prefix' => 'thi-cong','as' => 'construction.'], function () {
     Route::get('/{slug}',[ConstructionController::class,'projectCat'])->name('cat');
     Route::get('/{cat_slug}/{slug}/{id}',[ConstructionController::class,'projectDetail'])->name('detail');
 });
+Route::get('/quy-trinh-thi-cong',[ConstructionController::class,'constructionProgress'])->name('procProgress');
+
+
 Route::get('/tim-kiem-tien-do',[ConstructionProgressController::class,'index'])->name('conProgress');
 Route::get('/tien-do-thi-cong',[ConstructionProgressController::class,'store'])->name('storeProgress');
 

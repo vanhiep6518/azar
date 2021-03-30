@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('css')
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/shop.css')}}">
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('css/toastr.min.css')}}">
@@ -8,14 +10,14 @@
     <div id="site">
         <div id="container">
             <div id="main-content-wp" class="home-page clearfix">
-                <div class="wp-inner">
+                <div class="container clearfix">
                     <div class="main-content fl-right">
                         <div class="section clearfix" id="list-product-wp">
                             <div class="section-head">
                                 <h3 class="section-title">Tất cả sản phẩm</h3>
                             </div>
                             <div class="section-detail">
-                                <ul class="list-item">
+                                <ul class="list-item clearfix">
                                     @if($products && count($products)>0)
                                         @foreach($products as $item)
                                         <li>
@@ -47,6 +49,11 @@
                             <div class="secion-detail">
                                 {{showCategories($productCats)}}
                             </div>
+                        </div>
+                        <div class="owl-carousel owl-theme mt-5">
+                            <div class="item"><h4><a href=""><img src="{{asset('images/qc1.jpeg')}}" alt=""></a></h4></div>
+                            <div class="item"><h4><a href=""><img src="{{asset('images/qc2.jpeg')}}" alt=""></a></h4></div>
+                            <div class="item"><h4><a href=""><img src="{{asset('images/qc3.jpeg')}}" alt=""></a></h4></div>
                         </div>
                     </div>
                 </div>
@@ -106,5 +113,25 @@
 @section('custom-js')
     <script src="{{asset('js/toastr.min.js')}}"></script>
     <script src="{{asset('js/customs.js')}}"></script>
+    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
     {!! Toastr::message() !!}
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:false,
+            items: 1,
+            // responsive:{
+            //     0:{
+            //         items:1
+            //     },
+            //     600:{
+            //         items:3
+            //     },
+            //     1000:{
+            //         items:3
+            //     }
+            // }
+        })
+    </script>
 @endsection

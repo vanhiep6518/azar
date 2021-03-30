@@ -33,6 +33,7 @@
                         </div>
                         @enderror
                     </div>
+                    @if($project->id != 2)
                     <label for="fileupload">Ảnh đại diện</label><br>
                     <input id="fileupload" name="file" type="file" multiple="multiple" />
                     <br>
@@ -61,6 +62,7 @@
                         </div>
                         @enderror
                     </div>
+                    @endif
                     <div class="form-group">
                         <label for="">Trạng thái</label>
                         <div class="form-check">
