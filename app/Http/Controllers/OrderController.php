@@ -96,7 +96,7 @@ class OrderController extends Controller
 
     public function cart(){
         $cartItems = Cart::content();
-
+//        dd($cartItems);
         return view('orders.cart',compact('cartItems'));
     }
 

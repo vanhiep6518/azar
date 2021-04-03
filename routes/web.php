@@ -9,6 +9,7 @@ use \App\Http\Controllers\PageController;
 use \App\Http\Controllers\PriceController;
 use \App\Http\Controllers\OrderController;
 use \App\Http\Controllers\ConstructionProgressController;
+use \App\Http\Controllers\FengShuiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -95,6 +96,14 @@ Route::group(['prefix' => 'cart','as' => 'cart.'], function () {
     Route::get('/buyNow/{id}',[OrderController::class,'buyNow'])->name('buyNow');
 
     Route::post('/order',[OrderController::class,'order'])->name('order');
+});
+
+Route::group(['as' => 'fengshui.'], function () {
+    Route::match(['get','post'],'/xem-huong-nha',[FengShuiController::class,'houseDirection'])->name('house');
+    Route::match(['get','post'],'/xem-huong-bep',[FengShuiController::class,'kitchenDirection'])->name('kitchen');
+    Route::match(['get','post'],'/xem-mau-hop-menh',[FengShuiController::class,'color'])->name('color');
+    Route::match(['get','post'],'/xem-tuoi-xay-nha',[FengShuiController::class,'yearBuild'])->name('yearBuild');
+    Route::get('/thuoc-lo-ban',[FengShuiController::class,'ruler'])->name('ruler');
 });
 
 require __DIR__.'/auth.php';

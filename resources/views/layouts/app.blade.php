@@ -164,17 +164,17 @@
                                 @endif
                             </ul>
                         </li>
-{{--
-{{--                        <li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-260">--}}
-{{--                            <a href="index.html#">Phong thủy</a>--}}
-{{--                            <ul class="sub-menu">--}}
-{{--                                <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="index.html%3Fp=270.html">Xem hướng nhà</a></li>--}}
-{{--                                <li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="index.html%3Fp=273.html">Xem hướng bếp</a></li>--}}
-{{--                                <li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="index.html%3Fp=275.html">Xem màu hợp mệnh</a></li>--}}
-{{--                                <li id="menu-item-279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-279"><a href="index.html%3Fp=277.html">Xem tuổi xây nhà</a></li>--}}
-{{--                                <li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="index.html%3Fp=251.html">Thước lỗ ban</a></li>--}}
-{{--                            </ul>--}}
-{{--                        </li>--}}
+
+                        <li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-260">
+                            <a href="javascript:void(0)">Phong thủy</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="{{route('fengshui.house')}}">Xem hướng nhà</a></li>
+                                <li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="{{route('fengshui.kitchen')}}">Xem hướng bếp</a></li>
+                                <li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"><a href="{{route('fengshui.color')}}">Xem màu hợp mệnh</a></li>
+                                <li id="menu-item-279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-279"><a href="{{route('fengshui.yearBuild')}}">Xem tuổi xây nhà</a></li>
+                                <li id="menu-item-261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-261"><a href="{{route('fengshui.ruler')}}">Thước lỗ ban</a></li>
+                            </ul>
+                        </li>
                         <li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-260 {{ (request()->segment(1) == 'shop') ? 'active' : '' }}">
                             <a href="{{route('shop.index')}}">Shop</a>
                         </li>

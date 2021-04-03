@@ -64,29 +64,28 @@
                                 <h3 class="section-title">Cùng chuyên mục</h3>
                             </div>
                             <div class="section-detail">
-                                <ul class="list-item owl-carousel owl-theme" style="opacity: 1; display: block;">
-                                    @if($relativeProduct && count($relativeProduct) > 0)
-                                        <p>Không có sản phẩm nào cùng chuyên mục</p>
-                                        @foreach($relativeProduct as $item)
-                                            <li>
-                                                <a href="?mod=product&amp;action=detail&amp;id=2" title="" class="thumb">
-                                                    <img src="http://127.0.0.1:8000/storage/uploads/noithat-3.jpg">
-                                                </a>
-                                                <a href="?mod=product&amp;action=detail&amp;id=2" title="" class="product-name">Samsung Galaxy A51</a>
-                                                <div class="price">
-                                                    <span class="new">6,990,000đ</span>
-                                                    <!-- <span class="old">20.900.000đ</span> -->
-                                                </div>
-                                                <div class="action clearfix">
-                                                    <a href="?mod=user&amp;action=addCart&amp;id=2" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                                    <a href="?mod=user&amp;action=buyNow&amp;id=2" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                                                </div>
-                                            </li>
-                                        @endforeach
-{{--                                    @else--}}
-{{--                                        <p>Không có sản phẩm nào cùng chuyên mục</p>--}}
-                                    @endif
-                                </ul>
+                                @if($relativeProduct && count($relativeProduct) > 0)
+                                    <div class="list-item main-carousel">
+                                    @foreach($relativeProduct as $item)
+                                            <div class="carousel-cell">
+                                            <a href="{{route('shop.detailProduct',['cat_slug'=>$item->product_cat->slug,'product_slug'=>$item->slug,'id'=>$item->id])}}" title="" class="thumb">
+                                                <img src="{{$item->image[0]}}">
+                                            </a>
+                                            <a class="product-name" href="{{route('shop.detailProduct',['cat_slug'=>$item->product_cat->slug,'product_slug'=>$item->slug,'id'=>$item->id])}}">{{$item->name}}</a>
+                                            <div class="price">
+                                                <span class="new">{{currency_format($item->price)}}</span>
+                                                <!-- <span class="old">20.900.000đ</span> -->
+                                            </div>
+                                            <div class="action clearfix">
+                                                <a href="javascript:void(0)" data-id="{{$item->id}}" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
+                                                <a href="{{route('cart.buyNow',['id'=>$item->id])}}" title="" class="buy-now fl-right">Mua ngay</a>
+                                            </div>
+                                            </div>
+                                    @endforeach
+                                    </div>
+                                @else
+                                    <p>Không có sản phẩm nào cùng chuyên mục</p>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -151,11 +150,11 @@
             </div>
         </div>
         <div id="btn-top"><img src="public/images/icon-to-top.png" alt=""/></div>
-        <div id="fb-root"></div>
+
     </div>
 @endsection
 @section('custom-js')
-    <script src="{{asset('js/jquery.min.js')}}"></script>
+{{--    <script src="{{asset('js/jquery.min.js')}}"></script>--}}
     <script src="{{asset('js/owl.carousel.min.js')}}"></script>
     <script src="{{asset('js/xzoom.min.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
@@ -164,24 +163,13 @@
     {!! Toastr::message() !!}
 
     <script>
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
-            dots:false,
-            items:4,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:4
-                }
-            }
-        })
+        $('.main-carousel').flickity({
+            // options
+            cellAlign: 'left',
+            contain: true,
+            prevNextButtons: false,
+            pageDots: false
+        });
 
         $(".xzoom, .xzoom-gallery").xzoom({tint: '#333', Xoffset: 15});
     </script>

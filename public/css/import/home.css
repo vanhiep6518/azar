@@ -201,7 +201,7 @@
 
 #feature-product-wp .list-item li .product-name,
 #list-product-wp .list-item li .product-name,
-#same-category-wp .list-item li .product-name {
+#same-category-wp .list-item li .product-name ,.main-carousel .carousel-cell .product-name{
     display: block;
     text-align: center;
     color: #222;
@@ -216,16 +216,19 @@
     text-align: center;
     margin-bottom: 15px;
 }
-
+.price{
+    text-align: center;
+}
 #feature-product-wp .list-item li .price .new,
 #list-product-wp .list-item li .price .new,
-#same-category-wp .list-item li .price .new {
+#same-category-wp .list-item li .price .new,.main-carousel .carousel-cell .new {
     display: inline-block;
     font-family: 'Roboto Medium';
     color: #f12a43;
     font-size: 15px;
     font-weight: normal;
     margin-right: 5px;
+    text-align: center;
 }
 
 #feature-product-wp .list-item li .price .old,
@@ -239,7 +242,7 @@
 
 #feature-product-wp .list-item li .action a,
 #list-product-wp .list-item li .action a,
-#same-category-wp .list-item li .action a {
+#same-category-wp .list-item li .action a,.main-carousel .carousel-cell a {
     display: block;
     padding: 2px 10px;
     font-size: 12px;
@@ -247,28 +250,28 @@
 
 #feature-product-wp .list-item li .action .add-cart,
 #list-product-wp .list-item li .action .add-cart,
-#same-category-wp .list-item li .action .add-cart {
+#same-category-wp .list-item li .action .add-cart,.main-carousel .carousel-cell .add-cart {
     border: 1px solid #333;
     color: #333;
 }
 
 #feature-product-wp .list-item li .action .buy-now,
 #list-product-wp .list-item li .action .buy-now,
-#same-category-wp .list-item li .action .buy-now {
+#same-category-wp .list-item li .action .buy-now,.main-carousel .carousel-cell .buy-now {
     color: #da1818;
     border: 1px solid #da1818;
 }
 
 #feature-product-wp .list-item li .action .buy-now:hover,
 #list-product-wp .list-item li .action .buy-now:hover,
-#same-category-wp .list-item li .action .buy-now:hover {
+#same-category-wp .list-item li .action .buy-now:hover,.main-carousel .carousel-cell .buy-now:hover {
     background: #da1818;
     color: #fff;
 }
 
 #feature-product-wp .list-item li .action .add-cart:hover,
 #list-product-wp .list-item li .action .add-cart:hover,
-#same-category-wp .list-item li .action .add-cart:hover {
+#same-category-wp .list-item li .action .add-cart:hover,.main-carousel .carousel-cell .add-cart:hover {
     background: #333;
     color: #fff;
 }

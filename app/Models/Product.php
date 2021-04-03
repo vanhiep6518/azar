@@ -37,7 +37,7 @@ class Product extends Model
 
     public function getCatSlugAttribute()
     {
-        return ProductCat::where('id',$this->attributes['id'])->first()->slug ?? '';
+        return ProductCat::where('id',$this->attributes['cat_id'])->first()->slug ?? '';
     }
 
     public function getSlugAttribute()
