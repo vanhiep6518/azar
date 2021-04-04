@@ -14,6 +14,7 @@
 
 <!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1614945208 -->
 <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{asset('js/popper.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/bootstrap3-typeahead.min.js')}}"></script>
 <script src="{{asset('js/autoNumeric-1.9.41.js')}}"></script>
@@ -23,5 +24,6 @@
         $('[data-toggle="tooltip"]').tooltip({'placement':'right', 'container':'body'});
     });
 </script>
+@yield('custom-js')
 </body>
 </html>

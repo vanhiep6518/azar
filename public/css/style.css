@@ -45,4 +45,13 @@
     text-align: center;
 }
 
+.wpcf7 form .wpcf7-response-output {
+    border-color: #46b450;
+}
+
+.wpcf7 form .wpcf7-response-output.fail {
+    border-color: #ff0000;
+}
+
+
 

@@ -80,6 +80,15 @@
                 </ul>
                 @endif
         </li>
+        <li><a href="javascript:void(0)">Phong Thủy</a>
+            <ul>
+                <li ><a href="{{route('fengshui.house')}}">Xem hướng nhà</a></li>
+                <li><a href="{{route('fengshui.kitchen')}}">Xem hướng bếp</a></li>
+                <li ><a href="{{route('fengshui.color')}}">Xem màu hợp mệnh</a></li>
+                <li><a href="{{route('fengshui.yearBuild')}}">Xem tuổi xây nhà</a></li>
+                <li><a href="{{route('fengshui.ruler')}}">Thước lỗ ban</a></li>
+            </ul>
+        </li>
         <li><a href="{{route('shop.index')}}">Shop</a>
             {{showCategories($cats['product'])}}
         </li>
@@ -366,26 +375,28 @@
                         <div id="dktv_form" class="mb-3">
                             <div role="form" class="wpcf7" id="wpcf7-f256-o1" lang="vi" dir="ltr">
                                 <div class="screen-reader-response" role="alert" aria-live="polite"></div>
-                                <form action="" method="post" class="wpcf7-form init" novalidate="novalidate">
+                                <form action="{{route('sendAdvice')}}" id="send-advice-form" method="post" class="wpcf7-form init" novalidate="novalidate">
+                                    @csrf
                                     <div style="display: none;"> <input type="hidden" name="_wpcf7" value="256"/> <input type="hidden" name="_wpcf7_version" value="5.2"/> <input type="hidden" name="_wpcf7_locale" value="vi"/> <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f256-o1"/> <input type="hidden" name="_wpcf7_container_post" value="0"/> <input type="hidden" name="_wpcf7_posted_data_hash" value=""/></div>
                                     <div class="row contact-form">
                                         <div class="col-md-6">
-                                            <div class="form-group"> <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="* Họ và tên"/></span></div>
+                                            <div class="form-group"> <span class="wpcf7-form-control-wrap your-name"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="* Họ và tên"/></span></div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="form-group"> <span class="wpcf7-form-control-wrap your-phone"><input type="text" name="your-phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="* Số điện thoại"/></span></div>
+                                            <div class="form-group"> <span class="wpcf7-form-control-wrap your-phone"><input type="text" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="* Số điện thoại"/></span></div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="form-group"> <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email form-control" aria-invalid="false" placeholder="Email"/></span></div>
+                                            <div class="form-group"> <span class="wpcf7-form-control-wrap your-email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email form-control" aria-invalid="false" placeholder="Email"/></span></div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="form-group"> <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text form-control" aria-invalid="false" placeholder="Mã giới thiệu"/></span></div>
+{{--                                            <div class="form-group"> <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text form-control" aria-invalid="false" placeholder="Mã giới thiệu"/></span></div>--}}
                                         </div>
                                         <div class="col-md-12">
-                                            <div class="form-group"> <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="3" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Dịch vụ yêu cầu"></textarea></span></div>
+                                            <div class="form-group"> <span class="wpcf7-form-control-wrap your-message"><textarea name="message" cols="40" rows="3" class="wpcf7-form-control wpcf7-textarea form-control" aria-invalid="false" placeholder="Dịch vụ yêu cầu"></textarea></span></div>
                                         </div>
                                         <div class="col-md-6"> <span class="btn_dlh flex-grow-1">Để lại thông tin của quý khách <br/> &amp; Kiến trúc sư sẽ liên hệ tư vấn miễn phí</span></div>
-                                        <div class="col-md-6"> <input type="submit" value="Gửi đi" disabled class="wpcf7-form-control wpcf7-submit btn form-control btn__success"/></div>
+                                        <div class="col-md-6"> <input type="button" value="Gửi đi" class="wpcf7-form-control wpcf7-submit btn form-control btn__success btn-send-advice" style="color: #fff;"/>
+                                            <span class="ajax-loader"></span></div>
                                     </div>
                                     <div class="wpcf7-response-output" role="alert" aria-hidden="true"></div>
                                 </form>
@@ -429,15 +440,15 @@
                 <img src="{{asset('images/icon-phone.gif')}}" class="" alt=""/> <span>Gọi ngay cho chúng tôi</span>
                 <p class="support__mb--text">Gọi ngay <span class="d-none d-md-inline-block"> 0374 059 517</span></p>
             </a>
-            <a href="index.html#dktv_formsc" class="call-form" rel="nofollow">
+            <a href="#send-advice-form" class="call-form" rel="nofollow">
                 <i class="fa fa-user-o d-block d-md-none" aria-hidden="true"></i> <span>Để lại lời nhắn cho chúng tôi</span>
                 <p class="support__mb--text">Tư vấn miễn phí</p>
             </a>
-            <a href="index.html#" data-toggle="modal" data-target="#modal__yctv" class="call-address" rel="nofollow">
-                <span>Yêu cầu tư vấn</span>
-                <p class="support__mb--text mr-1">Yêu cầu tư vấn</p>
-                <img src="{{asset('images/icon-phone.gif')}}" class="flip-image" alt=""/>
-            </a>
+{{--            <a href="index.html#" data-toggle="modal" data-target="#modal__yctv" class="call-address" rel="nofollow">--}}
+{{--                <span>Yêu cầu tư vấn</span>--}}
+{{--                <p class="support__mb--text mr-1">Yêu cầu tư vấn</p>--}}
+{{--                <img src="{{asset('images/icon-phone.gif')}}" class="flip-image" alt=""/>--}}
+{{--            </a>--}}
         </div>
     </div>
     <div class="modal fade" id="modal__yctv" tabindex="-1" role="dialog" aria-labelledby="modal__yctvTitle" aria-hidden="true">
@@ -473,6 +484,7 @@
 <script src="{{asset('js/js.cookie-2.1.3.min.js')}}"></script>
 <script src="{{asset('js/flickity.pkgd.min.js')}}"></script>
 <script src="{{asset('js/mmenu.js')}}"></script>
+<script src="{{asset('js/advice-mail.js')}}"></script>
 
 @yield('custom-js')
 <script>

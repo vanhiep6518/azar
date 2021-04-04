@@ -10,6 +10,7 @@ use \App\Http\Controllers\PriceController;
 use \App\Http\Controllers\OrderController;
 use \App\Http\Controllers\ConstructionProgressController;
 use \App\Http\Controllers\FengShuiController;
+use \App\Http\Controllers\AdviceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -105,6 +106,8 @@ Route::group(['as' => 'fengshui.'], function () {
     Route::match(['get','post'],'/xem-tuoi-xay-nha',[FengShuiController::class,'yearBuild'])->name('yearBuild');
     Route::get('/thuoc-lo-ban',[FengShuiController::class,'ruler'])->name('ruler');
 });
+
+Route::post('/send-advice',[AdviceController::class,'sendAdvice'])->name('sendAdvice');
 
 require __DIR__.'/auth.php';
 

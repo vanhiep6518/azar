@@ -32,7 +32,7 @@
                     <p style="font-weight: bold;">Kính gửi: <span class="recipient">Công ty ...</span></p>
                     <p>Chúng tôi: <span class="office_info_auto-name">CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></p>
                     <p>Địa chỉ: <span class="office_info_auto-address">78 Nguyễn Minh Chấn, Hòa Khánh Nam, Q.Liên Chiểu, TP.Đà Nẵng</span></p>
-                    <p>Trân trọng báo giá thi công công trình: <span class="building_type_auto-title">...</span></p>
+                    <p>Trân trọng báo giá thi công công trình: <input id="don_gia_tk_chinh" class="item_editable use_area w-50 text-left"  value="..."></p>
                     <p>Địa chỉ công trình: <span class="building_address">...</span></p>
                     <br>
                     <table class="table baogia table-bordered price" style="width:100%;">
@@ -48,7 +48,7 @@
                             <td style="text-align:center;"> <input id="phantho" type="checkbox" class="chkxm"></td>
                             <td rowspan="2"> <span style="text-align: center;"><strong>PHẦN THÔ XÂY MỚI</strong></span></td>
                             <td> <span style="text-align: center;">Nhà Phố</span></td>
-                            <td> <span style="text-align: center;"> <input id="dg_xay_moi_nha_pho" name="dg_xay_moi_nha_pho xay_moi" disabled="" value="3,000,000" class="item_editable use_area xaymoi"> </span></td>
+                            <td> <span style="text-align: center;"> <input id="dg_xay_moi_nha_pho" name="dg_xay_moi_nha_pho xay_moi"  value="3,000,000" class="item_editable use_area xaymoi"> </span></td>
                             <td rowspan="4">
                                 <ul style="margin: 0;font-size: 12px;">
                                     <li>Sắt thép: Hòa Phát, Việt Nhật, Việt Úc</li>
@@ -60,35 +60,35 @@
                                     <li>Dây điện, ống luồn dây điện, dây cáp: Cadivi.</li>
                                 </ul>
                             </td>
-                            <td> <span style="text-align: center;"> <input id="dt_xay_moi_nha_pho" name="dt_xay_moi_nha_pho" disabled="" value="" class="item_editable use_area "> </span></td>
+                            <td> <span style="text-align: center;"> <input id="dt_xay_moi_nha_pho" name="dt_xay_moi_nha_pho"  value="" class="item_editable use_area "> </span></td>
                             <td class="item-total xay_moi_nha_pho_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input id="phantho1" type="checkbox" class="chkxm"></td>
                             <td> <span style="text-align: center;">Biệt Thự</span></td>
-                            <td> <span style="text-align: center;"> <input id="dg_xay_moi_biet_thu" name="dg_xay_moi_biet_thu xay_moi" disabled="" value="3,500,000" class="item_editable use_area xaymoi"></span></td>
-                            <td> <span style="text-align: center;"> <input id="dt_xay_moi_biet_thu" name="dt_xay_moi_biet_thu " disabled="" value="" class="item_editable use_area"> </span></td>
+                            <td> <span style="text-align: center;"> <input id="dg_xay_moi_biet_thu" name="dg_xay_moi_biet_thu xay_moi"  value="3,500,000" class="item_editable use_area xaymoi"></span></td>
+                            <td> <span style="text-align: center;"> <input id="dt_xay_moi_biet_thu" name="dt_xay_moi_biet_thu "  value="" class="item_editable use_area"> </span></td>
                             <td class="item-total xay_moi_biet_thu_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input id="phantho2" type="checkbox" class="chkxm"></td>
                             <td rowspan="2"> <span style="text-align: center;"><strong>PHẦN THÔ CẢI TẠO</strong></span></td>
                             <td> <span style="text-align: center;">Nhà Phố</span></td>
-                            <td rowspan="2"> <span style="text-align: center;"> <input id="dg_cai_tao_nha_pho" name="dg_cai_tao_nha_pho xay_moi" disabled="" value="2,300,000" class="item_editable use_area xaymoi"></span></td>
-                            <td> <span><input id="dt_cai_tao_nha_pho" name="dt_cai_tao_nha_pho" disabled="" value="" class="item_editable use_area"></span></td>
+                            <td rowspan="2"> <span style="text-align: center;"> <input id="dg_cai_tao_nha_pho" name="dg_cai_tao_nha_pho xay_moi"  value="2,300,000" class="item_editable use_area xaymoi"></span></td>
+                            <td> <span><input id="dt_cai_tao_nha_pho" name="dt_cai_tao_nha_pho"  value="" class="item_editable use_area"></span></td>
                             <td class="item-total cai_tao_nha_pho_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input id="phantho3" type="checkbox" class="chkxm"></td>
                             <td> <span style="text-align: center;">Biệt Thự</span></td>
-                            <td> <span><input id="dt_cai_tao_biet_thu" name="dt_cai_tao_biet_thu" disabled="" value="" class="item_editable use_area xaymoi"></span></td>
+                            <td> <span><input id="dt_cai_tao_biet_thu" name="dt_cai_tao_biet_thu"  value="" class="item_editable use_area xaymoi"></span></td>
                             <td class="item-total cai_tao_biet_thu_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input id="hoanthien" type="checkbox" class="chkht"></td>
                             <td rowspan="3"> <span style="text-align: center;"><strong>HOÀN THIỆN</strong></span></td>
                             <td> <span style="text-align: center;">Nhà Phố 1 MT</span></td>
-                            <td> <span style="text-align: center;"><input id="dg_hoan_thien_nha_pho_1mt" name="dg_hoan_thien_nha_pho_1mt" disabled="" value="3,000,000" class="item_editable use_area"></span></td>
+                            <td> <span style="text-align: center;"><input id="dg_hoan_thien_nha_pho_1mt" name="dg_hoan_thien_nha_pho_1mt"  value="3,000,000" class="item_editable use_area"></span></td>
                             <td rowspan="3">
                                 <ul style="margin: 0;font-size: 12px;">
                                     <li>Gạch ốp lát: Kimgress, Eurotile.</li>
@@ -103,53 +103,53 @@
                                     <li>Cầu thang: Ốp đá Granite, lan can kính, sắt.</li>
                                 </ul>
                             </td>
-                            <td> <span><input id="dt_hoan_thien_nha_pho_1mt" name="dt_hoan_thien_nha_pho_1mt" disabled="" value="" class="item_editable use_area"></span></td>
+                            <td> <span><input id="dt_hoan_thien_nha_pho_1mt" name="dt_hoan_thien_nha_pho_1mt"  value="" class="item_editable use_area"></span></td>
                             <td class="item-total hoan_thien_nha_pho_1mt_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input id="hoanthien1" type="checkbox" class="chkht"></td>
                             <td> <span style="text-align: center;">Nhà Phố 2 MT</span></td>
-                            <td> <span style="text-align: center;"><input id="dg_hoan_thien_nha_pho_2mt" name="dg_hoan_thien_nha_pho_2mt" disabled="" value="3,500,000" class="item_editable use_area"></span></td>
-                            <td> <span><input id="dt_hoan_thien_nha_pho_2mt" name="dt_hoan_thien_nha_pho_2mt" disabled="" value="" class="item_editable use_area"></span></td>
+                            <td> <span style="text-align: center;"><input id="dg_hoan_thien_nha_pho_2mt" name="dg_hoan_thien_nha_pho_2mt"  value="3,500,000" class="item_editable use_area"></span></td>
+                            <td> <span><input id="dt_hoan_thien_nha_pho_2mt" name="dt_hoan_thien_nha_pho_2mt"  value="" class="item_editable use_area"></span></td>
                             <td class="item-total hoan_thien_nha_pho_2mt_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input id="hoanthien2" type="checkbox" class="chkht"></td>
                             <td> <span style="text-align: center;">Biệt Thự</span></td>
-                            <td> <span style="text-align: center;"><input id="dg_hoan_thien_biet_thu" name="dg_hoan_thien_biet_thu" disabled="" value="4,000,000" class="item_editable use_area"></span></td>
-                            <td> <span><input id="dt_hoan_thien_biet_thu" name="dt_hoan_thien_biet_thu" disabled="" value="" class="item_editable use_area"></span></td>
+                            <td> <span style="text-align: center;"><input id="dg_hoan_thien_biet_thu" name="dg_hoan_thien_biet_thu"  value="4,000,000" class="item_editable use_area"></span></td>
+                            <td> <span><input id="dt_hoan_thien_biet_thu" name="dt_hoan_thien_biet_thu"  value="" class="item_editable use_area"></span></td>
                             <td class="item-total hoan_thien_biet_thu_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox" class="chktr"></td>
                             <td rowspan="2"> <span style="text-align: center;"><strong>TƯỜNG RÀO</strong></span></td>
                             <td> <span style="text-align: center;">Nhà Phố</span></td>
-                            <td> <span style="text-align: center;"><input id="dg_tuong_rao_nha_pho" name="dg_tuong_rao_nha_pho" disabled="" value="6,000,000" class="item_editable use_area"></span></td>
+                            <td> <span style="text-align: center;"><input id="dg_tuong_rao_nha_pho" name="dg_tuong_rao_nha_pho"  value="6,000,000" class="item_editable use_area"></span></td>
                             <td> <span style="margin: 0;font-size: 12px;">Cao 2.5m ốp đá 2 mặt, cổng sắt, conwood.</span></td>
-                            <td> <span><input id="dt_tuong_rao_nha_pho" name="dt_tuong_rao_nha_pho" disabled="" value="" class="item_editable use_area"></span></td>
+                            <td> <span><input id="dt_tuong_rao_nha_pho" name="dt_tuong_rao_nha_pho"  value="" class="item_editable use_area"></span></td>
                             <td class="item-total tuong_rao_nha_pho_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox" class="chktr"></td>
                             <td> <span style="text-align: center;">Biệt Thự</span></td>
-                            <td> <span style="text-align: center;"><input id="dg_tuong_rao_biet_thu" name="dg_tuong_rao_biet_thu" disabled="" value="8,000,000" class="item_editable use_area"></span></td>
+                            <td> <span style="text-align: center;"><input id="dg_tuong_rao_biet_thu" name="dg_tuong_rao_biet_thu"  value="8,000,000" class="item_editable use_area"></span></td>
                             <td> <span style="margin: 0;font-size: 12px;">Cao 2.5m ốp gạch, đá tự nhiên, cổng sắt, conwood.</span></td>
-                            <td> <span><input id="dt_tuong_rao_biet_thu" name="dt_tuong_rao_biet_thu" disabled="" value="" class="item_editable use_area"></span></td>
+                            <td> <span><input id="dt_tuong_rao_biet_thu" name="dt_tuong_rao_biet_thu"  value="" class="item_editable use_area"></span></td>
                             <td class="item-total tuong_rao_biet_thu_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox" class="chksv"></td>
                             <td rowspan="2"> <span style="text-align: center;"><strong>SÂN VƯỜN</strong></span></td>
                             <td> <span style="text-align: center;">Nhà Phố</span></td>
-                            <td rowspan="2"> <span style="text-align: center;"><input id="dg_san_vuon_nha_pho" name="dg_san_vuon_nha_pho" disabled="" value="4,000,000" class="item_editable use_area"></span></td>
+                            <td rowspan="2"> <span style="text-align: center;"><input id="dg_san_vuon_nha_pho" name="dg_san_vuon_nha_pho"  value="4,000,000" class="item_editable use_area"></span></td>
                             <td rowspan="2"> <span style="margin: 0;font-size: 12px;">Nền lát đá sa thạch, bazan.<br> Bao gồm bồn hoa cây cỏ, hệ thống tưới tiêu.</span></td>
-                            <td> <span><input id="dt_san_vuon_nha_pho" name="dt_san_vuon_nha_pho" disabled="" value="" class="item_editable use_area"></span></td>
+                            <td> <span><input id="dt_san_vuon_nha_pho" name="dt_san_vuon_nha_pho"  value="" class="item_editable use_area"></span></td>
                             <td class="item-total san_vuon_nha_pho_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox" class="chksv"></td>
                             <td> <span style="text-align: center;">Biệt Thự</span></td>
-                            <td> <span><input id="dt_san_vuon_biet_thu" name="dt_san_vuon_biet_thu" disabled="" value="" class="item_editable use_area"></span></td>
+                            <td> <span><input id="dt_san_vuon_biet_thu" name="dt_san_vuon_biet_thu"  value="" class="item_editable use_area"></span></td>
                             <td class="item-total san_vuon_biet_thu_item_total"></td>
                         </tr>
                         <tr class="vat_row_cothue">
@@ -158,7 +158,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <p style="margin-top:10px;">Bằng chữ: <span class="sum_total_word_auto"><span id="sumtoal">...</span> đồng./.</span></p>
+                    <p style="margin-top:10px;">Bằng chữ: <input id="don_gia_tk_chinh" class="item_editable use_area w-75 text-left" name="don_gia_tk_chinh" value="... đồng."></p>
                     <p style="margin-top:10px;" class="sum vat_row_cothue">* Ghi chú:</p>
                     <table class="table" style="margin-bottom:0;">
                         <tbody>
@@ -199,29 +199,29 @@
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Móng cọc (đã gồm cọc)</td>
-                            <td class="coefficient"> <input id="hs_mong_coc" name="hs_mong_coc" disabled="" value="0.6" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dt_mong_coc" name="dt_mong_coc" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="hs_mong_coc" name="hs_mong_coc"  value="0.6" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dt_mong_coc" name="dt_mong_coc"  value="" class="item_editable use_area"></td>
                             <td class="item-total dt_mong_coc_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Móng băng 01 phương</td>
-                            <td class="coefficient"> <input id="hs_mong_bang_1" disabled="" name="hs_mong_bang_1" value="0.4" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dt_mong_bang_1" name="dt_mong_bang_1" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="hs_mong_bang_1"  name="hs_mong_bang_1" value="0.4" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dt_mong_bang_1" name="dt_mong_bang_1"  value="" class="item_editable garden_area"></td>
                             <td class="item-total dt_mong_bang_1_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Móng băng 02 phương</td>
-                            <td class="coefficient"> <input id="hs_mong_bang_2" disabled="" name="hs_mong_bang_2" value="0.6" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dt_mong_bang_2" name="dt_mong_bang_2" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="hs_mong_bang_2"  name="hs_mong_bang_2" value="0.6" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dt_mong_bang_2" name="dt_mong_bang_2"  value="" class="item_editable use_area"></td>
                             <td class="item-total dt_mong_bang_2_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Móng bè</td>
-                            <td class="coefficient"> <input id="hs_mong_be" disabled="" name="hs_mong_be" value="1" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dt_mong_be" name="dt_mong_be" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="hs_mong_be"  name="hs_mong_be" value="1" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dt_mong_be" name="dt_mong_be"  value="" class="item_editable garden_area"></td>
                             <td class="item-total dt_mong_be_item_total"></td>
                         </tr>
                         <tr>
@@ -231,15 +231,15 @@
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Sân thượng (không mái che)</td>
-                            <td class="coefficient"> <input id="hs_san_thuong" disabled="" name="hs_san_thuong" value="0.3" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dt_san_thuong" name="dt_san_thuong" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="hs_san_thuong"  name="hs_san_thuong" value="0.3" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dt_san_thuong" name="dt_san_thuong"  value="" class="item_editable use_area"></td>
                             <td class="item-total dt_san_thuong_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Mái nghiêng (đã tính ngói)</td>
-                            <td class="coefficient"> <input id="hs_mai_nghieng" disabled="" name="hs_mai_nghieng" value="0.9" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dt_mai_nghieng" name="dt_mai_nghieng" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="hs_mai_nghieng"  name="hs_mai_nghieng" value="0.9" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dt_mai_nghieng" name="dt_mai_nghieng"  value="" class="item_editable garden_area"></td>
                             <td class="item-total dt_mai_nghieng_item_total"></td>
                         </tr>
                         <tr>
@@ -249,29 +249,29 @@
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Hầm sâu từ 1.0 m đến 1.3 m</td>
-                            <td class="coefficient"> <input id="hs_ham_sau_13" disabled="" name="hs_ham_sau_13" value="1.5" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dt_ham_sau_13" name="dt_ham_sau_13" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="hs_ham_sau_13"  name="hs_ham_sau_13" value="1.5" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dt_ham_sau_13" name="dt_ham_sau_13"  value="" class="item_editable use_area"></td>
                             <td class="item-total dt_ham_sau_13_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Hầm sâu từ 1.3 m đến 1.7 m</td>
-                            <td class="coefficient"> <input id="hs_ham_sau_17" disabled="" name="hs_ham_sau_17" value="1.7" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dt_ham_sau_17" name="dt_ham_sau_17" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="hs_ham_sau_17"  name="hs_ham_sau_17" value="1.7" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dt_ham_sau_17" name="dt_ham_sau_17"  value="" class="item_editable garden_area"></td>
                             <td class="item-total dt_ham_sau_17_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Hầm sâu từ 1.7m đến 2.0m</td>
-                            <td class="coefficient"> <input id="hs_ham_sau_20" disabled="" name="hs_ham_sau_20" value="2" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dt_ham_sau_20" name="dt_ham_sau_20" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="hs_ham_sau_20"  name="hs_ham_sau_20" value="2" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dt_ham_sau_20" name="dt_ham_sau_20"  value="" class="item_editable use_area"></td>
                             <td class="item-total dt_ham_sau_20_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Hầm sâu lớn hơn 2 mét</td>
-                            <td class="coefficient"> <input id="hs_ham_sau_hon_2m" disabled="" name="hs_ham_sau_hon_2m" value="2.5" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dt_ham_sau_hon_2m" name="dt_ham_sau_hon_2m" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="hs_ham_sau_hon_2m"  name="hs_ham_sau_hon_2m" value="2.5" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dt_ham_sau_hon_2m" name="dt_ham_sau_hon_2m"  value="" class="item_editable garden_area"></td>
                             <td class="item-total dt_ham_sau_hon_2m_item_total"></td>
                         </tr>
                         <tr>
@@ -281,15 +281,15 @@
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Từ tầng 04 – tầng 05</td>
-                            <td class="coefficient"> <input id="hs_5_tang" disabled="" name="hs_5_tang" value="1.2" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dt_5_tang" name="dt_5_tang" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="hs_5_tang"  name="hs_5_tang" value="1.2" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dt_5_tang" name="dt_5_tang"  value="" class="item_editable use_area"></td>
                             <td class="item-total dt_5_tang_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Từ tầng 06 – tầng 09</td>
-                            <td class="coefficient"> <input id="hs_9_tang" disabled="" name="hs_9_tang" value="1.5" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dt_9_tang" name="dt_9_tang" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="hs_9_tang"  name="hs_9_tang" value="1.5" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dt_9_tang" name="dt_9_tang"  value="" class="item_editable garden_area"></td>
                             <td class="item-total dt_9_tang_item_total"></td>
                         </tr>
                         <tr>
@@ -299,22 +299,22 @@
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Công trình trong hẻm &lt;5.5m</td>
-                            <td class="coefficient"> <input id="hs_cong_trinh_hem" disabled="" name="hs_cong_trinh_hem" value="0.05" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dt_cong_trinh_hem" disabled="" name="dt_cong_trinh_hem" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="hs_cong_trinh_hem"  name="hs_cong_trinh_hem" value="0.05" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dt_cong_trinh_hem"  name="dt_cong_trinh_hem" value="" class="item_editable use_area"></td>
                             <td class="item-total dt_cong_trinh_hem_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Công trình ngoài tỉnh</td>
-                            <td class="coefficient"> <input id="hs_cong_trinh_tinh" disabled="" name="hs_cong_trinh_tinh" value="0.1" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dt_cong_trinh_tinh" name="dt_cong_trinh_tinh" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="hs_cong_trinh_tinh"  name="hs_cong_trinh_tinh" value="0.1" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dt_cong_trinh_tinh" name="dt_cong_trinh_tinh"  value="" class="item_editable garden_area"></td>
                             <td class="item-total dt_cong_trinh_tinh_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content" style="font-weight: bold; background-color: rgb(243, 243, 243);"> Tầng lửng</td>
-                            <td class="coefficient"> <input id="hs_tang_lung" disabled="" name="hs_tang_lung" value="0.4" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dt_tang_lung" name="dt_tang_lung" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="hs_tang_lung"  name="hs_tang_lung" value="0.4" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dt_tang_lung" name="dt_tang_lung"  value="" class="item_editable garden_area"></td>
                             <td class="item-total dt_tang_lung_item_total"></td>
                         </tr>
                         <tr class="vat_row_pt">
@@ -337,64 +337,64 @@
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Sàn gỗ tự nhiên</td>
-                            <td class="coefficient"> <input id="hs_san_go" disabled="" name="hs_san_go" value="0.4" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dt_san_go" name="dt_san_go" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="hs_san_go"  name="hs_san_go" value="0.4" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dt_san_go" name="dt_san_go"  value="" class="item_editable use_area"></td>
                             <td class="item-total san_go_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Gạch Vietceramic</td>
-                            <td class="coefficient"> <input id="hs_gach" disabled="" name="hs_gach" value="0.4" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dt_gach" name="dt_gach" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="hs_gach"  name="hs_gach" value="0.4" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dt_gach" name="dt_gach"  value="" class="item_editable garden_area"></td>
                             <td class="item-total gach_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Cửa nhôm Newzealand</td>
-                            <td class="coefficient"> <input id="hs_cuanhom" disabled="" name="hs_cuanhom" value="0.5" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dt_cuanhom" name="dt_cuanhom" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="hs_cuanhom"  name="hs_cuanhom" value="0.5" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dt_cuanhom" name="dt_cuanhom"  value="" class="item_editable use_area"></td>
                             <td class="item-total cua_nhom_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Trần gỗ, MDF trang trí</td>
-                            <td class="coefficient"> <input id="hs_tran_go" disabled="" name="hs_tran_go" value="0.4" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dt_tran_go" name="dt_tran_go" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="hs_tran_go"  name="hs_tran_go" value="0.4" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dt_tran_go" name="dt_tran_go"  value="" class="item_editable garden_area"></td>
                             <td class="item-total tran_go_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Mái gara, sân thượng</td>
-                            <td class="coefficient"> <input id="hs_mai_gara" disabled="" name="hs_mai_gara" value="0.5" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dt_mai_gara" name="dt_mai_gara" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="hs_mai_gara"  name="hs_mai_gara" value="0.5" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dt_mai_gara" name="dt_mai_gara"  value="" class="item_editable use_area"></td>
                             <td class="item-total mai_gara_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Tường gạch trang trí</td>
-                            <td class="coefficient"> <input id="hs_tuong_gach" disabled="" name="hs_tuong_gach" value="0.4" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dt_tuong_gach" name="dt_tuong_gach" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="hs_tuong_gach"  name="hs_tuong_gach" value="0.4" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dt_tuong_gach" name="dt_tuong_gach"  value="" class="item_editable garden_area"></td>
                             <td class="item-total tuong_gach_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Tường đá tự nhiên</td>
-                            <td class="coefficient"> <input id="hs_tuong_da" disabled="" name="hs_tuong_da" value="0.7" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dt_tuong_da" name="dt_tuong_da" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="hs_tuong_da"  name="hs_tuong_da" value="0.7" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dt_tuong_da" name="dt_tuong_da"  value="" class="item_editable use_area"></td>
                             <td class="item-total dt_tuong_da_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Hồ bơi – Hồ cá koi</td>
-                            <td class="coefficient"> <input id="hs_hoboi" disabled="" name="hs_hoboi" value="1.5" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dt_hoboi" name="dt_hoboi" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="hs_hoboi"  name="hs_hoboi" value="1.5" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dt_hoboi" name="dt_hoboi"  value="" class="item_editable garden_area"></td>
                             <td class="item-total dt_hoboi_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Cửa lưới chống muỗi</td>
-                            <td class="coefficient"> <input id="hs_cuoi_luoi" disabled="" name="hs_cuoi_luoi" value="0.2" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dt_cuoi_luoi" name="dt_cuoi_luoi" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="hs_cuoi_luoi"  name="hs_cuoi_luoi" value="0.2" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dt_cuoi_luoi" name="dt_cuoi_luoi"  value="" class="item_editable use_area"></td>
                             <td class="item-total dt_cuoi_luoi_item_total"></td>
                         </tr>
                         <tr class="vat_row_ht">
@@ -418,40 +418,40 @@
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Điều hòa trung tâm</td>
                             <td class="content" style="text-align:center;">Bộ</td>
-                            <td class="coefficient"> <input id="sl_dieu_hoa_tt" disabled="" name="sl_dieu_hoa_tt" value="" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dg_dieu_hoa_tt" name="dg_dieu_hoa_tt" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="sl_dieu_hoa_tt"  name="sl_dieu_hoa_tt" value="" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dg_dieu_hoa_tt" name="dg_dieu_hoa_tt"  value="" class="item_editable use_area"></td>
                             <td class="item-total dieu_hoa_tt_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Hệ thống thông minh</td>
                             <td class="content" style="text-align:center;">Bộ</td>
-                            <td class="coefficient"> <input id="sl_he_thong_tm" disabled="" name="sl_he_thong_tm" value="" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dg_he_thong_tm" name="dg_he_thong_tm" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="sl_he_thong_tm"  name="sl_he_thong_tm" value="" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dg_he_thong_tm" name="dg_he_thong_tm"  value="" class="item_editable garden_area"></td>
                             <td class="item-total he_thong_tm_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">Xông hơi</td>
                             <td class="content" style="text-align:center;">35tr/p</td>
-                            <td class="coefficient"> <input id="sl_xong_hoi" disabled="" name="sl_xong_hoi" value="" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dg_xong_hoi" name="dg_xong_hoi" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="sl_xong_hoi"  name="sl_xong_hoi" value="" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dg_xong_hoi" name="dg_xong_hoi"  value="" class="item_editable use_area"></td>
                             <td class="item-total xong_hoi_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">TBVS Toto, inax</td>
                             <td class="content" style="text-align:center;">35tr/p</td>
-                            <td class="coefficient"> <input id="sl_tbvs_toto" disabled="" name="sl_tbvs_toto" value="" class="item_editable garden_area"></td>
-                            <td class="amount"> <input id="dg_tbvs_toto" name="dg_tbvs_toto" disabled="" value="" class="item_editable garden_area"></td>
+                            <td class="coefficient"> <input id="sl_tbvs_toto"  name="sl_tbvs_toto" value="" class="item_editable garden_area"></td>
+                            <td class="amount"> <input id="dg_tbvs_toto" name="dg_tbvs_toto"  value="" class="item_editable garden_area"></td>
                             <td class="item-total tbvs_toto_item_total"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td class="content">TBVS Bravat</td>
                             <td class="content" style="text-align:center;">70tr/p</td>
-                            <td class="coefficient"> <input id="sl_tbvs_bravat" disabled="" name="sl_tbvs_bravat" value="" class="item_editable use_area"></td>
-                            <td class="amount"> <input id="dg_tbvs_bravat" name="dg_tbvs_bravat" disabled="" value="" class="item_editable use_area"></td>
+                            <td class="coefficient"> <input id="sl_tbvs_bravat"  name="sl_tbvs_bravat" value="" class="item_editable use_area"></td>
+                            <td class="amount"> <input id="dg_tbvs_bravat" name="dg_tbvs_bravat"  value="" class="item_editable use_area"></td>
                             <td class="item-total tbvs_bravat_item_total"></td>
                         </tr>
                         <tr class="vat_row_khac">
@@ -563,18 +563,18 @@
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td> <span>Loại 1</span></td>
-                            <td> <span style="text-align:center;"> <input id="khach_loai_1" disabled="" name="khach_loai_1" value="70tr/p" class="item_editable use_area"> </span></td>
+                            <td> <span style="text-align:center;"> <input id="khach_loai_1"  name="khach_loai_1" value="70tr/p" class="item_editable use_area"> </span></td>
                             <td> <span>S = 20-30 m<sup>2</sup>: sofa, bàn, ghế thư giãn, kệ tivi, thảm</span></td>
-                            <td><input id="dt_khach_loai_1" disabled="" name="dt_khach_loai_1" value="" class="item_editable use_area"></td>
-                            <td><input id="tt_khach_loai_1" disabled="" name="tt_khach_loai_1" value="" class="item_editable use_area"></td>
+                            <td><input id="dt_khach_loai_1"  name="dt_khach_loai_1" value="" class="item_editable use_area"></td>
+                            <td><input id="tt_khach_loai_1"  name="tt_khach_loai_1" value="" class="item_editable use_area"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td> <span>Loại 2</span></td>
-                            <td> <span style="text-align:center;"> <input id="khach_loai_2" disabled="" name="khach_loai_2" value="100tr/p" class="item_editable use_area"></span></td>
+                            <td> <span style="text-align:center;"> <input id="khach_loai_2"  name="khach_loai_2" value="100tr/p" class="item_editable use_area"></span></td>
                             <td> <span>S = 40-50 m<sup>2</sup>: loại 1 + kệ trang trí, vách gỗ trang trí</span></td>
-                            <td><input id="dt_khach_loai_2" disabled="" name="dt_khach_loai_2" value="" class="item_editable use_area"></td>
-                            <td><input id="tt_khach_loai_2" disabled="" name="tt_khach_loai_2" value="" class="item_editable use_area"></td>
+                            <td><input id="dt_khach_loai_2"  name="dt_khach_loai_2" value="" class="item_editable use_area"></td>
+                            <td><input id="tt_khach_loai_2"  name="tt_khach_loai_2" value="" class="item_editable use_area"></td>
                         </tr>
                         <tr style="font-weight: bold; background-color: rgb(243, 243, 243);">
                             <td colspan="6"> <span><strong>Phòng bếp</strong></span></td>
@@ -582,18 +582,18 @@
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td> <span>Loại 1</span></td>
-                            <td> <span style="text-align:center;"><input id="bep_loai_1" disabled="" name="bep_loai_1" value="100tr/p" class="item_editable use_area"></span></td>
+                            <td> <span style="text-align:center;"><input id="bep_loai_1"  name="bep_loai_1" value="100tr/p" class="item_editable use_area"></span></td>
                             <td> <span>S = 20-30 m<sup>2</sup>: bếp, đảo bếp, bàn ăn 6 người, đèn ăn, 5 món phụ kiện</span></td>
-                            <td><input id="dt_bep_loai_1" disabled="" name="dt_bep_loai_1" value="" class="item_editable use_area"></td>
-                            <td><input id="tt_bep_loai_1" disabled="" name="tt_bep_loai_1" value="" class="item_editable use_area"></td>
+                            <td><input id="dt_bep_loai_1"  name="dt_bep_loai_1" value="" class="item_editable use_area"></td>
+                            <td><input id="tt_bep_loai_1"  name="tt_bep_loai_1" value="" class="item_editable use_area"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td style="width:102px;"> <span>Loại 2</span></td>
-                            <td style="width:76px;"> <span style="text-align:center;"><input id="bep_loai_2" disabled="" name="bep_loai_2" value="150tr/p" class="item_editable use_area"></span></td>
+                            <td style="width:76px;"> <span style="text-align:center;"><input id="bep_loai_2"  name="bep_loai_2" value="150tr/p" class="item_editable use_area"></span></td>
                             <td style="width:217px;"> <span>S = 35-50 m<sup>2</sup>: loại 1 + tủ rượu, bàn ăn 10 người</span></td>
-                            <td><input id="dt_bep_loai_2" disabled="" name="dt_bep_loai_2" value="" class="item_editable use_area"></td>
-                            <td><input id="tt_bep_loai_2" disabled="" name="tt_bep_loai_2" value="" class="item_editable use_area"></td>
+                            <td><input id="dt_bep_loai_2"  name="dt_bep_loai_2" value="" class="item_editable use_area"></td>
+                            <td><input id="tt_bep_loai_2"  name="tt_bep_loai_2" value="" class="item_editable use_area"></td>
                         </tr>
                         <tr style="font-weight: bold; background-color: rgb(243, 243, 243);">
                             <td colspan="6"> <span><strong>Phòng ngủ</strong></span></td>
@@ -601,34 +601,34 @@
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td style="width:102px;"> <span>Tiêu chuẩn</span></td>
-                            <td style="width:76px;"> <span style="text-align:center;"><input id="ngu_tieu_chuan" disabled="" name="ngu_tieu_chuan" value="60tr/p" class="item_editable use_area"></span></td>
+                            <td style="width:76px;"> <span style="text-align:center;"><input id="ngu_tieu_chuan"  name="ngu_tieu_chuan" value="60tr/p" class="item_editable use_area"></span></td>
                             <td style="width:217px;"> <span>S = 20-25 m<sup>2</sup>: tủ áo &lt; 3md, giường 1m6, tap, bàn trang điểm, kệ tivi</span></td>
-                            <td><input id="dt_ngu_tieu_chuan" disabled="" name="dt_ngu_tieu_chuan" value="" class="item_editable use_area"></td>
-                            <td><input id="tt_ngu_tieu_chuan" disabled="" name="tt_ngu_tieu_chuan" value="" class="item_editable use_area"></td>
+                            <td><input id="dt_ngu_tieu_chuan"  name="dt_ngu_tieu_chuan" value="" class="item_editable use_area"></td>
+                            <td><input id="tt_ngu_tieu_chuan"  name="tt_ngu_tieu_chuan" value="" class="item_editable use_area"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td style="width:102px;"> <span>Master</span></td>
-                            <td style="width:76px;"> <span style="text-align:center;"><input id="ngu_master" disabled="" name="ngu_master" value="90tr/p" class="item_editable use_area"></span></td>
+                            <td style="width:76px;"> <span style="text-align:center;"><input id="ngu_master"  name="ngu_master" value="90tr/p" class="item_editable use_area"></span></td>
                             <td style="width:217px;"> <span>S = 30-40 m<sup>2</sup>: phòng tiêu chuẩn + phòng thay đồ, sofa thư giãn, giường bọc nệm</span></td>
-                            <td><input id="dt_ngu_master" disabled="" name="dt_ngu_master" value="" class="item_editable use_area"></td>
-                            <td><input id="tt_ngu_master" disabled="" name="tt_ngu_master" value="" class="item_editable use_area"></td>
+                            <td><input id="dt_ngu_master"  name="dt_ngu_master" value="" class="item_editable use_area"></td>
+                            <td><input id="tt_ngu_master"  name="tt_ngu_master" value="" class="item_editable use_area"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td style="width:102px;"> <span>VIP</span></td>
-                            <td style="width:76px;"> <span style="text-align:center;"><input id="ngu_vip" disabled="" name="ngu_vip" value="150tr/p" class="item_editable use_area"></span></td>
+                            <td style="width:76px;"> <span style="text-align:center;"><input id="ngu_vip"  name="ngu_vip" value="150tr/p" class="item_editable use_area"></span></td>
                             <td style="width:217px;"> <span>S = 45-70 m<sup>2</sup>: phòng master + phòng thay đồ lớn, bar mini, sofa</span></td>
-                            <td><input id="dt_ngu_VIP" disabled="" name="dt_ngu_VIP" value="" class="item_editable use_area"></td>
-                            <td><input id="tt_ngu_VIP" disabled="" name="tt_ngu_VIP" value="" class="item_editable use_area"></td>
+                            <td><input id="dt_ngu_VIP"  name="dt_ngu_VIP" value="" class="item_editable use_area"></td>
+                            <td><input id="tt_ngu_VIP"  name="tt_ngu_VIP" value="" class="item_editable use_area"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td> <span><strong>Phòng SHC</strong></span></td>
-                            <td style="width:76px;"> <span style="text-align:center;"><input id="phong_shc" disabled="" name="phong_shc" value="50tr/p" class="item_editable use_area"></span></td>
+                            <td style="width:76px;"> <span style="text-align:center;"><input id="phong_shc"  name="phong_shc" value="50tr/p" class="item_editable use_area"></span></td>
                             <td style="width:217px;"> <span>Sofa, tap, kệ tivi, kệ trang trí, vách sau sofa</span></td>
-                            <td><input id="dt_phong_shc" disabled="" name="dt_phong_shc" value="" class="item_editable use_area"></td>
-                            <td><input id="tt_phong_shc" disabled="" name="tt_phong_shc" value="" class="item_editable use_area"></td>
+                            <td><input id="dt_phong_shc"  name="dt_phong_shc" value="" class="item_editable use_area"></td>
+                            <td><input id="tt_phong_shc"  name="tt_phong_shc" value="" class="item_editable use_area"></td>
                         </tr>
                         <tr style="font-weight: bold; background-color: rgb(243, 243, 243);">
                             <td colspan="6"> <span><strong>Phòng tắm</strong></span></td>
@@ -636,34 +636,34 @@
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td style="width:102px;"> <span>Loại 1</span></td>
-                            <td style="width:76px;"> <span style="text-align:center;"><input id="tam_1" disabled="" name="tam_1" value="10tr/p" class="item_editable use_area"></span></td>
+                            <td style="width:76px;"> <span style="text-align:center;"><input id="tam_1"  name="tam_1" value="10tr/p" class="item_editable use_area"></span></td>
                             <td style="width:217px;"> <span>Bệ lavabo &lt; 900mm, gương soi</span></td>
-                            <td><input id="dt_tam_1" disabled="" name="dt_tam_1" value="" class="item_editable use_area"></td>
-                            <td><input id="tt_tam_1" disabled="" name="tt_tam_1" value="" class="item_editable use_area"></td>
+                            <td><input id="dt_tam_1"  name="dt_tam_1" value="" class="item_editable use_area"></td>
+                            <td><input id="tt_tam_1"  name="tt_tam_1" value="" class="item_editable use_area"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td style="width:102px;"> <span>Loại 2</span></td>
-                            <td style="width:76px;"> <span style="text-align:center;"><input id="tam_2" disabled="" name="tam_2" value="20tr/p" class="item_editable use_area"></span></td>
+                            <td style="width:76px;"> <span style="text-align:center;"><input id="tam_2"  name="tam_2" value="20tr/p" class="item_editable use_area"></span></td>
                             <td style="width:217px;"> <span>Bệ lavabo dài &gt; 1m5, gương soi</span></td>
-                            <td><input id="dt_tam_2" disabled="" name="dt_tam_2" value="" class="item_editable use_area"></td>
-                            <td><input id="tt_tam_2" disabled="" name="tt_tam_2" value="" class="item_editable use_area"></td>
+                            <td><input id="dt_tam_2"  name="dt_tam_2" value="" class="item_editable use_area"></td>
+                            <td><input id="tt_tam_2"  name="tt_tam_2" value="" class="item_editable use_area"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td> <span><strong>Giặt phơi</strong></span></td>
-                            <td> <span style="text-align:center;"><input id="p_giat_phoi" disabled="" name="p_giat_phoi" value="30tr/p" class="item_editable use_area"></span></td>
+                            <td> <span style="text-align:center;"><input id="p_giat_phoi"  name="p_giat_phoi" value="30tr/p" class="item_editable use_area"></span></td>
                             <td> <span>Hệ tủ cửa đóng kín, bệ giặt tay, thanh treo di động</span></td>
-                            <td><input id="dt_giat_phoi" disabled="" name="dt_giat_phoi" value="" class="item_editable use_area"></td>
-                            <td><input id="tt_giat_phoi" disabled="" name="tt_giat_phoi" value="" class="item_editable use_area"></td>
+                            <td><input id="dt_giat_phoi"  name="dt_giat_phoi" value="" class="item_editable use_area"></td>
+                            <td><input id="tt_giat_phoi"  name="tt_giat_phoi" value="" class="item_editable use_area"></td>
                         </tr>
                         <tr>
                             <td style="text-align:center;"> <input type="checkbox"></td>
                             <td style="width:102px;"> <span><strong>Phòng thờ</strong></span></td>
-                            <td style="width:76px;"> <span style="text-align:center;"><input id="p_tho" disabled="" name="p_tho" value="60tr/p" class="item_editable use_area"></span></td>
+                            <td style="width:76px;"> <span style="text-align:center;"><input id="p_tho"  name="p_tho" value="60tr/p" class="item_editable use_area"></span></td>
                             <td style="width:217px;"> <span>Tủ thờ 2 tầng, vách CNC 2 bên, vách sau bàn thờ</span></td>
-                            <td><input id="dt_phong_tho" disabled="" name="dt_phong_tho" value="" class="item_editable use_area"></td>
-                            <td><input id="tt_phong_tho" disabled="" name="tt_phong_tho" value="" class="item_editable use_area"></td>
+                            <td><input id="dt_phong_tho"  name="dt_phong_tho" value="" class="item_editable use_area"></td>
+                            <td><input id="tt_phong_tho"  name="tt_phong_tho" value="" class="item_editable use_area"></td>
                         </tr>
                         <tr class="vat_row_pt">
                             <td colspan="5" class="center sum">TỔNG</td>
@@ -771,7 +771,7 @@
                             <td style="text-align: right;" id="tong_tat_ca_hang_muc" class="item-total sum sub_total_hang_muc"></td>
                         </tr>
                         <tr>
-                            <td colspan="2" style="text-align: center;"> Bằng chữ: <span id="tong_bang_chu">..............................</span> đồng ./.</td>
+                            <td colspan="2" style="text-align: center;"> Bằng chữ: <input id="don_gia_tk_chinh" class="item_editable use_area w-75 text-left" name="don_gia_tk_chinh" value="... đồng."></td>
                         </tr>
                         </tbody>
                     </table>
@@ -802,4 +802,41 @@
             </div>
         </form>
 
+@endsection
+@section('custom-js')
+    <script>
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        $('.item_editable').on('change',function(){
+            var tr = $(this).closest('tr')
+            var val1 = parseFloat(tr.find('input').eq(1).val().replace(/,/g, ''))
+            var val2 = parseInt(tr.find('input').eq(2).val())
+            var total = numberWithCommas(val1*val2)
+            total = total ? total : '000'
+            tr.find('.item-total').text(total)
+            //sum
+            var array = [];
+
+            var elements = tr.closest('tbody').find('.item-total')
+            for(var i = 0; i < elements.length; i++) {
+                var current = elements[i];
+                if(current.children.length === 0 && current.textContent.replace(/ |\n/g,'') !== '') {
+                    // Check the element has no children && that it is not empty
+                    if(!Number.isNaN(parseFloat(current.textContent))){
+                        array.push(parseFloat(current.textContent.replace(/,/g, '')));
+                    }
+
+                }
+            }
+            // console.log(array)
+            var sum = array.reduce(myFunction);
+
+            function myFunction(total, value) {
+                return total + value;
+            }
+
+            tr.closest('tbody').find('.sum').text(numberWithCommas(sum))
+        })
+    </script>
 @endsection

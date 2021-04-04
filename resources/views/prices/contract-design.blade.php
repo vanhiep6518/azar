@@ -169,19 +169,19 @@
                     </tr>
                     </tbody>
                 </table>
-                <p class="text-left"><strong style="width: 110px">Giá trị Thiết kế:</strong> <span class="line-under w-80"></span></p>
-                <p class="text-left"><span style="width: 110px;text-align: right;display: inline-block;">Bằng chữ:</span> <span class="line-under w-80"></span></p>
+                <p class="text-left"><strong style="width: 110px">Giá trị Thiết kế:</strong> <input id="don_gia_tk_chinh" class="item_editable use_area w-75 text-left" name="don_gia_tk_chinh" value="............................................................."></p>
+                <p class="text-left"><span style="width: 110px;text-align: right;display: inline-block;">Bằng chữ:</span> <input id="don_gia_tk_chinh" class="item_editable use_area w-75 text-left" name="don_gia_tk_chinh" value="............................................................."></p>
                 <p><span class="no_included_vat_note" style="display: none;">Đơn giá trên chưa bao gồm 10% VAT.</span></p>
                 <p class="text-left"><i>Ghi chú: Đơn giá trên chưa bao gồm chi phi cấp phép, và giá trị thuế VAT.</i></p>
                 <p>Diện tích trên là tạm tính tại thời điểm ký kết hợp đồng, diện tích thiết kế sẽ được tính lại nếu có phát sinh sau này.</p>
                 <p><i>Bên B hoàn lại 100% tiền thiết kế cho bên A sau khi ký hợp đồng thi công.</i></p>
                 <p><strong>2.1. Phương thức thanh toán: Thanh toán làm 3 đợt.</strong></p>
                 <p><strong>2.1.1.</strong> Đợt 1: ~40% tổng giá trị của hợp đồng ngay sau khi ký kết hợp đồng.</p>
-                <p>Thành tiền: <span class="line-under w-80"></span></p>
+                <p>Thành tiền: <input id="don_gia_tk_chinh" class="item_editable use_area w-75 text-left" name="don_gia_tk_chinh" value="............................................................."></p>
                 <p><strong>2.1.2.</strong> Đợt 2: ~30% sau khi bên A và bên B chốt bản vẽ Mặt bằng, Mặt tiền.</p>
-                <p>Thành tiền: <span class="line-under w-80"></span></p>
+                <p>Thành tiền: <input id="don_gia_tk_chinh" class="item_editable use_area w-75 text-left" name="don_gia_tk_chinh" value="............................................................."></p>
                 <p><strong>2.1.3.</strong> Đợt 3: ~30% Bên A thanh toán hết giá trị còn lại của hợp đồng vào thời điểm khi bên B in bản vẽ và bàn giao toàn bộ hồ sơ thiết kế kỹ thuật.</p>
-                <p>Thành tiền: <span class="line-under w-80"></span></p>
+                <p>Thành tiền: <input id="don_gia_tk_chinh" class="item_editable use_area w-75 text-left" name="don_gia_tk_chinh" value="............................................................."></p>
                 <p><strong><span class="text-underline">Điều 3:</span> TIẾN ĐỘ CÔNG VIỆC.</strong></p>
                 <p><b>3.1.</b> Thời hạn thiết kế là ngày kể từ ngày bên B nhận được tiền đợt 01 của Bên A, nhưng không bao gồm thời gian chờ chỉnh sửa của bên A.</p>
                 <p><b>3.2.</b> Nếu thời gian thiết kế kéo dài vượt quá 60 ngày do sự phản hồi chậm trễ của Bên A , hoặc do thời gian thiết kế kéo dài của bên B mà không có bất kì lí do chính đáng nào, thì mỗi bên có quyền dừng hợp đồng và không hoàn trả số tiền tạm ứng ở giai đoạn tương đương.</p>

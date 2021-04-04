@@ -116,7 +116,7 @@
                     </tr>
                     </tbody>
                 </table>
-                <p style="margin-top:10px;">Bằng chữ: <span class="sum_total_word_auto"><span id="sumtoal">...</span> đồng./.</span></p>
+                <p style="margin-top:10px;">Bằng chữ: <input id="don_gia_tk_chinh" class="item_editable use_area w-75 text-left" name="don_gia_tk_chinh" value="... đồng."></p>
                 <p style="margin-top:10px;" class="sum">Ghi chú:</p>
                 <p> <span class="no_included_vat_note" style="display: none;">+ Đơn giá trên chưa bao gồm Thuế GTGT (VAT).<br></span> + Diện tích trên đây là tạm tính. <br> + Trong trường hợp diện tích quá nhỏ, giá trị hợp đồng tối thiểu là 20.000.000 đồng. <br> + Hạng mục không liệt kê hoặc có khối lượng bằng 0 được hiểu là không thực hiện. <br> + Báo giá có giá trị đến hết ngày. <span class="valid_until_date idata" style="min-width: 150px;"><span id="giatriden">04 tháng 04 năm 2021.</span></span></p>
                 <br>
