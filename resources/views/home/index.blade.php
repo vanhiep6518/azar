@@ -128,7 +128,7 @@
                 <div class="sc-content">
                     <div class="row">
                         <div class="col-lg-4 item__wrap mb-5 item--left">
-                            <div class="itemImg__wrap"> <img src="{{asset('images/Untitled-1-min-1.png')}}" class="img-fluid mx-auto wow fadeInUp"/></div>
+                            <div class="itemImg__wrap"> <img src="{{asset('images/l-thicong.jpg')}}" class="img-fluid mx-auto wow fadeInUp"/></div>
                         </div>
                         <div class="col-lg-4">
                             <div class="itemAccordion__wrap">
@@ -186,7 +186,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 item__wrap item--left">
-                            <div class="itemImg__wrap mb-3"> <img src="{{asset('images/Untitled-1-min.png')}}" class="img-fluid mx-auto wow fadeInUp"/></div>
+                            <div class="itemImg__wrap mb-3"> <img src="{{asset('images/r-thicong.jpg')}}" class="img-fluid mx-auto wow fadeInUp"/></div>
                         </div>
                     </div>
 {{--                    <div class="text-center mb-2"> <a href="#copyright" class="sc__readmore --s2">Đăng ký Tư vấn miễn phí</a></div>--}}

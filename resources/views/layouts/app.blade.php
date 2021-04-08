@@ -92,6 +92,7 @@
         <li><a href="{{route('shop.index')}}">Shop</a>
             {{showCategories($cats['product'])}}
         </li>
+        <li><a href="{{route('conProgress')}}">Tiến độ thi công</a></li>
         <li><a href="{{route('introduce')}}">Giới thiệu</a></li>
     </ul>
 </nav>
@@ -141,7 +142,6 @@
                                         @endif
                                     @endforeach
                                 @endif
-                                    <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="{{route('conProgress')}}">Tiến độ thi công</a></li>
                             </ul>
                         </li>
                         <li id="menu-item-230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-230 {{ (request()->segment(1) == 'bang-gia') ? 'active' : '' }}">
@@ -196,15 +196,18 @@
                         <li class="position-relative"><a href="{{route('cart.cart')}}" class=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span class="order_num {{(Cart::count() == 0) ? 'd-none':'' }}" >{{Cart::count()}}</span></li>
                         <li class=""><a href="https://www.facebook.com/Thietkenhatrongoigiare/" class=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li class=""><a href="https://www.youtube.com/channel/UCcGQ2f9G8tYUtoy5NUixRGw" class=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                        <li class=" hbtn__search">
-                            <a href="#" class=""><i class="fa fa-search" aria-hidden="true"></i></a>
-                            <form role="search"  method="get" class="search-form search__form" action="">
-                                <div class="input-group">
-                                    <input type="search" name="q" id="search-form-5fefb62161333" class="search-field form-control" placeholder="Nhập từ khóa cần tìm …" value=""/>
-                                    <div class="input-group-append"> <button class="search-submit btn btn-outline-secondary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button></div>
-                                </div>
-                            </form>
-                        </li>
+{{--                        <li class=" hbtn__search">--}}
+{{--                            <a href="#" class=""><i class="fa fa-search" aria-hidden="true"></i></a>--}}
+{{--                            <form role="search"  method="get" class="search-form search__form" action="">--}}
+{{--                                <div class="input-group">--}}
+{{--                                    <input type="search" name="q" id="search-form-5fefb62161333" class="search-field form-control" placeholder="Nhập từ khóa cần tìm …" value=""/>--}}
+{{--                                    <div class="input-group-append"> <button class="search-submit btn btn-outline-secondary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button></div>--}}
+{{--                                </div>--}}
+{{--                            </form>--}}
+{{--                        </li>--}}
+                    </ul>
+                    <ul id="menu-main-menu" class="dn__menu d-none d-lg-block">
+                        <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="{{route('conProgress')}}">Tiến độ thi công</a></li>
                     </ul>
                     <ul class="el__right --mb">
                         <li class="position-relative"><a href="{{route('cart.cart')}}" class=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span class="order_num {{(Cart::count() == 0) ? 'd-none':'' }}" >{{Cart::count()}}</span></li>
@@ -343,15 +346,15 @@
                             <p class="company__name">CÔNG TY TƯ VẤN THIẾT KẾ VÀ <br>XÂY DỰNG 81Art</p>
                             <p class="mb-3">CHI NHÁNH 1: 78 NGUYÊN MINH CHẤN, HÒA KHÁNH NAM, LIÊN CHIỂU ĐÀ NẴNG.</p>
                             <p class="mb-3">CHI NHÁNH 2: 71/17 TRẦN ĐẠI NGHĨA, TỔ 6, YÊN THẾ, TP.PLEIKU, GIA LAI</p>
-                            <p class="mb-3">Hotline: <a href="tel: 0374 059 517"> 0374 059 517</a></p>
+                            <p class="mb-3">Hotline: <a href="tel: 0374 059 517"> 0374 059 517</a> - <a href="tel: 0919 399 748"> 0919 399 748</a></p>
                             <p>Email: 81ARTSTUDIO@GMAIL.COM</p>
 {{--                            <p>MST: 0401992979</p>--}}
                         </address>
                         <div class="social__box --s1 flex-grow-1 mb-2">
                             <a href="https://www.facebook.com/Thietkenhatrongoigiare"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
                             <a href="https://www.youtube.com/channel/UCcGQ2f9G8tYUtoy5NUixRGw"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-                            <a href="" class="ic--tiktok"><img src="{{asset('images/tiktok.png')}}" alt=""/></a>
-                            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.tiktok.com/@81art.studio" class="ic--tiktok"><img src="{{asset('images/tiktok.png')}}" alt=""/></a>
+                            <a href="https://www.instagram.com/81art.studio/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                             <a href=""><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
                         </div>
                     </div>
@@ -404,10 +407,14 @@
                         </div>
                         <div class="footer_hotline_sc mb-3">
                             <div class="d-flex flex-wrap align-items-center">
-                                <div class="item__honline">
+                                <div class="item__honline d-flex">
+                                    <div class="item__sonline2 mr-2">
+                                        <img src="{{asset('images/phone-call.svg')}}" class="" alt=""/>
+                                        <div class="ml-1 d-inline-block"> 0374 059 517 </div>
+                                    </div>
                                     <div class="item__sonline2">
-                                        <img src="wp-content/themes/blogdefault/assets/img/phone-call.svg" class="" alt=""/>
-                                        <div class="ml-1 d-inline-block"> 0374 059 517</div>
+                                        <img src="{{asset('images/phone-call.svg')}}" class="" alt=""/>
+                                        <div class="ml-1 d-inline-block"> 0919 399 748</div>
                                     </div>
                                 </div>
 {{--                                <div class="item__honline">--}}
