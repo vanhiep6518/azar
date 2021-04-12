@@ -12,7 +12,8 @@ class ConstructionController extends Controller
 {
     public function index(){
         $projects = Construction::with('construction_cat')
-            ->where('status','=',1)->paginate(16);
+            ->where('status','=',1)
+            ->where('constructions.id','!=',2)->paginate(16);
         return view('constructions.index',compact('projects'));
     }
 
@@ -20,6 +21,7 @@ class ConstructionController extends Controller
         $projects = Construction::leftJoin('construction_cats','construction_cats.id','=','constructions.cat_id')
             ->where('construction_cats.slug','=',$slug)
             ->where('constructions.status','=',1)
+            ->where('constructions.id','!=',2)
             ->select('constructions.*')
             ->with('construction_cat')->paginate(16);
         $cat = ConstructionCat::where('slug',$slug)->first();

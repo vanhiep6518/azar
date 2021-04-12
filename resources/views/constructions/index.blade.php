@@ -12,7 +12,11 @@
                     <ul class="nav nav-tabs myTabS1 --long" id="myTab" role="tablist">
                         @if(isset($cats) && $cats['construction'])
                             @foreach($cats['construction'] as $item)
-                                <li class="nav-item"> <a class="nav-link {{(isset($cat) && $cat->id == $item->id) ? 'active' : ''}}" href="{{route('construction.cat',['slug'=>$item->slug])}}">{{$item->name}}</a></li>
+                                @if($item->id == 1)
+                                    <li class="nav-item"> <a class="nav-link {{(isset($cat) && $cat->id == $item->id) ? 'active' : ''}}" href="{{route('construction.detail',['cat_slug'=>$item->slug, 'slug' => 'quy-trinh-thi-cong', 'id' => 2])}}">{{$item->name}}</a></li>
+                                @else
+                                    <li class="nav-item"> <a class="nav-link {{(isset($cat) && $cat->id == $item->id) ? 'active' : ''}}" href="{{route('construction.cat',['slug'=>$item->slug])}}">{{$item->name}}</a></li>
+                                @endif
                             @endforeach
                         @endif
                     </ul>
@@ -27,11 +31,7 @@
                                             </div>
                                             <div class="item__meta">
                                                 <p class="item__title">{{$item->title}}</p>
-                                                <div class="item__field__wrap">
-                                                    <div class="item__field">{{$item->price}}</div>
-                                                    <div class="item__field">{{$item->floors}}</div>
-                                                    <div class="item__field">{{$item->acreage}}</div>
-                                                </div>
+
                                             </div>
                                         </a>
                                     </archive>

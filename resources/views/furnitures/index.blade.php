@@ -27,11 +27,7 @@
                                             </div>
                                             <div class="item__meta">
                                                 <p class="item__title">{{$item->title}}</p>
-                                                <div class="item__field__wrap">
-                                                    <div class="item__field">{{$item->price}}</div>
-                                                    <div class="item__field">{{$item->floors}}</div>
-                                                    <div class="item__field">{{$item->acreage}}</div>
-                                                </div>
+
                                             </div>
                                         </a>
                                     </archive>

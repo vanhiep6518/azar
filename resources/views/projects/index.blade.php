@@ -29,9 +29,9 @@
                                             <div class="item__meta">
                                                 <p class="item__title">{{$item->title}}</p>
                                                 <div class="item__field__wrap">
-                                                    <div class="item__field">{{$item->price}}</div>
-                                                    <div class="item__field">{{$item->floors}}</div>
-                                                    <div class="item__field">{{$item->acreage}}</div>
+                                                    @if($item->price) <div class="item__field">{{$item->price}}</div> @endif
+                                                    @if($item->floors) <div class="item__field">{{$item->floors}}</div> @endif
+                                                    @if($item->acreage) <div class="item__field">{{$item->acreage}}</div> @endif
                                                 </div>
                                             </div>
                                         </a>

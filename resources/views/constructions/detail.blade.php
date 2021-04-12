@@ -49,7 +49,7 @@
                                     @foreach($relatedProject as $item)
                                         <div class="carousel-cell">
                                             <archive class="project__item ef__zoomin">
-                                                <a href="{{route('project.detail',['cat_slug'=>$item->project_cat->slug, 'slug' => $item->slug, 'id' => $item->id])}}" class="">
+                                                <a href="{{route('project.detail',['cat_slug'=>$item->construction_cat->slug, 'slug' => $item->slug, 'id' => $item->id])}}" class="">
                                                     <div class="item__thumb">
                                                         <div class="dnfix__thumb"> <img width="300" height="300" src="{{$item->image}}" class="img-fluid wp-post-image" ></div>
                                                     </div>
