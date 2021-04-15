@@ -30,7 +30,9 @@
                         </div>
                         <aside class="widget-area widget__left widget__fix">
                             <div class="sidebar__inner">
-                                <section id="media_image-2" class="widget widget_media_image"><a href="https://media.giphy.com/media/lPjHC9zJScNjqIECmu/giphy.gif"><img class="image " src="https://media.giphy.com/media/lPjHC9zJScNjqIECmu/giphy.gif" alt="" width="382" height="678"></a></section>
+                                <section id="media_image-2" class="widget widget_media_image">
+
+                                </section>
                             </div>
                         </aside>
                         @include('layouts.form-advice')
