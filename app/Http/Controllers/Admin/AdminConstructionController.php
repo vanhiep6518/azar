@@ -53,7 +53,6 @@ class AdminConstructionController extends Controller
             }
             return view('admin.constructions.add',compact('listCat'));
         }
-
         $messages = [
             'required' => ':attribute không được để trống',
         ];

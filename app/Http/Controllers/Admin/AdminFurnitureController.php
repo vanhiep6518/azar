@@ -68,8 +68,8 @@ class AdminFurnitureController extends Controller
 //            'content' => 'required|string',
             'project_cat' => 'required|string',
             'status' => 'required|string',
-            'filenames' => 'required',
-            'filenames.*' => 'image'
+            //'filenames' => 'required',
+            //'filenames.*' => 'image'
         ],$messages,$customAttr);
 
         if ($validator->fails()) {
@@ -88,29 +88,26 @@ class AdminFurnitureController extends Controller
             }
         }
 
-
-        if($id){
-
-            Furniture::where('id',$id)->update([
-                'admin_id' => Auth::guard('admin')->user()->id,
-                'title' => $request->input('title'),
-                'content' => $request->input('content'),
-                'cat_id' => $request->input('project_cat'),
-                'status' => $request->input('status'),
-                'image' => $files
-            ]);
-
-            return redirect()->back()->with('status', 'Cập nhật dự án thành công');
-        }
-
-        Furniture::create([
+        $data = [
             'admin_id' => Auth::guard('admin')->user()->id,
             'title' => $request->input('title'),
             'content' => $request->input('content'),
             'cat_id' => $request->input('project_cat'),
             'status' => $request->input('status'),
-            'image' => $files
-        ]);
+        ];
+
+        if(!empty($files)){
+            $data['image'] = $files;
+        }
+
+        if($id){
+
+            Furniture::where('id',$id)->update($data);
+
+            return redirect()->back()->with('status', 'Cập nhật dự án thành công');
+        }
+
+        Furniture::create($data);
 
         return redirect()->back()->with('status', 'Thêm nội thất thành công');
     }
