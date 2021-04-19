@@ -39,7 +39,7 @@
                 <table class="party" style="border:collapse; border: none; width: 100%;">
                     <tbody>
                     <tr>
-                        <th width="50%">BÊN A: <span class="office_info_auto-name">CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></th>
+                        <th width="50%">BÊN A: <span class="office_info_auto-name">CÔNG TY TNHH TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></th>
                         <th><strong>BÊN B: <span class="recipient"></span></strong></th>
                     </tr>
                     <tr>

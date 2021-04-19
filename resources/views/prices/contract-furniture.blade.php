@@ -36,7 +36,7 @@
                     <li><span class="idata" style="width: 100%;">Số điện thoại: <span class="party_phone"></span></span></li>
                     <li><span class="idata" style="width: 100%;">Email: <span class="party_email"></span></span></li>
                 </ul>
-                <p><strong>BÊN B: <span class="office_info_auto-name">CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></strong></p>
+                <p><strong>BÊN B: <span class="office_info_auto-name">CÔNG TY TNHH TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></strong></p>
                 <ul>
                     <li><span class="idata" style="width: 16%; border-bottom: none;">Đại diện</span><span>: </span><span class="office_info_auto-representative">Ông. PHẠM VĂN THÔNG</span></li>
                     <li><span class="idata" style="width: 16%; border-bottom: none;">Chức vụ</span><span>: </span><span class="office_info_auto-position">Giám đốc</span></li>

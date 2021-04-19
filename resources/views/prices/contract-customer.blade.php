@@ -81,7 +81,7 @@
                 </ul>
                 <p><strong>BÊN B : BÊN NHẬN THẦU</strong></p>
                 <ul>
-                    <li><span class="idata" style="width: 16%; border-bottom: none;">Tên đơn vị</span><span>: </span><span class="office_info_auto-name">CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></li>
+                    <li><span class="idata" style="width: 16%; border-bottom: none;">Tên đơn vị</span><span>: </span><span class="office_info_auto-name">CÔNG TY TNHH TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></li>
                     <li><span class="idata" style="width: 16%; border-bottom: none;">Đại diện</span><span>: </span><span class="office_info_auto-representative">Ông. PHẠM VĂN THÔNG</span></li>
                     <li><span class="idata" style="width: 16%; border-bottom: none;">Chức vụ</span><span>: </span><span class="office_info_auto-position">Giám đốc</span></li>
                     <li><span class="idata" style="width: 16%; border-bottom: none;">Địa chỉ</span><span>: </span><span class="office_info_auto-address">78 Nguyễn Minh Chấn, Hòa Khánh Nam, Q.Liên Chiểu, TP.Đà Nẵng</span></li>
@@ -149,7 +149,7 @@
                     </tr>
                     <tr>
                         <td><span>Bê tông</span></td>
-                        <td><span>Tươi của Công ty CP bê tông Đăng Hải</span></td>
+                        <td><span>Tươi của CÔNG TY TNHH TƯ VẤN THIẾT KẾ & XÂY DỰNG 81ART CP bê tông Đăng Hải</span></td>
                     </tr>
                     <tr>
                         <td><span>Vật liệu cấp thoát nước</span></td>

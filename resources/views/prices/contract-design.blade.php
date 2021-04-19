@@ -56,7 +56,7 @@
                     <tbody>
                     <tr>
                         <th width="50%" style="vertical-align: top;"><strong>BÊN A: <span class="recipient">CHỦ ĐẦU TƯ</span></strong></th>
-                        <th><strong>BÊN B: <span class="office_info_auto-name">CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></strong></th>
+                        <th><strong>BÊN B: <span class="office_info_auto-name">CÔNG TY TNHH TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></strong></th>
                     </tr>
                     <tr>
                         <td>

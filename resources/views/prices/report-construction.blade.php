@@ -30,7 +30,7 @@
                     <h1 style="text-align:center;margin:0 0 20px;font-size:26px;"><strong>BÁO GIÁ THI CÔNG</strong></h1>
                     <p>Số: <span class="qr_code"><span id="mabgtk">...</span></span><span class="signed_date_auto_bgtk" style="float:right;">Đà Nẵng, ngày 05 tháng 03 năm 2021</span></p>
                     <p style="font-weight: bold;">Kính gửi: <span class="recipient">Công ty ...</span></p>
-                    <p>Chúng tôi: <span class="office_info_auto-name">CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></p>
+                    <p>Chúng tôi: <span class="office_info_auto-name">CÔNG TY TNHH TƯ VẤN THIẾT KẾ &amp; XÂY DỰNG 81ART</span></p>
                     <p>Địa chỉ: <span class="office_info_auto-address">78 Nguyễn Minh Chấn, Hòa Khánh Nam, Q.Liên Chiểu, TP.Đà Nẵng</span></p>
                     <p>Trân trọng báo giá thi công công trình: <input id="don_gia_tk_chinh" class="item_editable use_area w-50 text-left"  value="..."></p>
                     <p>Địa chỉ công trình: <span class="building_address">...</span></p>
