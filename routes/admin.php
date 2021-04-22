@@ -44,6 +44,7 @@ Route::middleware('authAdmin')->name('admin.')->group(function (){
         Route::post('/action', [AdminFurnitureController::class, 'actionFurniture'])->name('actionFurniture');
 
         Route::match(['get', 'post'], '/save/{id?}', [AdminFurnitureController::class, 'saveFurniture'])->name('saveFurniture');
+        Route::get('/delete/{id}', [AdminFurnitureController::class, 'deleteFurniture'])->name('deleteFurniture');
 
         Route::get('/list-cat', [AdminFurnitureController::class, 'listCat'])->name('furnitureCat');
         Route::post('/add-cat', [AdminFurnitureController::class, 'addCat'])->name('addFurnituresCat');

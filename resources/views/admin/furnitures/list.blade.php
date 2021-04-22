@@ -75,7 +75,7 @@
                                     <td>{{$item->furniture_cat->name}}</td>
                                     <td>{{Carbon\Carbon::parse($item->created_at)->format('d/m/Y')}}</td>
                                     <td><a href="{{route('admin.saveFurniture',['id'=> $item->id])}}" class="btn btn-success btn-sm rounded-0"  data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></a>
-                                        <a href="{{route('admin.deleteFurnitureCat',['id'=>$item->id])}}" class="btn btn-danger btn-sm rounded-0" onclick="return confirm('Xóa bài viết này ?')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
+                                        <a href="{{route('admin.deleteFurniture',['id'=>$item->id])}}" class="btn btn-danger btn-sm rounded-0" onclick="return confirm('Xóa bài viết này ?')" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></a>
                                     </td>
 
                                 </tr>

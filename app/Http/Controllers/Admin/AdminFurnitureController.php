@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Storage;
 
 class AdminFurnitureController extends Controller
 {
@@ -36,7 +37,7 @@ class AdminFurnitureController extends Controller
         return view('admin.furnitures.list',compact('numberStatus','projects'));
     }
 
-    public function deleteProject($id){
+    public function deleteFurniture($id){
         $project = Furniture::find($id);
         if($project){
             $project->delete();
@@ -84,6 +85,11 @@ class AdminFurnitureController extends Controller
             {
                 $file->storeAs('public/uploads', $file->getClientOriginalName());
                 $file_url = URL::asset('storage/uploads/'.$file->getClientOriginalName());
+
+//                $file_name = 'uploads/'.$file->getClientOriginalName();
+//                Storage::put($file_name, file_get_contents($file));
+//                $file_url = Storage::url($file_name);
+//
                 $files[] = $file_url;
             }
         }
