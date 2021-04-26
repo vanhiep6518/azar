@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\AdminVideoController;
 use App\Http\Controllers\Admin\AdminProductController;
 use App\Http\Controllers\Admin\AdminOrderController;
 use App\Http\Controllers\Admin\AdminConstructionProgressController;
+use App\Http\Controllers\Admin\AdminDesignPriceController;
 use Illuminate\Support\Facades\Route;
 
 Route::match(['get', 'post'], '/login', [LoginController::class, 'login'])->name('admin.login');
@@ -79,6 +80,15 @@ Route::middleware('authAdmin')->name('admin.')->group(function (){
         Route::post('/update-cat/{id}', [AdminPriceController::class, 'updateCat'])->name('updatePriceCat');
         Route::get('/ajax-edit-cat', [AdminPriceController::class, 'ajaxEditCat']);
         Route::get('/delete-cat/{id}', [AdminPriceController::class, 'deleteCat'])->name('deletePriceCat');
+
+    });
+
+    Route::group(['prefix' => 'design-price'], function () {
+        Route::get('/list/{status?}', [AdminDesignPriceController::class, 'listDesignPrice'])->name('listDesignPrice');
+        Route::post('/action', [AdminDesignPriceController::class, 'actionDesignPrice'])->name('actionDesignPrice');
+
+        Route::match(['get', 'post'], '/save/{id?}', [AdminDesignPriceController::class, 'saveDesignPrice'])->name('saveDesignPrice');
+        Route::get('/delete/{id}', [AdminDesignPriceController::class, 'deleteDesignPrice'])->name('deleteDesignPrice');
     });
 
     Route::group(['prefix' => 'page'], function () {

@@ -7,6 +7,7 @@ use App\Helpers\StringHelpers;
 use App\Http\Controllers\Controller;
 use App\Models\Construction;
 use App\Models\ConstructionCat;
+use App\Models\DesignPrice;
 use App\Models\Price;
 use App\Models\PriceCat;
 use Illuminate\Http\Request;

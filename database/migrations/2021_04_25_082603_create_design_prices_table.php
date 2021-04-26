@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKitchenDirectionsTable extends Migration
+class CreateDesignPricesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class CreateKitchenDirectionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('kitchen_directions', function (Blueprint $table) {
+        Schema::create('design_prices', function (Blueprint $table) {
             $table->id();
-            $table->integer('year');
-            $table->integer('gender')->default(0);
+            $table->string('title',255)->unique();
+            $table->bigInteger('admin_id')->unsigned();
             $table->text('content');
+            $table->integer('status');
+            $table->foreign('admin_id')
+                ->references('id')->on('admins')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,6 +33,6 @@ class CreateKitchenDirectionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kitchen_directions');
+        Schema::dropIfExists('design_prices');
     }
 }

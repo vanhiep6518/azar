@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Helpers\CollectionHelpers;
 use App\Models\Construction;
+use App\Models\DesignPrice;
 use App\Models\Furniture;
 use App\Models\Project;
 use App\Models\ProjectCat;
@@ -15,8 +16,9 @@ class HomeController extends Controller
 {
     public function index(Request $request){
         $projectCats = ProjectCat::with('projects')->get();
+        $news = Construction::where('cat_id',4)->get();
         $sliders = Slider::where('status',1)->get();
-
+        $designPrices = DesignPrice::where('status',1)->get();
         if ($request->has('q')) {
             $q = $request->input('q');
             $project = Project::with('project_cat')
@@ -35,6 +37,6 @@ class HomeController extends Controller
                 'results' => $results->appends(['q'=>$q])
             ]);
         }
-        return view('home.index',compact('projectCats','sliders'));
+        return view('home.index',compact('projectCats','sliders','news','designPrices'));
     }
 }

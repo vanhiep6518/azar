@@ -79,6 +79,19 @@
                 <li><a href="{{route('admin.priceCat')}}">Danh mục</a></li>
             </ul>
         </li>
+        <li class="nav-link {{ (request()->segment(2) == 'design-price') ? 'active' : '' }}">
+            <a href="{{route('admin.listDesignPrice')}}">
+                <div class="nav-link-icon d-inline-flex">
+                    <i class="far fa-folder"></i>
+                </div>
+                Bảng giá thiết kế
+            </a>
+            <i class="arrow fas fa-angle-down"></i>
+            <ul class="sub-menu">
+                <li><a href="{{route('admin.saveDesignPrice')}}">Thêm mới</a></li>
+                <li><a href="{{route('admin.listDesignPrice')}}">Danh sách</a></li>
+            </ul>
+        </li>
         <li class="nav-link {{ (request()->segment(2) == 'page') ? 'active' : '' }}">
             <a href="{{route('admin.page')}}">
                 <div class="nav-link-icon d-inline-flex">
