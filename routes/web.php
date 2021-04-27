@@ -71,13 +71,7 @@ Route::group(['prefix' => 'bang-gia','as' => 'price.'], function () {
 
 Route::get('/gioi-thieu',[PageController::class,'introduce'])->name('introduce');
 
-Route::get('/bao-gia-thiet-ke',[PriceController::class,'reportDesignPrice']);
-Route::get('/bao-gia-thi-cong',[PriceController::class,'reportConstructionPrice']);
 
-Route::get('/hop-dong-thiet-ke',[PriceController::class,'contractDesign']);
-Route::get('/hop-dong-thi-cong-doi-tac',[PriceController::class,'partnerContract']);
-Route::get('/hop-dong-thi-cong-khach-hang',[PriceController::class,'customerContract']);
-Route::get('/hop-dong-thi-cong-noi-that',[PriceController::class,'furnitureContract']);
 
 Route::group(['prefix' => 'shop','as' => 'shop.'], function () {
     Route::get('/',[OrderController::class,'index'])->name('index');

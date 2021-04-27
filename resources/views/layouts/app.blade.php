@@ -152,26 +152,17 @@
                             <ul class="sub-menu">
                                 @if(isset($cats) && $cats['price'])
                                     @foreach($cats['price'] as $item)
-                                        <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="javascript:void(0)">{{$item->name}}</a>
-                                            @if($item->prices && count($item->prices) > 0)
-                                                <ul class="sub-menu">
-                                                @foreach($item->prices as $item2)
-                                                    <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="{{route('price.detail',['slug'=>$item2->slug,'id'=>$item2->id])}}">{{$item2->title}}</a></li>
-                                                @endforeach
-                                                </ul>
-                                            @elseif($item->id == 2)
-                                                <ul class="sub-menu">
-                                                    <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="/bao-gia-thiet-ke">Báo giá thiết kế</a></li>
-                                                    <li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="/bao-gia-thi-cong">Báo giá thi công</a></li>
-                                                </ul>
-                                            @elseif($item->id == 3)
-                                                <ul class="sub-menu">
-                                                    <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="/hop-dong-thiet-ke">Hợp đồng thiết kế</a></li>
-                                                    <li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="/hop-dong-thi-cong-doi-tac">Hợp đồng ĐT</a></li>
-                                                    <li id="menu-item-281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-281"><a href="/hop-dong-thi-cong-khach-hang">Hợp đồng KH</a></li>
-                                                </ul>
-                                            @endif
-                                        </li>
+                                        @if($item->id != 2 && $item->id != 3)
+                                            <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="javascript:void(0)">{{$item->name}}</a>
+                                                @if($item->prices && count($item->prices) > 0)
+                                                    <ul class="sub-menu">
+                                                        @foreach($item->prices as $item2)
+                                                            <li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="{{route('price.detail',['slug'=>$item2->slug,'id'=>$item2->id])}}">{{$item2->title}}</a></li>
+                                                        @endforeach
+                                                    </ul>
+                                                @endif
+                                            </li>
+                                        @endif
                                     @endforeach
                                 @endif
                             </ul>
@@ -209,7 +200,7 @@
 {{--                            </form>--}}
 {{--                        </li>--}}
                     </ul>
-                    <ul id="menu-main-menu" class="dn__menu d-none d-lg-block">
+                    <ul id="menu-main-menu" class="dn__menu d-none d-lg-block construct-progress">
                         <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-project_cat menu-item-284"><a href="{{route('conProgress')}}">Tiến độ thi công</a></li>
                     </ul>
                     <ul class="el__right --mb">
@@ -235,15 +226,17 @@
                     </div>
                 </div>
                 <div class="col-md-8 text-center py-3">
-                    <p class="company__name mb-4">CÔNG TY TNHH TƯ VẤN THIẾT KẾ VÀ XÂY DỰNG 81ART</p>
-                    <div class="row">
-                        <div class="col-4">
+                    <div class="row mb-4 position-relative">
+                        <div class="col-10">
+                            <p class="company__name mb-4">CÔNG TY TNHH TƯ VẤN THIẾT KẾ VÀ XÂY DỰNG 81ART</p>
+                        </div>
+                        <div class="col-5">
                             <p>CHI NHÁNH 1: 78 NGUYÊN MINH CHẤN, HÒA KHÁNH NAM, LIÊN CHIỂU ĐÀ NẴNG.</p>
                         </div>
-                        <div class="col-4">
+                        <div class="col-5">
                             <p>CHI NHÁNH 2: 71/17 TRẦN ĐẠI NGHĨA, TỔ 6, YÊN THẾ, TP.PLEIKU, GIA LAI</p>
                         </div>
-                        <div class="col-4 support-online">
+                        <div class="support-online">
                             <a href="tel:0374059517" class="call-nowz" rel="nofollow">
                                 <img src="{{asset('images/icon-phone.gif')}}" class="" alt=""/> <span>Gọi ngay cho chúng tôi</span>
                                 <p class="support__mb--text">Gọi ngay <span class="d-none d-md-inline-block"> 0374 059 517</span></p>

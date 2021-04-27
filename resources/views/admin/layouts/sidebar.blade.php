@@ -105,20 +105,36 @@
                 <li><a href="{{route('admin.page')}}">Danh sách</a></li>
             </ul>
         </li>
-        <li class="nav-link {{ (request()->segment(2) == 'slider') ? 'active' : '' }}">
-            <a href="{{route('admin.slider')}}">
+{{--        <li class="nav-link {{ (request()->segment(2) == 'slider') ? 'active' : '' }}">--}}
+{{--            <a href="{{route('admin.slider')}}">--}}
+{{--                <div class="nav-link-icon d-inline-flex">--}}
+{{--                    <i class="far fa-folder"></i>--}}
+{{--                </div>--}}
+{{--                Slider--}}
+{{--            </a>            <i class="arrow fas fa-angle-right"></i>--}}
+
+{{--            <ul class="sub-menu">--}}
+{{--                <li><a href="{{route('admin.saveSlider')}}">Thêm mới</a></li>--}}
+{{--                <li><a href="{{route('admin.slider')}}">Danh sách</a></li>--}}
+{{--            </ul>--}}
+{{--        </li>--}}
+
+        <li class="nav-link {{ (request()->segment(2) == 'baogia') ? 'active' : '' }}">
+            <a href="/admin/bao-gia-thiet-ke" target="_blank">
                 <div class="nav-link-icon d-inline-flex">
                     <i class="far fa-folder"></i>
                 </div>
-                Slider
+                Báo giá & Hợp đồng
             </a>            <i class="arrow fas fa-angle-right"></i>
-
             <ul class="sub-menu">
-                <li><a href="{{route('admin.saveSlider')}}">Thêm mới</a></li>
-                <li><a href="{{route('admin.slider')}}">Danh sách</a></li>
+                <li><a href="/admin/bao-gia-thiet-ke" target="_blank">Báo giá thiết kế</a></li>
+                <li><a href="/admin/bao-gia-thi-cong" target="_blank">Báo giá thi công</a></li>
+                <li><a href="/admin/hop-dong-thiet-ke" target="_blank">Hợp đồng thiết kế</a></li>
+                <li><a href="/admin/hop-dong-thi-cong-khach-hang" target="_blank">Hợp đồng thi công KH</a></li>
+                <li><a href="/admin/hop-dong-thi-cong-noi-that" target="_blank">HĐTC nội thất</a></li>
+                <li><a href="/admin/hop-dong-thi-cong-doi-tac" target="_blank">Hợp đồng thi công ĐT</a></li>
             </ul>
         </li>
-
         <li class="nav-link {{ (request()->segment(2) == 'product') ? 'active' : '' }}">
             <a href="{{route('admin.product')}}">
                 <div class="nav-link-icon d-inline-flex">

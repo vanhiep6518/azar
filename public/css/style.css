@@ -80,7 +80,7 @@
 }
 
 .price-new .new {
-    margin: 20px 10px;
+    margin: 20px;
     border: 5px solid #a65c26;
     padding: 10px;
 }
@@ -175,5 +175,39 @@ background: #0f241f;
 
 #footer .support-online {
     align-self: flex-end;
+}
+
+.price-new .owl-carousel {
+    width: calc(100% + 70px);
+    position: relative;
+    left: -35px;
+}
+
+.support-online {
+    position: absolute;
+    right: 0px;
+    bottom: -50px;
+}
+
+#footer .logo1__wrap {
+    width: 200px;
+}
+
+.construct-progress li a {
+    color: #f6de7c!important;
+}
+
+.project__item .item__meta{
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.project__item:hover .item__meta {
+    visibility: visible;
+}
+
+.social__box {
+    display: flex;
+    justify-content: center;
 }
 

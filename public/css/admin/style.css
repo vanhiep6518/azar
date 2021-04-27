@@ -245,3 +245,8 @@ ul#sidebar-menu * {
     font-size: 17px;
 }
 
+#sidebar {
+    overflow-y: scroll;
+}
+
+

@@ -1,30 +1,30 @@
 @extends('layouts.app')
 @section('title','Thiết kế & Xây dựng Nhà đẹp 81ART')
 @section('content')
-    <section class="slider">
-        <div class="main-carousel dn__slider">
-            @if($sliders)
-                @foreach($sliders as $item)
-                    <div class="carousel-cell">
-                        <div class="slider__item">
-                            <div class="item__thumb dnfix__thumb"> <img src="{{$item->image}}" class="img-fluid mx-auto"/></div>
-                            <div class="item__meta__wrap">
-                                <div class="container">
-                                    <div class="item__meta d-sm-flex">
-                                        <div class="item__box">
-                                            <p class="item__title text-uppercase" data-animate="flipInX" data-animate-delay="5000">{{$item->title}}</p>
-                                            <p class="item__sub" data-animate="bounceIn" data-animate-delay="5000">{{$item->sub_title}}<br/> <br/></p>
-                                            <a href="{{$item->detail_url}}" class="item__readmore" data-animate="flipInX" data-animate-delay="5000">Xem chi tiết</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            @endif
-        </div>
-    </section>
+{{--    <section class="slider">--}}
+{{--        <div class="main-carousel dn__slider">--}}
+{{--            @if($sliders)--}}
+{{--                @foreach($sliders as $item)--}}
+{{--                    <div class="carousel-cell">--}}
+{{--                        <div class="slider__item">--}}
+{{--                            <div class="item__thumb dnfix__thumb"> <img src="{{$item->image}}" class="img-fluid mx-auto"/></div>--}}
+{{--                            <div class="item__meta__wrap">--}}
+{{--                                <div class="container">--}}
+{{--                                    <div class="item__meta d-sm-flex">--}}
+{{--                                        <div class="item__box">--}}
+{{--                                            <p class="item__title text-uppercase" data-animate="flipInX" data-animate-delay="5000">{{$item->title}}</p>--}}
+{{--                                            <p class="item__sub" data-animate="bounceIn" data-animate-delay="5000">{{$item->sub_title}}<br/> <br/></p>--}}
+{{--                                            <a href="{{$item->detail_url}}" class="item__readmore" data-animate="flipInX" data-animate-delay="5000">Xem chi tiết</a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                @endforeach--}}
+{{--            @endif--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <section class="projectSlider__featured waypoint">
         <header class="h-header s1 text-center h-header--border ">
             <p class="h-title color--white text-uppercase btn__effect"> <a href="project.html" class="">Dự án</a></p>
@@ -133,6 +133,9 @@
                             </div>
                             <div class="tab__readmore"><a href="{{route('procProgress')}}">Xem chi tiết</a></div>
                         </div>
+                        <div class="mt-3">
+                            <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=78%20Nguy%E1%BB%85n%20Minh%20Ch%E1%BA%A5n%2C%20H%C3%B2a%20Kh%C3%A1nh%20Nam%2C%20Li%C3%AAn%20Chi%E1%BB%83u%2C%20%C4%90%C3%A0%20N%E1%BA%B5ng%2C%20Vietnam&key=AIzaSyBMMiAwb58mAVGONPBiGud5OT1Kjh-64w4"></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-8 price-new">
@@ -205,7 +208,7 @@
         });
         $('.owl-carousel').owlCarousel({
             loop:false,
-            margin:10,
+            margin:3,
             nav:true,
             dots: false,
             autoplay: true,

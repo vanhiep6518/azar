@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\AdminProductController;
 use App\Http\Controllers\Admin\AdminOrderController;
 use App\Http\Controllers\Admin\AdminConstructionProgressController;
 use App\Http\Controllers\Admin\AdminDesignPriceController;
+use App\Http\Controllers\PriceController;
 use Illuminate\Support\Facades\Route;
 
 Route::match(['get', 'post'], '/login', [LoginController::class, 'login'])->name('admin.login');
@@ -148,6 +149,14 @@ Route::middleware('authAdmin')->name('admin.')->group(function (){
         Route::get('/delete/{id}', [AdminConstructionProgressController::class, 'deleteProgress'])->name('deleteProgress');
 
     });
+
+    Route::get('/bao-gia-thiet-ke',[PriceController::class,'reportDesignPrice']);
+    Route::get('/bao-gia-thi-cong',[PriceController::class,'reportConstructionPrice']);
+
+    Route::get('/hop-dong-thiet-ke',[PriceController::class,'contractDesign']);
+    Route::get('/hop-dong-thi-cong-doi-tac',[PriceController::class,'partnerContract']);
+    Route::get('/hop-dong-thi-cong-khach-hang',[PriceController::class,'customerContract']);
+    Route::get('/hop-dong-thi-cong-noi-that',[PriceController::class,'furnitureContract']);
 });
 
 
