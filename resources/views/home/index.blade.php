@@ -134,7 +134,7 @@
                             <div class="tab__readmore"><a href="{{route('procProgress')}}">Xem chi tiết</a></div>
                         </div>
                         <div class="mt-3">
-                            <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/search?q=78%20Nguy%E1%BB%85n%20Minh%20Ch%E1%BA%A5n%2C%20H%C3%B2a%20Kh%C3%A1nh%20Nam%2C%20Li%C3%AAn%20Chi%E1%BB%83u%2C%20%C4%90%C3%A0%20N%E1%BA%B5ng%2C%20Vietnam&key=AIzaSyBMMiAwb58mAVGONPBiGud5OT1Kjh-64w4"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d479.28409630148974!2d108.1587537!3d16.051329!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219d511834bd7%3A0xc2e5a6b23f121a16!2zODFBUlRfQ8OUTkcgVFkgVE5ISCBUxq8gVuG6pE4gVEhJ4bq-VCBL4bq-IFbDgCBYw4JZIEThu7BORyA4MUFSVA!5e0!3m2!1svi!2s!4v1619517943963!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>

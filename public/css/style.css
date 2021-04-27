@@ -183,10 +183,14 @@ background: #0f241f;
     left: -35px;
 }
 
-.support-online {
-    position: absolute;
-    right: 0px;
-    bottom: -50px;
+/*.support-online {*/
+/*    position: absolute;*/
+/*    right: 0px;*/
+/*    bottom: -50px;*/
+/*}*/
+
+.support-online a {
+    width: fit-content;
 }
 
 #footer .logo1__wrap {
@@ -209,5 +213,20 @@ background: #0f241f;
 .social__box {
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (min-width: 1800px) {
+#footer .c-name {
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+#footer .addr {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+#footer .sp-ol {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
 }
 
