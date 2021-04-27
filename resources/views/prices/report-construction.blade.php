@@ -11,8 +11,8 @@
 {{--                            <div class="logo2__wrap"><img src="https://81ART.vn/wp-content/uploads/2020/04/lgotexxt.png" alt="Thiết kế &amp; Xây dựng Nhà đẹp 81ART" class="img-fluid --st2"></div>--}}
                         </a>
                     </div>
-                    <div><a id="menu-bgtk" href="bao-gia-thiet-ke" class="btn" title="" data-toggle="tooltip" data-original-title="Báo giá thiết kế">Báo giá thiết kế</a></div>
-                    <div><a id="menu-bgtc" href="bao-gia-thi-cong" class="btn btn-light" title="" data-toggle="tooltip" data-original-title="Báo giá thi công">Báo giá thi công</a></div>
+                    <div><a id="menu-bgtk" href="/admin/bao-gia-thiet-ke" class="btn" title="" data-toggle="tooltip" data-original-title="Báo giá thiết kế">Báo giá thiết kế</a></div>
+                    <div><a id="menu-bgtc" href="/admin/bao-gia-thi-cong" class="btn btn-light" title="" data-toggle="tooltip" data-original-title="Báo giá thi công">Báo giá thi công</a></div>
                 </div>
                 <div id="inputdata">
                     <p></p>
