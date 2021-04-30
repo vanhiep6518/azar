@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link data-minify="1" rel="stylesheet" href="{{asset('css/hopdong-5220b6d012ff636bd1aeff981050c478.css')}}">
+    @yield('css')
 </head>
 <body data-rsssl="1">
 <div id="wrapper">

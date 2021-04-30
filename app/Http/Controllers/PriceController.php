@@ -39,4 +39,8 @@ class PriceController extends Controller
         return view('prices.contract-furniture');
     }
 
+    public function estimated(){
+        return view("prices.estimated");
+    }
+
 }

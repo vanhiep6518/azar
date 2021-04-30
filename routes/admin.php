@@ -157,6 +157,7 @@ Route::middleware('authAdmin')->name('admin.')->group(function (){
     Route::get('/hop-dong-thi-cong-doi-tac',[PriceController::class,'partnerContract']);
     Route::get('/hop-dong-thi-cong-khach-hang',[PriceController::class,'customerContract']);
     Route::get('/hop-dong-thi-cong-noi-that',[PriceController::class,'furnitureContract']);
+    Route::get('/khai-toan',[PriceController::class,'estimated']);
 });
 
 

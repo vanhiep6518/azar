@@ -133,6 +133,7 @@
                 <li><a href="/admin/hop-dong-thi-cong-khach-hang" target="_blank">Hợp đồng thi công KH</a></li>
                 <li><a href="/admin/hop-dong-thi-cong-noi-that" target="_blank">HĐTC nội thất</a></li>
                 <li><a href="/admin/hop-dong-thi-cong-doi-tac" target="_blank">Hợp đồng thi công ĐT</a></li>
+                <li><a href="/admin/khai-toan" target="_blank">Khai toán</a></li>
             </ul>
         </li>
         <li class="nav-link {{ (request()->segment(2) == 'product') ? 'active' : '' }}">
