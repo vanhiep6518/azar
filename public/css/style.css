@@ -215,6 +215,17 @@ background: #0f241f;
     justify-content: center;
 }
 
+.art {
+    color: #f6de7c!important;
+   }
+a.table__dktv {
+    border: 1px solid #e7c96c;
+    display: inline-block;
+    padding: 2px 15px;
+    color: #e1c367;
+    border-radius: 30px;
+    font-size: 1rem;
+}
 @media only screen and (min-width: 1800px) {
 #footer .c-name {
     flex: 0 0 80%;
@@ -229,4 +240,20 @@ background: #0f241f;
     max-width: 20%;
 }
 }
+@media only screen and (max-width: 600px) {
+
+    #footer .sp-ol.spec {
+        display: none;
+    }
+
+    #footer .company__name{
+        font-size: 20px;    line-height: 25px;
+    }
+
+    #footer .addr p{
+        font-size: 12px;
+    }
+}
+
+
 

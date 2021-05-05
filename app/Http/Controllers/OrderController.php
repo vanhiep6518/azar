@@ -38,15 +38,15 @@ class OrderController extends Controller
     }
 
     public function detailProduct($cat_slug,$product_slug,$id){
-        $product = Product::find($id);
+        $project = Product::find($id);
         $relativeProduct = Product::where([
-            ['cat_id',$product->cat_id],
+            ['cat_id',$project->cat_id],
             ['id','!=',$id]
         ])->get();
         $productCats = $this->productCats;
 //        dd($relativeProduct);
-        if($product){
-            return view('orders.detail-product',compact('product','productCats','relativeProduct'));
+        if($project){
+            return view('orders.detail-product',compact('project','productCats','relativeProduct'));
         }
     }
 

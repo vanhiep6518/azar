@@ -172,7 +172,9 @@
                                             <div class="content">
                                                 {!! $item->content !!}
                                             </div>
+                                            <a href="http://81art.vn/bang-gia/bng-gi-thit-k-nh-nng-2021/4" class="table__dktv">Xem chi tiết</a>
                                         </div>
+
                                     </div>
                                 @endforeach
                             @endif

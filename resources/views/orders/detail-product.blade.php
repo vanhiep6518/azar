@@ -16,28 +16,28 @@
                         <div class="section" id="detail-product-wp">
                             <div class="section-detail clearfix">
                                 <div class="thumb-wp fl-left">
-                                    <img class="xzoom" id="xzoom-default" src="{{$product->image[0]}}" xoriginal="{{$product->image[0]}}" />
+                                    <img class="xzoom" id="xzoom-default" src="{{$project->image[0]}}" xoriginal="{{$project->image[0]}}" />
                                     <div class="thumb-respon-wp">
-                                        <img src="{{$product->image[0]}}" alt="">
+                                        <img src="{{$project->image[0]}}" alt="">
                                     </div>
                                     <div class="xzoom-thumbs d-flex mt-2">
-                                        @if($product->image && count($product->image) > 0)
-                                            @foreach($product->image as $item)
+                                        @if($project->image && count($project->image) > 0)
+                                            @foreach($project->image as $item)
                                                 <a href="{{$item}}"><img class="xzoom-gallery" width="80" src="{{$item}}" title=""></a>
                                             @endforeach
                                         @endif
                                     </div>
                                 </div>
                                 <div class="info fl-right">
-                                    <h3 class="product-name">{{$product->name}}</h3>
+                                    <h3 class="product-name">{{$project->name}}</h3>
                                     <div class="desc">
-                                        {!! $product->short_desc !!}
+                                        {!! $project->short_desc !!}
                                     </div>
 {{--                                    <div class="num-product">--}}
 {{--                                        <span class="title">Sản phẩm: </span>--}}
 {{--                                        <span class="status">Còn hàng</span>--}}
 {{--                                    </div>--}}
-                                    <p class="price">{{currency_format($product->price)}}</p>
+                                    <p class="price">{{currency_format($project->price)}}</p>
                                     <form id="add-cart-form">
                                         @csrf
                                         <div id="num-order-wp">
@@ -46,7 +46,7 @@
                                             <input type="hidden" id="price" value="6990000">
                                             <a title="" id="plus"><i class="fa fa-plus"></i></a>
                                         </div>
-                                        <button type="button" title="Thêm giỏ hàng" data-id="{{$product->id}}" class="add-cart2">Thêm giỏ hàng</button>
+                                        <button type="button" title="Thêm giỏ hàng" data-id="{{$project->id}}" class="add-cart2">Thêm giỏ hàng</button>
                                     </form>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                                 <h3 class="section-title">Mô tả sản phẩm</h3>
                             </div>
                             <div class="section-detail">
-                                {!! $product->detail !!}
+                                {!! $project->detail !!}
                             </div>
                         </div>
                         <div class="section" id="same-category-wp">

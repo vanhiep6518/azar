@@ -4,6 +4,29 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="p:domain_verify" content="7c4ce7a44c53a04da48d3b860520852c"/>
+    @php
+        $content = '';
+        if(isset($project) && $project->content != ''){
+            $content = $project->content;
+        }else if(isset($project) && $project->short_desc != ''){
+            $content = $project->short_desc ?? '';
+        }else{
+            $content = $page->content ?? '';
+        }
+        $des_post = strip_tags( $content );
+        $des_post = str_replace( array("\n", "\r", "\t"), ' ', $des_post );
+        $des_post = mb_substr( $des_post, 0, 155, 'utf8' );
+    @endphp
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8K221E327B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-8K221E327B');
+    </script>
+    <meta name="description" content="{{$des_post}}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;display=swap" rel="stylesheet"/>
     <title>@yield('title')</title>
     <link rel="icon" href="{{asset('images/LOGO.jpg')}}">
@@ -64,6 +87,7 @@
         @if(isset($cats) && $cats['price'])
                 <ul>
             @foreach($cats['price'] as $item)
+                    @if($item->id != 2 && $item->id != 3)
                 <li><a href="javascript:void(0)">{{$item->name}}</a>
                     @if($item->prices && count($item->prices) > 0)
                         <ul>
@@ -71,20 +95,22 @@
                                 <li><a href="{{route('price.detail',['slug'=>$item2->slug,'id'=>$item2->id])}}">{{$item2->title}}</a></li>
                             @endforeach
                         </ul>
-                    @elseif($item->id == 2)
-                        <ul>
-                            <li><a href="/bao-gia-thiet-ke">Báo giá thiết kế</a></li>
-                            <li><a href="/bao-gia-thi-cong">Báo giá thi công</a></li>
-                        </ul>
-                    @elseif($item->id == 3)
-                        <ul>
-                            <li><a href="/hop-dong-thiet-ke">Hợp đồng thiết kế</a></li>
-                            <li><a href="/hop-dong-thi-cong-doi-tac">Hợp đồng ĐT</a></li>
-                            <li><a href="/hop-dong-thi-cong-khach-hang">Hợp đồng KH</a></li>
-                        </ul>
+{{--                    @elseif($item->id == 2)--}}
+{{--                        <ul>--}}
+{{--                            <li><a href="/bao-gia-thiet-ke">Báo giá thiết kế</a></li>--}}
+{{--                            <li><a href="/bao-gia-thi-cong">Báo giá thi công</a></li>--}}
+{{--                        </ul>--}}
+{{--                    @elseif($item->id == 3)--}}
+{{--                        <ul>--}}
+{{--                            <li><a href="/hop-dong-thiet-ke">Hợp đồng thiết kế</a></li>--}}
+{{--                            <li><a href="/hop-dong-thi-cong-doi-tac">Hợp đồng ĐT</a></li>--}}
+{{--                            <li><a href="/hop-dong-thi-cong-khach-hang">Hợp đồng KH</a></li>--}}
+{{--                        </ul>--}}
                     @endif
                 </li>
+                        @endif
                 @endforeach
+
                 </ul>
                 @endif
         </li>
@@ -220,22 +246,22 @@
                     <div class="social__box --s1 flex-grow-1 mb-2">
                         <a href="https://www.facebook.com/Thietkenhatrongoigiare"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
                         <a href="https://www.youtube.com/channel/UCcGQ2f9G8tYUtoy5NUixRGw"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-                        <a href="https://www.tiktok.com/@81art.studio" class="ic--tiktok"><img src="{{asset('images/tiktok.png')}}" alt=""/></a>
+                        <a href="https://www.tiktok.com/@81art.studio" class="ic--tiktok"><img src="{{asset('images/tiktok.svg')}}" alt=""/></a>
                         <a href="https://www.instagram.com/81art.studio/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         <a href=""><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="col-md-8 text-center py-3">
                     <div class="row position-relative">
-                        <div class="col-8 c-name">
-                            <p class="company__name mb-4">CÔNG TY TNHH TƯ VẤN THIẾT KẾ VÀ XÂY DỰNG 81ART</p>
+                        <div class="col-12 col-sm-8 c-name">
+                            <p class="company__name mb-4">CÔNG TY TNHH TƯ VẤN THIẾT KẾ VÀ XÂY DỰNG <span class="art">81ART</span></p>
                         </div>
-                        <div class="col-4 sp-ol"></div>
-                        <div class="col-4 addr">
-                            <p>CHI NHÁNH 1: 78 NGUYÊN MINH CHẤN, HÒA KHÁNH NAM, LIÊN CHIỂU ĐÀ NẴNG.</p>
+                        <div class="col-4 sp-ol spec"></div>
+                        <div class="col-12 col-sm-4 addr">
+                            <p>CHI NHÁNH 1: 78 NGUYÊN MINH CHẤN, HÒA KHÁNH NAM, LIÊN CHIỂU, ĐÀ NẴNG.</p>
                         </div>
-                        <div class="col-4 addr">
-                            <p>CHI NHÁNH 2: 71/17 TRẦN ĐẠI NGHĨA, TỔ 6, YÊN THẾ, TP.PLEIKU, GIA LAI</p>
+                        <div class="col-12 col-sm-4 addr">
+                            <p>CHI NHÁNH 2: 71/17 TRẦN ĐẠI NGHĨA, TỔ 6, YÊN THẾ, TP.PLEIKU, GIA LAI.</p>
                         </div>
                         <div class="col-4 sp-ol">
                             <div class="support-online">
@@ -353,6 +379,14 @@
 <style>
     @keyframes zoom{0%{transform:scale(.5);opacity:0}50%{opacity:1}to{opacity:0;transform:scale(1)}}@keyframes lucidgenzalo{0% to{transform:rotate(-25deg)}50%{transform:rotate(25deg)}}.jscroll-to-top{bottom:100px}.fcta-zalo-ben-trong-nut svg path{fill:#fff}.fcta-zalo-vi-tri-nut{position:fixed;bottom:105px;right:20px;z-index:999}.fcta-zalo-nen-nut,div.fcta-zalo-mess{box-shadow:0 1px 6px rgba(0,0,0,.06),0 2px 32px rgba(0,0,0,.16)}.fcta-zalo-nen-nut{width:50px;height:50px;text-align:center;color:#fff;background:#0068ff;border-radius:50%;position:relative}.fcta-zalo-nen-nut::after,.fcta-zalo-nen-nut::before{content:"";position:absolute;border:1px solid #0068ff;background:#0068ff80;z-index:-1;left:-20px;right:-20px;top:-20px;bottom:-20px;border-radius:50%;animation:zoom 1.9s linear infinite}.fcta-zalo-nen-nut::after{animation-delay:.4s}.fcta-zalo-ben-trong-nut,.fcta-zalo-ben-trong-nut i{transition:all 1s}.fcta-zalo-ben-trong-nut{position:absolute;text-align:center;width:60%;height:60%;left:10px;bottom:25px;line-height:70px;font-size:25px;opacity:1}.fcta-zalo-ben-trong-nut i{animation:lucidgenzalo 1s linear infinite}.fcta-zalo-nen-nut:hover .fcta-zalo-ben-trong-nut,.fcta-zalo-text{opacity:0}.fcta-zalo-nen-nut:hover i{transform:scale(.5);transition:all .5s ease-in}.fcta-zalo-text a{text-decoration:none;color:#fff}.fcta-zalo-text{position:absolute;top:6px;text-transform:uppercase;font-size:12px;font-weight:700;transform:scaleX(-1);transition:all .5s;line-height:1.5}.fcta-zalo-nen-nut:hover .fcta-zalo-text{transform:scaleX(1);opacity:1}div.fcta-zalo-mess{position:fixed;bottom:110px;right:58px;z-index:99;background:#fff;padding:7px 25px 7px 15px;color:#0068ff;border-radius:50px 0 0 50px;font-weight:700;font-size:15px}.fcta-zalo-mess span{color:#0068ff!important}
     span#fcta-zalo-tracking{font-family:Roboto;line-height:1.5}.fcta-zalo-text{font-family:Roboto}
+    @media only screen and (max-width: 600px){
+        div.fcta-zalo-mess{
+            bottom: 38px;
+        }
+        .fcta-zalo-vi-tri-nut{
+            bottom: 32px;
+        }
+    }
 </style>
 
 <script>
