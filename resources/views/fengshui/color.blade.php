@@ -14,6 +14,7 @@
                     <header class="entry-header page__headerz">
                         <h1 class="page-title pl-0">XEM MÀU HỢP MỆNH</h1>
                     </header>
+
                     <!-- .entry-header -->
                 </article>
                 <div class="form__searchpt">
