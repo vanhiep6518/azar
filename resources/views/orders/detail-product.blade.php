@@ -149,7 +149,7 @@
                 </ul>
             </div>
         </div>
-        <div id="btn-top"><img src="public/images/icon-to-top.png" alt=""/></div>
+{{--        <div id="btn-top"><img src="public/images/icon-to-top.png" alt=""/></div>--}}
 
     </div>
 @endsection
