@@ -226,6 +226,11 @@ a.table__dktv {
     border-radius: 30px;
     font-size: 1rem;
 }
+
+img{
+    max-width: 100%;
+    height: auto;
+}
 @media only screen and (min-width: 1800px) {
 #footer .c-name {
     flex: 0 0 80%;
