@@ -293,4 +293,19 @@
             </main>
         </div>
     </div>
+
+@endsection
+
+@section('custom-js')
+    <script>
+        $("img").each(function() {        //Loop through all images
+            var $t = $(this);             //$t is the current iteration
+            var ht = $t.attr("height");   //Get the HTML height
+            var w = $t.attr("width");   //Get the HTML height
+            ht = ht ? ht+"px" : "auto";   //If HTML height is defined, add "px" | Else, use "auto"
+            w = w ? w+"px" : "auto";   //If HTML height is defined, add "px" | Else, use "auto"
+            $t.css("height", ht);         //Apply the height to the current element
+            $t.css("width", w);         //Apply the height to the current element
+        });
+    </script>
 @endsection

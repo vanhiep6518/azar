@@ -227,7 +227,7 @@ a.table__dktv {
     font-size: 1rem;
 }
 
-img{
+:not(.page__gioithieu) img{
     max-width: 100%;
     height: auto;
 }
