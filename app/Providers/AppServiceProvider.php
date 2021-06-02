@@ -39,7 +39,7 @@ class AppServiceProvider extends ServiceProvider
         $cats['price'] = PriceCat::with('prices')->get();
         $cats['product'] = ProductCat::all();
         $procCon = Construction::where('cat_id',1)->first();
-        $video_id = Video::first()->video_id;
+        $video_id = Video::first()->video_id ?? null;
         View::share('cats', $cats);
         View::share('video_id', $video_id);
         View::share('procCon', $procCon);

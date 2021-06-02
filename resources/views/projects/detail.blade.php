@@ -4,9 +4,9 @@
     <div class="dn__breadcrumb">
         <div class="sc__wrap">
             <div class="container-fluid">
-                <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" class="crumbs-home" href="https://81ART.vn">Trang chủ</a></span>
+                <span ><a rel="v:url" property="v:title" class="crumbs-home" href="https://81ART.vn">Trang chủ</a></span>
                 <span class="delimiter"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="{{route('project.list')}}">Dự án</a></span>
+                <span ><a rel="v:url" property="v:title" href="{{route('project.list')}}">Dự án</a></span>
                 <span class="delimiter"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                 <span class="current">{{$project->title}}</span>
             </div>

@@ -22,7 +22,7 @@
                                         @foreach($productCat->recursiveProducts as $item)
                                             <li>
                                                 <a href="{{route('shop.detailProduct',['cat_slug'=>$item->product_cat->slug,'product_slug'=>$item->slug,'id'=>$item->id])}}" title="" class="thumb">
-                                                    <img src="{{$item->image[0]}}">
+                                                    <img src="{{$item->image[0] ?? 'http://via.placeholder.com/80X80'}}">
                                                 </a>
                                                 <a href="{{route('shop.detailProduct',['cat_slug'=>$item->product_cat->slug,'product_slug'=>$item->slug,'id'=>$item->id])}}" title="" class="product-name">{{$item->name}}</a>
                                                 <div class="price">
